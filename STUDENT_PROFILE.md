@@ -3,10 +3,10 @@
 | รายการ | ข้อมูล |
 |---|---|
 | รายวิชา | ENGSE203 การเขียนโปรแกรมสำหรับวิศวกรซอฟต์แวร์ |
-| รหัสนักศึกษา | STUDENT-ID |
-| ชื่อ-นามสกุล | ชื่อ-นามสกุล |
-| Section | SEC-X |
-| GitHub Username | GITHUB-USERNAME |
-| Repository | `engse203-student-labs-STUDENT-ID` |
-
-> ไฟล์นี้จะถูกปรับข้อมูลเมื่อรัน `npm run setup`
+| รหัสนักศึกษา | 68543210013 |
+| ชื่อ-นามสกุล | นรบดี บุญเลิศ |
+| Section | SEC2 |
+| GitHub Username | nara-bodee |
+| Repository | `engse203-student-labs-68543210013` |
+| Mode | `new-course` |
+| Pages Hub | https://nara-bodee.github.io/engse203-student-labs-68543210013/ |

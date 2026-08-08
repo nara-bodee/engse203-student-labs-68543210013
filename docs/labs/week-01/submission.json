@@ -6,7 +6,7 @@
   "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab01-68543210013-7",
   "originalCommit": "6ff8cd3783d6ab4fa2b1ffedd523ec18bc02a5eb",
   "pullRequestUrl": "",
-  "submissionTag": "",
+  "submissionTag": "lab-01-submission-v1",
   "testStatus": "pass",
   "notes": "Imported LAB01 source and verified hello.js locally with Node v24.14.0. Local-only run; PR and tag pending.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-01/",

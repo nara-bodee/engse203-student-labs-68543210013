@@ -1,16 +1,16 @@
 {
   "week": "week-02",
-  "title": "Modern JavaScript Learning Dashboard",
-  "status": "draft",
-  "sourceOrigin": "course-starter",
-  "originalRepoUrl": "",
-  "originalCommit": "",
+  "title": "Modern JavaScript",
+  "status": "ready",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab02-68543210013-7",
+  "originalCommit": "8d63789b9d4adabfadb2a1f0fa13ad0e25ab2251",
   "pullRequestUrl": "",
   "submissionTag": "",
-  "testStatus": "not-tested",
-  "notes": "นำ Vite build output ที่มี index.html เข้า publish/",
+  "testStatus": "pass",
+  "notes": "Imported LAB02 source, adjusted Vite config for unified Pages, passed project check, built with Vite, and imported publish output. Local-only run; PR and tag pending.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-02/",
   "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-02/labs/week-02/source",
-  "hasPublish": false,
-  "sourceEntries": 0
+  "hasPublish": true,
+  "sourceEntries": 9
 }

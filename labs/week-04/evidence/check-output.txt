@@ -1,0 +1,10 @@
+Command:
+C:\Users\meenz\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts\check-project.mjs
+
+Working directory:
+labs\week-04\source
+
+Result:
+LAB 4 verifier: PASS — run manual TC-01–TC-12 and record evidence in README
+
+Status: PASS

@@ -1,16 +1,16 @@
 {
   "week": "week-04",
   "title": "React Campus Service Request",
-  "status": "draft",
-  "sourceOrigin": "course-starter",
-  "originalRepoUrl": "",
-  "originalCommit": "",
+  "status": "ready",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab04-68543210013-7",
+  "originalCommit": "5dd6514464567d4e9fe1584deed549b34cdb872b",
   "pullRequestUrl": "",
-  "submissionTag": "",
-  "testStatus": "not-tested",
-  "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub",
+  "submissionTag": "lab-04-submission-v1",
+  "testStatus": "pass",
+  "notes": "Imported LAB04 React/Vite source, passed verifier, built with Vite, imported publish output, and captured desktop/mobile/validation/success/empty evidence screenshots. Local-only run; PR and tag pending.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-04/",
   "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-04/labs/week-04/source",
-  "hasPublish": false,
-  "sourceEntries": 0
+  "hasPublish": true,
+  "sourceEntries": 11
 }

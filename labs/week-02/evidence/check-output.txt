@@ -1,0 +1,11 @@
+Command:
+C:\Users\meenz\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts\check-project.mjs
+
+Working directory:
+labs\week-02\source
+
+Result:
+LAB 02 project structure and required evidence check passed.
+Reminder: this checker does not replace manual review of behavior, Git workflow, README, and GitHub Pages.
+
+Status: PASS

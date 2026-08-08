@@ -1,16 +1,16 @@
 {
   "week": "week-03",
   "title": "Responsive Web UI & Form Interaction",
-  "status": "draft",
-  "sourceOrigin": "course-starter",
-  "originalRepoUrl": "",
-  "originalCommit": "",
+  "status": "ready",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab03-68543210013-7",
+  "originalCommit": "427bcb40b95ca51773479c4cf0dff5a62e232657",
   "pullRequestUrl": "",
-  "submissionTag": "",
-  "testStatus": "not-tested",
-  "notes": "Static site ต้องมี index.html ที่ publish root",
+  "submissionTag": "lab-02-submission-v1",
+  "testStatus": "pass",
+  "notes": "Imported LAB03 source, adjusted Vite config for unified Pages, passed syntax check, built with Vite, imported publish output, and captured desktop/mobile/valid/invalid evidence screenshots. Local-only run; PR and tag pending.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-03/",
   "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-03/labs/week-03/source",
-  "hasPublish": false,
-  "sourceEntries": 0
+  "hasPublish": true,
+  "sourceEntries": 7
 }

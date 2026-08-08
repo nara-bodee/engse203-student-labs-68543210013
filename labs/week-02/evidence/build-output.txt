@@ -1,0 +1,18 @@
+Command:
+C:\Users\meenz\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe ..\..\..\..\engse203-lab04-68543210013-7\node_modules\vite\bin\vite.js build
+
+Working directory:
+labs\week-02\source
+
+Result:
+vite v8.2.0 building client environment for production...
+transforming...
+✓ 8 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                 1.62 kB │ gzip: 0.68 kB
+dist/assets/index-3wj7afgn.css  1.69 kB │ gzip: 0.79 kB
+dist/assets/index-BXF-Gt84.js   3.76 kB │ gzip: 1.75 kB
+✓ built in 220ms
+
+Status: PASS

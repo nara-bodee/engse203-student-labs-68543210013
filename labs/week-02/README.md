@@ -6,26 +6,34 @@
 - Original repository: `https://github.com/nara-bodee/engse203-lab02-68543210013-7`
 - Original commit: `8d63789b9d4adabfadb2a1f0fa13ad0e25ab2251`
 - Local branch: `lab/week-02`
-- Submission status: local ready, not submitted to GitHub PR/tag yet
+- Pull request: `https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/2`
+- Submission tag: `lab-02-submission-v1`
 
 ## Project Structure
 
 ```text
 labs/week-02/
-├── README.md
-├── lab-metadata.json
-├── source/
-│   ├── index.html
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── vite.config.js
-│   ├── public/
-│   ├── scripts/
-│   └── src/
-├── evidence/
-└── publish/
-    ├── index.html
-    └── assets/
+â”œâ”€â”€ README.md
+â”œâ”€â”€ lab-metadata.json
+â”œâ”€â”€ source/
+â”‚   â”œâ”€â”€ index.html
+â”‚   â”œâ”€â”€ package.json
+â”‚   â”œâ”€â”€ package-lock.json
+â”‚   â”œâ”€â”€ vite.config.js
+â”‚   â”œâ”€â”€ public/
+â”‚   â”œâ”€â”€ scripts/
+â”‚   â””â”€â”€ src/
+â”œâ”€â”€ evidence/
+â”‚   â”œâ”€â”€ README.md
+â”‚   â”œâ”€â”€ build-output.txt
+â”‚   â”œâ”€â”€ check-output.txt
+â”‚   â”œâ”€â”€ dashboard-error-state.png
+â”‚   â”œâ”€â”€ dashboard-filter-done.png
+â”‚   â”œâ”€â”€ dashboard-mobile-375.png
+â”‚   â””â”€â”€ dashboard-success-desktop-1280.png
+â””â”€â”€ publish/
+    â”œâ”€â”€ index.html
+    â””â”€â”€ assets/
 ```
 
 ## Run
@@ -49,11 +57,7 @@ Project check:
 C:\Users\meenz\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts\check-project.mjs
 ```
 
-Result:
-
-```text
-LAB 02 project structure and required evidence check passed.
-```
+Result: PASS. See `evidence/check-output.txt`.
 
 Build:
 
@@ -61,13 +65,9 @@ Build:
 C:\Users\meenz\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe ..\..\..\..\engse203-lab04-68543210013-7\node_modules\vite\bin\vite.js build
 ```
 
-Result:
+Result: PASS. See `evidence/build-output.txt`.
 
-```text
-✓ built in 220ms
-```
-
-Publish output was imported from `labs/week-02/source/dist` into `labs/week-02/publish`.
+Publish output was imported from `labs/week-02/source/dist` into `labs/week-02/publish`, then `source/dist` was removed.
 
 ## Pages Configuration
 
@@ -85,9 +85,17 @@ export default {
 
 ## Evidence
 
-The verified local evidence for this migration step is the passing project check, successful Vite build, and generated publish output. No screenshot was created in this step.
+- `evidence/dashboard-success-desktop-1280.png` - desktop dashboard after data loaded successfully.
+- `evidence/dashboard-filter-done.png` - status filter set to `done`.
+- `evidence/dashboard-mobile-375.png` - mobile layout at 375px width.
+- `evidence/dashboard-error-state.png` - dashboard error state with `simulateError=1`.
+- `evidence/check-output.txt` - project checker output.
+- `evidence/build-output.txt` - Vite build output.
+- `evidence/README.md` - evidence index.
+
+Screenshots were captured from `labs/week-02/publish/` using Microsoft Edge through Playwright.
 
 ## Known Issues
 
 - `npm` and `node` are not available on the PowerShell PATH in this environment.
-- Pull request URL and submission tag are pending because this run is Local only.
+- Metadata records the merged PR URL and submission tag.

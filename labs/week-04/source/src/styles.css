@@ -1,4 +1,4 @@
-*, *::before, *::after { box-sizing: border-box; }
+﻿*, *::before, *::after { box-sizing: border-box; }
 
 :root {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -39,9 +39,6 @@ form > button, .filter-active { border: 0; border-radius: .6rem; padding: .65rem
 .request-card { display: flex; justify-content: space-between; gap: .8rem; padding: 1rem; border: 1px solid var(--border); border-radius: .75rem; background: #f9fbfe; }
 .request-card h3 { margin: .15rem 0; }
 .request-card p { margin: .2rem 0; color: var(--muted); }
-.priority-badge { display: inline-flex; align-items: center; width: fit-content; margin-top: .55rem; padding: .25rem .55rem; border-radius: 999px; font-size: .82rem; font-weight: 800; }
-.priority-normal { color: #21543d; background: #e5f6ee; }
-.priority-urgent { color: #8a1f11; background: #ffe2dc; }
 .request-id { font-weight: 800; }
 .request-card button { align-self: start; border: 0; border-radius: .5rem; padding: .5rem .7rem; color: var(--danger); background: #feeceb; }
 

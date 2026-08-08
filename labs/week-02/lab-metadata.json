@@ -1,11 +1,11 @@
 {
   "week": "week-02",
   "title": "Modern JavaScript",
-  "status": "ready",
+  "status": "submitted",
   "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab02-68543210013-7",
   "originalCommit": "8d63789b9d4adabfadb2a1f0fa13ad0e25ab2251",
-  "pullRequestUrl": "",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/2",
   "submissionTag": "lab-02-submission-v1",
   "testStatus": "pass",
   "notes": "Imported LAB02 source, adjusted Vite config for unified Pages, passed project check, built with Vite, and imported publish output. Local-only run; PR and tag pending."

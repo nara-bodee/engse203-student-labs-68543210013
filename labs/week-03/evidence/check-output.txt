@@ -1,0 +1,10 @@
+Command:
+C:\Users\meenz\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe --check src\app.js
+
+Working directory:
+labs\week-03\source
+
+Result:
+No syntax errors reported.
+
+Status: PASS

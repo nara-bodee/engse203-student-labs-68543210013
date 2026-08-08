@@ -1,3 +1,7 @@
 # Week 01 Evidence
 
-ใส่ screenshots, test output หรือ reflection ที่ไม่ใช่ข้อมูลลับ แล้วอ้างชื่อไฟล์ใน `../README.md`
+Evidence files:
+
+- `run-output.txt` - verified output from running `hello.js` with Node v24.14.0.
+
+LAB01 has no web UI, so the evidence is command output rather than a browser screenshot.

@@ -6,7 +6,7 @@
   "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab02-68543210013-7",
   "originalCommit": "8d63789b9d4adabfadb2a1f0fa13ad0e25ab2251",
   "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/2",
-  "submissionTag": "lab-03-submission-v1",
+  "submissionTag": "lab-02-submission-v1",
   "testStatus": "pass",
   "notes": "Imported LAB02 source, adjusted Vite config for unified Pages, passed project check, built with Vite, imported publish output, merged PR, and created submission tag."
 }

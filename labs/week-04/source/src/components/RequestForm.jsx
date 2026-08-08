@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 
 function RequestForm({ onAddRequest }) {
   const [formData, setFormData] = useState({
@@ -18,7 +18,6 @@ function RequestForm({ onAddRequest }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // TODO LAB4-R05-R07: validate controlled state แล้วเรียก onAddRequest
 
     const newErrors = {};
     if (formData.requesterName.trim().length < 2) {
@@ -34,7 +33,7 @@ function RequestForm({ onAddRequest }) {
       newErrors.details = 'รายละเอียดต้องมีอย่างน้อย 10 ตัวอักษร';
     }
     if (formData.priority !== 'normal' && formData.priority !== 'urgent') {
-      newErrors.priority = 'ระบุความเร่งด่วนไม่ถูกต้อง';
+      newErrors.priority = 'กรุณาเลือกความเร่งด่วน';
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -96,12 +95,14 @@ function RequestForm({ onAddRequest }) {
           <small className="error" id="details-error">{errors.details}</small>
         </div>
 
-        <fieldset className="field">
-          <legend>ความเร่งด่วน</legend>
-          <label><input type="radio" name="priority" value="normal" checked={formData.priority === 'normal'} onChange={handleChange} /> ปกติ</label>
-          <label><input type="radio" name="priority" value="urgent" checked={formData.priority === 'urgent'} onChange={handleChange} /> เร่งด่วน</label>
+        <div className="field">
+          <label htmlFor="priority">ความเร่งด่วน</label>
+          <select id="priority" name="priority" value={formData.priority} onChange={handleChange} aria-invalid={!!errors.priority}>
+            <option value="normal">ปกติ</option>
+            <option value="urgent">เร่งด่วน</option>
+          </select>
           <small className="error" id="priority-error">{errors.priority}</small>
-        </fieldset>
+        </div>
 
         <button type="submit">เพิ่มคำร้อง</button>
         <p className={`status ${feedback ? 'success' : ''}`} role="status">
@@ -113,5 +114,3 @@ function RequestForm({ onAddRequest }) {
 }
 
 export default RequestForm;
-
-

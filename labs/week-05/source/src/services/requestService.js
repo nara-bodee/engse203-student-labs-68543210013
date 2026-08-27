@@ -4,15 +4,9 @@
  * กติกาที่ checker ตรวจจริง:
  *   - fetch() ต้องอยู่ในไฟล์นี้เท่านั้น
  *   - หน้าและ component เรียกเฉพาะฟังก์ชันที่ export จากไฟล์นี้
- *
- * TODO ในไฟล์นี้แบ่งเป็น 2 ระยะ
- *   5A-x  ทำในคาบแรก  (อ่านข้อมูล)
- *   5B-x  ทำในคาบสอง  (เขียนข้อมูล)
- * ทำเฉพาะ TODO ของคาบปัจจุบัน อย่าข้ามไปทำของคาบหน้า
  */
 
-// TODO 5B-1: เปิดใช้บรรทัดล่างนี้เมื่อถึงคาบ 5B
-// import { clearStoredRequests, readStoredRequests, writeStoredRequests } from './requestStorage.js';
+import { clearStoredRequests, readStoredRequests, writeStoredRequests } from './requestStorage.js';
 
 const LAB_DELAY_MS = 420;
 
@@ -31,6 +25,20 @@ async function fetchSeedRequests() {
   return structuredClone(await response.json());
 }
 
+async function loadNormalRequests(onRecovery) {
+  const stored = readStoredRequests();
+  if (stored.status === 'valid') return stored.requests;
+
+  const seedRequests = await fetchSeedRequests();
+  writeStoredRequests(seedRequests);
+
+  if (stored.status === 'invalid') {
+    onRecovery?.(`พบข้อมูลเดิมที่อ่านไม่ได้ (${stored.reason}) ระบบจึงกู้ข้อมูลตัวอย่างให้แล้ว`);
+  }
+
+  return seedRequests;
+}
+
 export async function getRequests(options = {}) {
   await waitForLabDelay();
 
@@ -41,7 +49,7 @@ export async function getRequests(options = {}) {
     return [];
   }
 
-  return fetchSeedRequests();
+  return loadNormalRequests(options.onRecovery);
 }
 
 export async function getRequestById(requestId) {
@@ -49,22 +57,55 @@ export async function getRequestById(requestId) {
   return requests.find((request) => request.id === requestId) ?? null;
 }
 
-/* ─────────── คาบ 5B ─────────── */
+function readText(value) {
+  return typeof value === 'string' ? value.trim() : '';
+}
 
-// async function loadNormalRequests(onRecovery) {
-//   throw new Error('TODO 5B-2: loadNormalRequests');
-// }
+function validateRequestInput(input) {
+  if (!input) throw new Error('ข้อมูลคำร้องไม่ถูกต้อง');
+  if (readText(input.requesterName).length < 2) throw new Error('ชื่อผู้แจ้งไม่ถูกต้อง');
+  if (!readText(input.requestType)) throw new Error('กรุณาเลือกประเภทคำร้อง');
+  if (!readText(input.location)) throw new Error('กรุณาระบุสถานที่');
+  if (readText(input.details).length < 10) throw new Error('รายละเอียดต้องมีอย่างน้อย 10 ตัวอักษร');
+  if (!['normal', 'urgent'].includes(input.priority)) throw new Error('ความเร่งด่วนไม่ถูกต้อง');
+}
+
+function createRequestId(requests) {
+  let id;
+  do {
+    const random = Math.random().toString(36).slice(2, 8).toUpperCase();
+    id = `REQ-${random}`;
+  } while (requests.some((request) => request.id === id));
+  return id;
+}
 
 export async function addRequest(requestInput) {
-  void requestInput;
-  throw new Error('TODO 5B-4: addRequest');
+  validateRequestInput(requestInput);
+  const requests = await getRequests();
+  const newRequest = {
+    id: createRequestId(requests),
+    requesterName: readText(requestInput.requesterName),
+    requestType: readText(requestInput.requestType),
+    location: readText(requestInput.location),
+    details: readText(requestInput.details),
+    priority: requestInput.priority,
+    status: 'pending',
+  };
+
+  writeStoredRequests([...requests, newRequest]);
+  return structuredClone(newRequest);
 }
 
 export async function deleteRequest(requestId) {
-  void requestId;
-  throw new Error('TODO 5B-5: deleteRequest');
+  const requests = await getRequests();
+  const nextRequests = requests.filter((request) => request.id !== requestId);
+  writeStoredRequests(nextRequests);
+  return structuredClone(nextRequests);
 }
 
 export async function resetRequests() {
-  throw new Error('TODO 5B-6: resetRequests');
+  clearStoredRequests();
+  const seedRequests = await fetchSeedRequests();
+  writeStoredRequests(seedRequests);
+  return structuredClone(seedRequests);
 }

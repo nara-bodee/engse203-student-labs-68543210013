@@ -13,19 +13,25 @@ function RequestDetailPage() {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
+    let ignore = false;
+
     setLoadState('loading');
     setRequest(null);
     setErrorMessage('');
 
     getRequestById(requestId)
       .then((result) => {
+        if (ignore) return;
         setRequest(result);
         setLoadState('success');
       })
       .catch((error) => {
+        if (ignore) return;
         setErrorMessage(error instanceof Error ? error.message : 'เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ');
         setLoadState('error');
       });
+
+    return () => { ignore = true; };
   }, [requestId, reloadKey]);
 
   return (

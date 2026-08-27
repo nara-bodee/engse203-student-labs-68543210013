@@ -3,6 +3,7 @@
 | เวลา | ใช้ช่วยเรื่องอะไร | ไฟล์/ส่วนที่เกี่ยวข้อง | สิ่งที่ตรวจซ้ำด้วยตัวเอง |
 |---|---|---|---|
 | 2026-08-27 | วางแผนและเติม TODO ตาม CHECKPOINT_CARDS 5A โดยใช้เฉพาะ starter, guide, checker และไฟล์ ENGSE203-LAB ที่ให้มา | `src/App.jsx`, `src/pages/*`, `src/components/AppHeader.jsx`, `src/services/requestService.js` | รัน `npm run check -- --session=1` ได้ 104/104 และ `npm run build` ผ่าน |
+| 2026-08-27 | เติม TODO 5B สำหรับ persistence, recovery, add/delete/reset, navigation และ cleanup guard ตาม CHECKPOINT_CARDS 5B | `src/services/requestStorage.js`, `src/services/requestService.js`, `src/pages/DashboardPage.jsx`, `src/pages/NewRequestPage.jsx`, `src/pages/RequestDetailPage.jsx` | รัน `npm run check` ได้ 133/133 และ `npm run build` ผ่าน |
 
 ## ข้อจำกัด
 

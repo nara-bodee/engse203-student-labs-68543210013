@@ -2,7 +2,7 @@
 
 **ชื่อ–รหัส:** 68543210013  
 **OS / Browser / Node:** Windows / Microsoft Edge Headless / v24.19.0  
-**Branch / Commit:** `lab/week-05-b` / `07d809c`
+**Branch / Commit:** `lab/week-05-b` / latest pushed
 
 กรอก Actual result จากการรันจริง ใช้ `PASS`, `FAIL` หรือ `NOT RUN` และอ้างหลักฐานแบบ relative path
 
@@ -42,4 +42,5 @@
 | TC-L5-12 | 2026-08-27 | เติม TODO 5A และ 5B ตาม checker contract | `npm run check` ผ่าน 133/133 | PASS |
 | TC-L5-22 | 2026-08-27 | build source และ import publish output | `npm run build` และ `npm run build:pages` ผ่าน | PASS |
 | TC-L5-07 | 2026-08-28 | เก็บภาพ evidence จาก local app ด้วย Edge Headless | ได้ไฟล์ PNG ครบตามโครงสร้าง evidence ตัวอย่าง | PASS |
+
 

@@ -1,4 +1,4 @@
-﻿import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const links = [
   ['/', 'Dashboard'],
@@ -14,7 +14,7 @@ function AppHeader() {
           <p className="eyebrow">ENGSE203 • LAB 05</p>
           <p className="brand">Campus Service Request</p>
         </div>
-        <nav className="main-nav" aria-label="เมนูหลัก">
+        <nav aria-label="เมนูหลัก">
           {links.map(([to, label]) => (
             <NavLink
               className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}

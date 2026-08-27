@@ -1,6 +1,6 @@
 # ENGSE203 LAB05 — Campus Service Request
 
-Student implementation สำหรับ LAB05 React Routing, Data Fetching และ Front-end Mini App
+Reference implementation สำหรับ Phase W5-D (Instructor Private)
 
 ## Run
 
@@ -33,8 +33,6 @@ flowchart TD
 ## Effect reasoning
 
 Dashboard Effect ขึ้นกับ `scenario` และ `reloadKey` เพราะทั้งสองค่าเปลี่ยนชุดข้อมูลที่ต้อง synchronize จาก Service ส่วน summary และ filtered list เป็น derived data ระหว่าง render จึงไม่อยู่ใน Effect มี `ignore` cleanup guard เพื่อป้องกันผล async เก่ามาเขียน state หลัง route/scenario เปลี่ยน
-
-Request Detail Effect ขึ้นกับ `requestId` และ `reloadKey` เพราะ URL parameter เป็นตัวกำหนดคำร้องที่ต้องโหลด และปุ่ม retry ต้องสั่งโหลดซ้ำได้โดยไม่เปลี่ยน route มี `ignore` cleanup guard เหมือน Dashboard เพื่อกัน stale update หลังผู้ใช้ออกจากหน้า
 
 ## Privacy
 

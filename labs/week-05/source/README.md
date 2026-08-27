@@ -1,6 +1,6 @@
-# ENGSE203 LAB05 Starter — Campus Service Request
+# ENGSE203 LAB05 — Campus Service Request
 
-Starter นี้เปิดได้และรักษาพฤติกรรมแกนของ Week04 แบบ in-memory แต่ตั้งใจยังไม่ผ่าน LAB05 ทุกข้อ ให้ทำตาม CP00–CP06 และรัน checker หลังแต่ละช่วง
+Student implementation สำหรับ LAB05 React Routing, Data Fetching และ Front-end Mini App
 
 ## Run
 
@@ -12,16 +12,7 @@ npm run build
 npm run preview
 ```
 
-## Starting state
-
-- `HashRouter` และ dependency เตรียมไว้เป็น infrastructure
-- Dashboard ยัง render โดยตรงและยังไม่ใช้ route matrix
-- add/filter/delete ยังทำงานใน memory; refresh แล้วข้อมูลใหม่หาย
-- Page/Service/Storage filenames และ validator scaffold เตรียมไว้
-- deterministic `error`/`empty` scenario helper เตรียมไว้
-- `npm run check` ต้องรายงาน `[TODO]` จนกว่าจะทำ CP ครบ
-
-## Target architecture
+## Architecture
 
 ```mermaid
 flowchart TD
@@ -39,9 +30,11 @@ flowchart TD
 - `requestService.js` เป็น data-access boundary ของ UI
 - `requestStorage.js` เป็นไฟล์เดียวที่ใช้ `localStorage`
 
-## TODO boundary
+## Effect reasoning
 
-นักศึกษาประกอบ Routes/Navigation, Effect lifecycle, Service calls, persistence functions, dynamic detail และ regression checks เอง ส่วน schema validator, visual components, scenario delay และ checker infrastructure มีให้เป็น scaffold
+Dashboard Effect ขึ้นกับ `scenario` และ `reloadKey` เพราะทั้งสองค่าเปลี่ยนชุดข้อมูลที่ต้อง synchronize จาก Service ส่วน summary และ filtered list เป็น derived data ระหว่าง render จึงไม่อยู่ใน Effect มี `ignore` cleanup guard เพื่อป้องกันผล async เก่ามาเขียน state หลัง route/scenario เปลี่ยน
+
+Request Detail Effect ขึ้นกับ `requestId` และ `reloadKey` เพราะ URL parameter เป็นตัวกำหนดคำร้องที่ต้องโหลด และปุ่ม retry ต้องสั่งโหลดซ้ำได้โดยไม่เปลี่ยน route มี `ignore` cleanup guard เหมือน Dashboard เพื่อกัน stale update หลังผู้ใช้ออกจากหน้า
 
 ## Privacy
 

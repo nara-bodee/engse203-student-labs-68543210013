@@ -1,6 +1,6 @@
 ﻿# ENGSE203 LAB05 — Student Test Report
 
-**ชื่อ–รหัส:** 68543210013  
+**ชื่อ–รหัส:** นรบดี บุญเลิศ 68543210013  
 **OS / Browser / Node:** Windows / Microsoft Edge Headless / v24.19.0  
 **Branch / Commit:** `lab/week-05-b` / latest pushed
 

@@ -102,7 +102,7 @@
 | **TC-L5-12** | `npm run check` | ผ่าน **133/133** | Checker ทำงานสำเร็จและผ่านครบ 133/133 รายการ | PASS | 133/133 |
 | **TC-L5-22** | `npm run build` แล้ว `npm run preview` | build ไม่มี error · เปิด preview แล้ว refresh ที่ทุก URL ได้ | Build สำเร็จโดยไม่มี error และทดสอบ refresh ทุก route บน preview แล้วสามารถเปิดได้ตามปกติโดยไม่เกิด 404 | PASS | |
 | **TC-L5-23** | เปิด GitHub Pages **ในหน้าต่างส่วนตัว** แล้ว refresh ที่ URL ที่มี `#` | โหลดได้ทุกหน้า · refresh แล้วไม่ 404 · ข้อมูลตัวอย่างขึ้นเหมือนผู้ใช้ใหม่ | เปิด Week05 บน GitHub Pages ในหน้าต่าง Private สามารถเข้าถึงทุก route และ refresh แต่ละ URL ได้โดยไม่เกิด 404 ข้อมูลตัวอย่างแสดงได้ตามปกติเหมือนผู้ใช้ใหม่ | PASS | `images/pages-incognito.png` |
-| **TC-L5-24** | เปิด Pull Request และติด tag `lab-05-submission-v1` | PR เปิดแล้ว · tag ถูก push ขึ้น remote | มี Pull Request สำหรับ `lab/week-05 → main` และตรวจสอบแล้วว่า tag `lab-05-submission-v1` อยู่บน remote | PASS | https://github.com/Mangporunicorn/engse203-student-labs-68543210078/pull/6 |
+| **TC-L5-24** | เปิด Pull Request และติด tag `lab-05-submission-v1` | PR เปิดแล้ว · tag ถูก push ขึ้น remote | มี Pull Request สำหรับ `lab/week-05 → main` และตรวจสอบแล้วว่า tag `lab-05-submission-v1` อยู่บน remote | PASS | https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/9 |
 
 ---
 

@@ -14,10 +14,13 @@ function AppHeader() {
           <p className="eyebrow">ENGSE203 • LAB 05</p>
           <p className="brand">Campus Service Request</p>
         </div>
+
         <nav aria-label="เมนูหลัก">
           {links.map(([to, label]) => (
             <NavLink
-              className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+              className={({ isActive }) =>
+                `nav-link${isActive ? ' active' : ''}`
+              }
               end={to === '/'}
               key={to}
               to={to}

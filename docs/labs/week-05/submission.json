@@ -8,7 +8,7 @@
   "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/9",
   "submissionTag": "lab-05-submission-v1",
   "testStatus": "pass",
-  "notes": "Completed LAB05A read path and LAB05B write path. npm run check passed 133/133, npm run build passed, publish output imported, and PR #9 opened.",
+  "notes": "Completed LAB05A read path and LAB05B write path. npm run check passed 133/133, npm run build passed, publish output imported, PR #9 merged, and submission tag lab-05-submission-v1 updated.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-05/",
   "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-05/labs/week-05/source",
   "hasPublish": true,

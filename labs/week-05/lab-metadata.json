@@ -5,8 +5,8 @@
     "sourceOrigin":  "course-starter",
     "originalRepoUrl":  "https://github.com/se-rmutl/engse203-lab/tree/main/labs/week-05-react-mini-app/lab05/starter",
     "originalCommit":  "7eb464480659fb5139801a36f7af059babf2eb7f",
-    "pullRequestUrl":  "",
+    "pullRequestUrl":  "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/8",
     "submissionTag":  "lab-05-submission-v1",
     "testStatus":  "pass",
-    "notes":  "Completed LAB05A read path and LAB05B write path. npm run check passed 133/133, npm run build passed, publish output imported. PR URL and tag should be finalized after merging branch lab/week-05-b."
+    "notes":  "Completed LAB05A read path and LAB05B write path. npm run check passed 133/133, npm run build passed, publish output imported, PR #8 merged, and submission tag lab-05-submission-v1 created."
 }

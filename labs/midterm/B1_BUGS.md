@@ -37,7 +37,7 @@
 | 3 | กดตัวกรองสถานะใด ๆ แล้วผลไม่เปลี่ยน (เหมือนกรองไม่ทำงาน) | 	DashboardPage.jsx:55 | มันกรองแค่สถานะ pending | เปลี่ยนเป็น statusFilter แทน |
 | 4 | เปลี่ยน URL `REQ-101` → `REQ-102` แล้วข้อมูลไม่เปลี่ยน | RequestDetailPage.jsx:28 | Array ว่างทำไห้จะรันแค่ตอนเรียกครั้งแรก | เรียก requestId , reloadKey เข้าไปใน Array |
 | 5 | กด "ลบ" แล้วการ์ดหาย แต่ตัวเลขในแผงสรุปไม่ลด | DashboardPage.jsx:51 | Array ว่างทำไห้จะรันแค่ตอนเรียกครั้งแรก | เรียก request เข้าไปใน Array |
-| 6 | กด "ลบ" แล้วหน้าพัง/ว่างเปล่า |  |  |  |
+| 6 | กด "ลบ" แล้วหน้าพัง/ว่างเปล่า | DashboardPage.jsx:65 | ลืมใส่ await | ใส่ await หน้า deleteRequest(requestId) |
 
 ---
 

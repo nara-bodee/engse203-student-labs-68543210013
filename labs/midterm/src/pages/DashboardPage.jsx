@@ -53,7 +53,8 @@ function DashboardPage() {
 
   const filteredRequests = requests.filter((request) => {
     const matchesSearch = searchText === '' || request.requestType.includes(searchText) || request.location.includes(searchText);
-    return matchesSearch;
+    const matchesStatus = statusFilter === 'all' || request.status === statusFilter;
+    return matchesSearch && matchesStatus;
   });
 
   function handleRetry() {

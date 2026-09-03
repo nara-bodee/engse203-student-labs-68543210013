@@ -51,10 +51,10 @@ function DashboardPage() {
     completed: requests.filter((request) => request.status === 'completed').length,
   }), [requests]);
 
-  const filteredRequests = statusFilter === 'all'
-    ? requests
-    : requests.filter((request) => request.status === statusFilter);
-
+  const filteredRequests = requests.filter((request) => {
+    const matchesSearch = searchText === '' || request.requestType.includes(searchText) || request.location.includes(searchText);
+    return matchesSearch;
+  });
 
   function handleRetry() {
     if (scenario) setSearchParams({});
@@ -114,6 +114,9 @@ function DashboardPage() {
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
+            {searchText && (
+              <p>ผลการค้นหา: {filteredRequests.length} รายการ</p>
+            )}
             {/* TODO B3: ส่ง onAcknowledge={handleAcknowledge} ให้ RequestList เพื่อให้การ์ด pending มีปุ่ม "รับเรื่อง" */}
             <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
           </section>

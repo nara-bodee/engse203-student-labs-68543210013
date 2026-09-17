@@ -1,0 +1,12 @@
+{
+  "week": "week-06",
+  "title": "Express API Foundation — Campus Service REST API",
+  "status": "submitted",
+  "sourceOrigin": "course-starter",
+  "originalRepoUrl": "https://github.com/se-rmutl/engse203-lab/tree/main/labs/week-06-express-api-foundation/lab06/starter",
+  "originalCommit": "29d47c4acf45c15606970bb30e1840cf694b974f",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/10",
+  "submissionTag": "lab-06-submission-v1",
+  "testStatus": "pass",
+  "notes": "Completed LAB06 Express REST API with route/controller/service separation, middleware, centralized error handling, JSON persistence, API testing, and evidence."
+}

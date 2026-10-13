@@ -29,3 +29,14 @@
 Frontend ใช้ React + Vite
 Backend ใช้ Node.js + Express
 Database ใช้ SQLite
+
+## Live Demo — Render (Challenge)
+
+URL: https://campus-service-68543210013.onrender.com/
+
+- [x] Deploy ระบบขึ้น Render
+- [x] Frontend ตอบ HTTP 200
+- [x] GET /api/health ตอบ 200
+- [x] Environment เป็น production
+- [x] SQLite เชื่อมต่อสำเร็จ
+- [x] GET /api/requests ตอบ 200

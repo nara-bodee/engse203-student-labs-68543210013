@@ -98,8 +98,8 @@ export function findById(id) {
 /** สร้างรหัสคำร้องถัดไป เช่น REQ-006 */
 function nextId() {
   // รหัสถัดไป = จำนวนคำร้องที่มีอยู่ + 1  (ปรับให้เรียบง่ายขึ้นในรุ่นนี้)
-  const { total } = db.prepare('SELECT COUNT(*) AS total FROM requests').get();
-  return `REQ-${String(total + 1).padStart(3, '0')}`;  
+  const { maxId } = db.prepare('SELECT MAX(CAST(SUBSTR(id, 5) AS INTEGER)) AS maxId FROM requests').get();
+  return `REQ-${String((maxId ?? 0) + 1).padStart(3, '0')}`;
 }
 
 /**

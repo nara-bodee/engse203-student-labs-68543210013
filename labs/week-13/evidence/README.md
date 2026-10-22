@@ -66,7 +66,10 @@ Malformed Hash Tests ถูกเพิ่มก่อนแก้ Implementatio
 
 ## Submission Status
 
-กำลังเตรียมส่ง: Metadata ใช้ `ready` ยังไม่มี PR URL หรือ Submission Tag; วางแผนใช้ `lab-13-submission-v1` หลัง Merge และได้รับอนุมัติ ไม่ได้สร้าง Screenshot หรืออ้างว่ามี Screenshot เพิ่ม
+- สร้าง [PR #20: Week 13: Authentication & Security (CP48–CP52)](https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/20) แล้ว และยังรอ Review/Merge
+- Metadata ใช้ `submitted` พร้อม PR URL จริง; `lab-13-submission-v1` เป็นชื่อ Tag ที่วางแผนไว้หลัง Merge และได้รับอนุมัติเท่านั้น ยังไม่ได้สร้าง Tag
+- GitHub Pages ยังต้องตรวจหลัง Deploy รวมการเปิดใน Incognito และตรวจ Console/404
+- ไม่ได้สร้าง Screenshot หรืออ้างว่ามี Screenshot เพิ่ม
 
 ผลข้างต้นเป็นผล Tests/Checkers ของ Source ไม่ได้หมายความว่า Root Repository Verification ผ่านทั้งหมด
 

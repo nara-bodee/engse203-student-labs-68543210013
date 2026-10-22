@@ -175,5 +175,21 @@
     "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-12/labs/week-12/source",
     "hasPublish": false,
     "sourceEntries": 17
+  },
+  {
+    "week": "week-13",
+    "title": "ความปลอดภัยพื้นฐานและความพร้อมก่อนใช้งาน",
+    "status": "ready",
+    "sourceOrigin": "course-starter",
+    "originalRepoUrl": "",
+    "originalCommit": "",
+    "pullRequestUrl": "",
+    "submissionTag": "",
+    "testStatus": "pass",
+    "notes": "CP48-CP52 PASS 23/23. API 82/82 tests, Frontend 3/3 tests, Week 12 regression 20/20. Hardened password verification and production JWT configuration.",
+    "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-13/",
+    "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-13/labs/week-13/source",
+    "hasPublish": false,
+    "sourceEntries": 18
   }
 ]

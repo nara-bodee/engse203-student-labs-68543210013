@@ -30,3 +30,27 @@ describe('verifyPassword', () => {
     expect(verifyPassword('staff1234', stored)).toBe(false);
   });
 });
+
+describe('verifyPassword — malformed hash regression', () => {
+  const [, salt, hash] = SEED_HASH.split('$');
+
+  test.each([
+    ['กรณีเดิม: Hex ใช้ไม่ได้', 'scrypt$abc$zz'],
+    ['กรณีเดิม: Hex ไม่ครบ byte', 'scrypt$abc$0'],
+    ['hash มีอักขระที่ไม่ใช่ Hex', `scrypt$${salt}$${'z'.repeat(128)}`],
+    ['hash มีจำนวนตัวอักษรเป็นเลขคี่', `scrypt$${salt}$${hash.slice(0, -1)}`],
+    ['hash สั้นกว่า 128 ตัวอักษร', `scrypt$${salt}$${hash.slice(0, -2)}`],
+    ['hash ยาวกว่า 128 ตัวอักษร', `scrypt$${salt}$${hash}00`],
+    ['hash มี newline ต่อท้าย', `scrypt$${salt}$${hash}\n`],
+    ['salt มีอักขระที่ไม่ใช่ Hex', `scrypt$${'z'.repeat(32)}$${hash}`],
+    ['salt สั้นกว่า 32 ตัวอักษร', `scrypt$${salt.slice(0, -1)}$${hash}`],
+    ['salt ยาวกว่า 32 ตัวอักษร', `scrypt$${salt}00$${hash}`],
+    ['scheme ไม่ใช่ scrypt', `sha256$${salt}$${hash}`],
+    ['จำนวนส่วนขาดไปหนึ่งส่วน', `scrypt$${salt}`],
+    ['ไม่มี salt', `scrypt$$${hash}`],
+    ['ไม่มี hash', `scrypt$${salt}$`],
+    ['มีส่วนเกินหลัง hash', `${SEED_HASH}$extra`],
+  ])('%s → false โดยไม่โยน error', (_name, stored) => {
+    expect(verifyPassword('staff1234', stored)).toBe(false);
+  });
+});

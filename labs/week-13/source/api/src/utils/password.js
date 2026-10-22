@@ -21,10 +21,15 @@ export function hashPassword(plain) {
 }
 
 export function verifyPassword(plain, stored) {
-  const [scheme, salt, hashHex] = String(stored ?? '').split('$');
-  if (scheme !== 'scrypt' || !salt || !hashHex) return false;
+  if (typeof stored !== 'string') return false;
+  const parts = stored.split('$');
+  if (parts.length !== 3) return false;
+  const [scheme, salt, hashHex] = parts;
+  if (scheme !== 'scrypt' || !/^[0-9a-f]{32}$/i.test(salt) || !/^[0-9a-f]{128}$/i.test(hashHex)) {
+    return false;
+  }
   const expected = Buffer.from(hashHex, 'hex');
-  const actual = scryptSync(String(plain), salt, expected.length);
+  const actual = scryptSync(String(plain), salt, KEY_LENGTH);
   // timingSafeEqual ใช้เวลาเท่ากันไม่ว่าจะผิดตัวที่เท่าไร — กันการเดาจากเวลาที่ใช้ตอบ
-  return actual.length === expected.length && timingSafeEqual(actual, expected);
+  return timingSafeEqual(actual, expected);
 }

@@ -27,6 +27,11 @@ describe('POST /api/auth/login', () => {
 
 describe('สิทธิ์ของ PUT / DELETE', () => {
   const put = () => request(app).put('/api/requests/REQ-001').send({ status: 'completed' });
+  test('ไม่มี token → 401', async () => {
+    const r = await put();
+    expect(r.status).toBe(401);
+  });
+
   test('token ที่เซ็นด้วย secret อื่น (ปลอม) → 401', async () => {
     const r = await put().set('Authorization', `Bearer ${tokenFor('staff', 'not-the-real-secret')}`);
     expect(r.status).toBe(401);

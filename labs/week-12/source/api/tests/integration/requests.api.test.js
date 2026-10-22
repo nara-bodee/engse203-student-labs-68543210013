@@ -106,3 +106,16 @@ test('คำร้องที่ไม่มีอยู่ → 404 (ไม่�
   const r = await request(app).put('/api/requests/REQ-999').send({ status: 'completed' });
   expect(r.status).toBe(404);
 });
+
+test('BUG #1 ลบรายการกลางแล้วเพิ่มใหม่ → 201', async () => {
+  await request(app)
+    .delete('/api/requests/REQ-002')
+    .expect(204);
+
+  const response = await request(app)
+    .post('/api/requests')
+    .send(valid);
+
+  expect(response.status).toBe(201);
+  expect(response.body.id).toBe('REQ-006');
+});

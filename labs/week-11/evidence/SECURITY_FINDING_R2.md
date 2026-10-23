@@ -1,5 +1,7 @@
 # Week 11 — Security Finding R2 (Read Only)
 
+> **สถานะล่าสุด 23 ตุลาคม 2026:** แพตช์ใน Draft PR #29 แก้ dependency ใน revision worktree แล้ว (`proxy-addr@2.0.8`), runtime audit 0 และ regression ผ่าน ดู [ผล remediation](SECURITY_REMEDIATION.md) ส่วนด้านล่างเป็นหลักฐาน R2 ก่อนแก้ ไม่ใช่สถานะ dependency ล่าสุด **การยืนยันแพตช์บน Render ยัง OPEN/UNVERIFIED** และวิดีโอบังคับยังไม่ได้รับการยืนยัน
+
 วันที่ 22 ตุลาคม 2026 · นรบดี บุญเลิศ 68543210013-7
 
 ## ข้อสรุป

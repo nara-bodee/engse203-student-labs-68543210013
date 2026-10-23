@@ -1,0 +1,108 @@
+GET /api/requests 200 3.399 ms - 2492
+▶ GET /api/requests
+  ✔ คืน array พร้อม status 200 (35.5226ms)
+GET /api/requests 200 0.960 ms - 2492
+  ✔ คืน requesterName ไม่ใช่ requester_id (14.2698ms)
+GET /api/requests?status=x%27%20OR%20%271%27%3D%271 200 0.665 ms - 2
+  ✔ SQL injection ผ่าน status ไม่หลุด (14.9805ms)
+✔ GET /api/requests (66.4373ms)
+GET /api/requests 200 0.478 ms - 2492
+GET /api/requests/REQ-001 200 1.002 ms - 321
+▶ GET /api/requests/:id
+  ✔ id ที่มีจริงคืน 200 (16.5013ms)
+GET /api/requests/REQ-NOT-FOUND 404 0.791 ms - 71
+  ✔ id ที่ไม่มีคืน 404 (8.8726ms)
+✔ GET /api/requests/:id (26.0746ms)
+GET /api/requests 200 0.501 ms - 2492
+POST /api/requests 201 17.315 ms - 268
+DELETE /api/requests/REQ-009 204 0.527 ms - -
+▶ POST /api/requests
+  ✔ ข้อมูลถูกต้องสร้างคำร้องและคืน 201 (39.8498ms)
+POST /api/requests 400 0.925 ms - 406
+  ✔ ข้อมูลไม่ครบคืน 400 (9.3066ms)
+✔ POST /api/requests (49.7953ms)
+✔ GHSA-jqcg-44mw-7w3h: a short IPv6 prefix cannot trust an IPv4 client (5.1754ms)
+✔ the correct IPv4 and mapped IPv6 subnets still match the private network (0.7054ms)
+✔ the application keeps trust proxy disabled and ignores untrusted XFF (4.0013ms)
+ℹ tests 10
+ℹ suites 3
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 681.9543
+PS> node --disable-warning=ExperimentalWarning check-week11.mjs
+GET /api/health 200 4.494 ms - 132
+GET /api/requests 200 1.233 ms - 2492
+GET /api/nope 404 0.425 ms - 62
+
+✅ CP35 มีชั้น API (api/src/app.js)
+✅ CP35 มีชั้น frontend (frontend/src)
+✅ CP35 มีชั้นฐานข้อมูล (api/data/schema.sql)
+✅ CP36 มี config.js รวม env ไว้ที่เดียว
+✅ CP36 config อ่าน NODE_ENV
+✅ CP36 config อ่าน PORT จาก env
+✅ CP36 config มี isProd แยก dev/production
+✅ CP36 app.js ใช้ config ไม่ hardcode
+✅ CP37 มี healthRoutes.js
+✅ CP37 app.js ผูก /api/health
+✅ CP37 health คืนสถานะฐานข้อมูล
+✅ CP37 service มี getDbStatus()
+✅ CP38 มี errorHandler รวมศูนย์
+✅ CP38 มี notFound handler
+✅ CP38 ใช้ morgan logging
+✅ CP38 logging แยก dev/production
+✅ CP39 app.js เสิร์ฟ static ตอน production
+✅ CP39 config มี staticDir
+✅ CP39 production: เปิด / แล้วได้หน้าเว็บ (ไม่ใช่ JSON)
+✅ CP39 bundle production ไม่ฝัง localhost:3001 (ใช้ path สัมพัทธ์)
+✅ CP39 frontend มี build script
+✅ CP39 frontend build แล้ว (มี dist/)
+✅ CP37 GET /api/health ตอบ 200 + status ok
+✅ CP37 health บอก env และ database
+✅ CP35 ระบบยังคืนข้อมูลได้ (integration ไม่พัง)
+✅ CP38 route ที่ไม่มี → 404 (notFound ทำงาน)
+✅ CP40 มี README.md
+✅ CP40 README อธิบายสถาปัตยกรรม 3 ชั้น
+✅ CP40 README มีวิธีรัน (npm)
+✅ CP41 มีบันทึกคำตอบ DATABASE_CHOICES.md
+✅ CP41 ตอบเรื่อง SQLite/NoSQL/async
+✅ CP42 มีหลักฐานสาธิต (DEMO.md หรือลิงก์วิดีโอ)
+✅ CP43 frontend build แล้ว (จำลอง production ได้)
+✅ CP43 app.js เสิร์ฟ static ตอน production (พอร์ตเดียว)
+✅ CP43 มี frontend/.env.production (VITE_API_BASE_URL ว่าง)
+✅ CP43 root package.json มี script build + start (build ใช้ --include=dev)
+✅ CP43 มีไฟล์เตรียม deploy จริง (render.yaml — สำหรับ Challenge)
+✅ CHAL ⭐ มี deploy config จริง (render.yaml/Procfile/Dockerfile)
+✅ CHAL ⭐ render.yaml ตามสเปกปัจจุบัน (runtime · rootDir · healthCheckPath · NODE_VERSION)
+✅ CHAL ⭐ health check บอก uptime
+✅ CHAL ⭐ มี CI (.github/workflows)
+
+──────────────────────────────────────────────────────────
+🏫 ในห้อง (CP35–CP39)   ผ่าน 17/17 รายการ
+🏠 ที่บ้าน (CP40–CP43)   ผ่าน 20/20 รายการ
+⭐ Challenge            ผ่าน 4/4 รายการ
+──────────────────────────────────────────────────────────
+ผ่าน 41/41 รายการ
+
+หมายเหตุ: checker ตรวจว่าระบบพร้อมใช้จริง แต่ตรวจไม่ได้ว่าเข้าใจ
+ผู้สอนจะสุ่มถามให้อธิบายว่า dev ต่างจาก production อย่างไร
+PS> npm run build --prefix frontend
+npm notice run engse203-week05-campus-service-request@0.3.0 build
+npm notice run vite build
+vite v8.1.5 building client environment for production...
+[2K
+transforming...✓ 41 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.51 kB │ gzip:   0.32 kB
+dist/assets/index-UUV2Pq6a.css    4.79 kB │ gzip:   1.72 kB
+dist/assets/index-jCVeq_CP.js   459.51 kB │ gzip: 137.89 kB
+
+✓ built in 613ms
+proxy-addr@2.0.8
+node_modules/proxy-addr
+  proxy-addr@"^2.0.7" from express@5.2.1
+  node_modules/express
+    express@"^5.1.0" from the root project

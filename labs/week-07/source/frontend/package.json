@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "check": "node scripts/check-project.mjs",
+    "test:cp13": "node --disable-warning=ExperimentalWarning --experimental-vm-modules --test tests/request-detail.test.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "verify": "npm run check && npm run build"

@@ -118,14 +118,14 @@
     "sourceOrigin": "course-starter",
     "originalRepoUrl": "",
     "originalCommit": "",
-    "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/12",
-    "submissionTag": "lab-09-submission-v1",
+    "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/27",
+    "submissionTag": "lab-09-submission-v2",
     "testStatus": "pass",
-    "notes": "Weekly LAB submission evidence.",
+    "notes": "Weekly LAB submission evidence. Revision: Week 09 revision: Complete the SQL data model explanation and verification evidence.",
     "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-09/",
     "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-09/labs/week-09/source",
     "hasPublish": false,
-    "sourceEntries": 6
+    "sourceEntries": 7
   },
   {
     "week": "week-10",

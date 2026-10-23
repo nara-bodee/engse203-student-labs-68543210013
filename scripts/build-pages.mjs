@@ -27,13 +27,14 @@ for (const week of labs) {
   const publishRoot = path.join(labRoot, "publish");
   const target = path.join(docsRoot, "labs", week);
   const metadata = await readJson(path.join(labRoot, "lab-metadata.json"));
+  const sourceRef = metadata.submissionTag || `lab/${week}`;
+  const sourceUrl = `${repoUrl}/tree/${sourceRef}/labs/${week}/source`;
   const hasPublish = await exists(path.join(publishRoot, "index.html"));
   await fs.mkdir(target, { recursive: true });
 
   if (hasPublish) {
     await fs.cp(publishRoot, target, { recursive: true });
   } else {
-    const sourceUrl = `${repoUrl}/tree/lab/${week}/labs/${week}/source`;
     const evidenceUrl =
   validHttpUrl(metadata.evidenceUrl) ||
   `${repoUrl}/tree/lab/${week}/labs/${week}/evidence`;
@@ -50,7 +51,6 @@ for (const week of labs) {
     await fs.writeFile(path.join(target, "index.html"), report, "utf8");
   }
 
-  const sourceUrl = `${repoUrl}/tree/lab/${week}/labs/${week}/source`;
   const prUrl = validHttpUrl(metadata.pullRequestUrl);
   const pageUrl = `${pagesBase}/labs/${week}/`;
   const sourceCount = (await meaningfulEntries(path.join(labRoot, "source"))).length;

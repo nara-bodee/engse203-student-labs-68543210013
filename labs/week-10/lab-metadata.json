@@ -1,12 +1,12 @@
 {
-    "week":  "week-10",
-    "title":  "Node.js and SQLite",
-    "status":  "submitted",
-    "sourceOrigin":  "course-starter",
-    "originalRepoUrl":  "",
-    "originalCommit":  "",
-    "pullRequestUrl":  "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/13",
-    "submissionTag":  "lab-10-submission-v1",
-    "testStatus":  "pass",
-    "notes":  "Weekly LAB submission evidence."
+  "week": "week-10",
+  "title": "Node.js and SQLite",
+  "status": "submitted",
+  "sourceOrigin": "course-starter",
+  "originalRepoUrl": "",
+  "originalCommit": "",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/28",
+  "submissionTag": "lab-10-submission-v2",
+  "testStatus": "pass",
+  "notes": "Weekly LAB submission evidence. Revision: Week 10 revision: Restore the frontend environment example and setup documentation."
 }

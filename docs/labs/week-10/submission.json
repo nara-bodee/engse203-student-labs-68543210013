@@ -5,12 +5,12 @@
   "sourceOrigin": "course-starter",
   "originalRepoUrl": "",
   "originalCommit": "",
-  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/13",
-  "submissionTag": "lab-10-submission-v1",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/28",
+  "submissionTag": "lab-10-submission-v2",
   "testStatus": "pass",
-  "notes": "Weekly LAB submission evidence.",
+  "notes": "Weekly LAB submission evidence. Revision: Week 10 revision: Restore the frontend environment example and setup documentation.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-10/",
   "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-10/labs/week-10/source",
   "hasPublish": false,
-  "sourceEntries": 6
+  "sourceEntries": 7
 }

@@ -9,8 +9,9 @@
   "submissionTag": "lab-13-submission-v2",
   "testStatus": "pass",
   "notes": "CP48-CP52 PASS 23/23. API 82/82 tests, Frontend 3/3 tests, Week 12 regression 20/20. Hardened password verification and production JWT configuration. Revision: Week 13 revision: Correct authentication lab setup and submission evidence.",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-13-submission-v2/labs/week-13/evidence",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-13/",
-  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-13/labs/week-13/source",
+  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-13-submission-v2/labs/week-13/source",
   "hasPublish": false,
   "sourceEntries": 18
 }

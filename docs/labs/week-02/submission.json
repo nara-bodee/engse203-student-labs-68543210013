@@ -10,7 +10,7 @@
   "testStatus": "pass",
   "notes": "Imported LAB02 source, adjusted Vite config for unified Pages, passed project check, built with Vite, imported publish output, merged PR, and created submission tag. Revision: Week 02 revision: Complete README submission links and references.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-02/",
-  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-02/labs/week-02/source",
+  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-02-submission-v2/labs/week-02/source",
   "hasPublish": true,
   "sourceEntries": 9
 }

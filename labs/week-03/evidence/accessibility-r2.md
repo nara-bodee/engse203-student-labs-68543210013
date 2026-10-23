@@ -1,5 +1,7 @@
 # LAB03 Accessibility — R2 Verification
 
+> ผลล่าสุด: ตรวจ Browser Zoom 200% จริงสำเร็จในรอบ follow-up ดู [ผลและภาพจริง](zoom200-verification.md) ข้อ UNVERIFIED ด้านล่างเป็นประวัติของแต่ละรอบก่อนหน้า
+
 นรบดี บุญเลิศ · 68543210013-7 · 22 ตุลาคม 2026
 
 ตรวจบน [Pages LAB03](https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-03/) โดยใช้ Browser keyboard API จริง ไม่แก้ HTML/CSS/JavaScript

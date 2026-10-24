@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-25 Asia/Bangkok",
+  "headTested": "1af1fa45d10829a76fe5dad94fa9cd3563a73d26",
+  "sourceTree": "a548e5bbba219c7ca13d078dd7e1f4cad10db14f",
+  "origin": "http://127.0.0.1:5605",
+  "syntheticDataOnly": true,
+  "sourceFixture": false,
+  "cases": {
+    "TC02": {
+      "status": "UNVERIFIED",
+      "mandatory": true,
+      "navigationActiveStates": "PASS actual GUI navigation/keyboard; aria-current matches",
+      "networkHTMLReload": "NOT VERIFIED - native DevTools input blocked",
+      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L34"
+    },
+    "TC07": {
+      "status": "UNVERIFIED",
+      "mandatory": true,
+      "reason": "Actual DevTools envelope/key-removal inspection not completed",
+      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L65"
+    },
+    "TC17": {
+      "status": "UNVERIFIED",
+      "mandatory": true,
+      "reason": "Non-all reset and unrelated-key preservation not completed in DevTools/GUI",
+      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L69"
+    },
+    "TC19": {
+      "status": "PASS",
+      "mandatory": true,
+      "cycles": [
+        {
+          "cycle": 1,
+          "id": "REQ-MVMOUGD9-FIKZ",
+          "added": [
+            4,
+            2,
+            1,
+            1
+          ],
+          "deleted": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "actualCardCounts": [
+            4,
+            3
+          ]
+        },
+        {
+          "cycle": 2,
+          "id": "REQ-MVMOUJWO-RM5A",
+          "added": [
+            4,
+            2,
+            1,
+            1
+          ],
+          "deleted": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "actualCardCounts": [
+            4,
+            3
+          ]
+        },
+        {
+          "cycle": 3,
+          "id": "REQ-MVMOUNFN-QSFU",
+          "added": [
+            4,
+            2,
+            1,
+            1
+          ],
+          "deleted": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "actualCardCounts": [
+            4,
+            3
+          ]
+        }
+      ],
+      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L89"
+    },
+    "TC21": {
+      "status": "PASS",
+      "mandatory": true,
+      "result": {
+        "case": "TC21",
+        "status": "PASS",
+        "keyboardOnlyAfterInitialReload": true,
+        "keysUsed": [
+          "Tab",
+          "Shift+Tab",
+          "Enter",
+          "Space",
+          "ArrowDown (native select)",
+          "ArrowRight (native radio)",
+          "text typing"
+        ],
+        "createdId": "REQ-MVMOYXFO-8RM0",
+        "removedSyntheticRecord": true,
+        "finalSummary": "ทั้งหมด\n3\nรอดำเนินการ\n1\nกำลังดำเนินการ\n1\nเสร็จสิ้น\n1",
+        "focusChecks": 108,
+        "focusFailures": 0,
+        "uniqueFocusStops": [
+          "#/",
+          "#/requests/new",
+          "#/about",
+          "Reset Demo Data",
+          "ทั้งหมด",
+          "รอดำเนินการ",
+          "กำลังดำเนินการ",
+          "เสร็จสิ้น",
+          "#/requests/REQ-001",
+          "requesterName",
+          "requestType",
+          "location",
+          "details",
+          "normal",
+          "urgent",
+          "เพิ่มคำร้อง",
+          "ลบคำร้อง REQ-001",
+          "#/requests/REQ-002",
+          "ลบคำร้อง REQ-002",
+          "#/requests/REQ-003",
+          "ลบคำร้อง REQ-003",
+          "#/requests/REQ-MVMOYXFO-8RM0",
+          "ลบคำร้อง REQ-MVMOYXFO-8RM0"
+        ]
+      },
+      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L100"
+    }
+  },
+  "blocking": "Verification gate for PR38 only, not a newly demonstrated application defect",
+  "toolLimitation": {
+    "nativeInput": "point over PickerHost.exe instead of msedge.exe; failed to activate captured window after fresh-window recovery",
+    "securitySettingsChanged": false,
+    "rule": "Computer-use guidance forbids automating Windows security apps/permission requests",
+    "userInputRequested": "Please handle the pending Windows Security window manually; no further merge approval requested",
+    "latestObservation": "Windows lock screen captured instead of native Edge window; interactive desktop unavailable. User asked to unlock manually."
+  },
+  "note": "No existing screenshots were recaptured. New focus screenshots only document newly completed TC21."
+}

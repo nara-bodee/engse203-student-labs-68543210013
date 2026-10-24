@@ -1,13 +1,13 @@
 {
-    "week":  "week-11",
-    "title":  "Full-Stack Integration",
-    "status":  "submitted",
-    "sourceOrigin":  "course-starter",
-    "originalRepoUrl":  "",
-    "originalCommit":  "",
-    "pullRequestUrl":  "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/14",
-    "submissionTag":  "lab-11-submission-v2",
-    "testStatus":  "pass",
-    "evidenceUrl": "https://campus-service-68543210013.onrender.com/",
-    "notes":  "Live demo: https://campus-service-68543210013.onrender.com/"
+  "week": "week-11",
+  "title": "Full-Stack Integration",
+  "status": "submitted",
+  "sourceOrigin": "course-starter",
+  "originalRepoUrl": "",
+  "originalCommit": "",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/29",
+  "submissionTag": "lab-11-submission-v3",
+  "testStatus": "pass",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-11-submission-v3/labs/week-11/evidence",
+  "notes": "Revision: user confirmed CP42 videos; proxy-addr2.0.8/body-parser2.4.0 patched; required tests passed; Render production patch remains UNVERIFIED."
 }

@@ -1,6 +1,6 @@
 # Week 11 — Security Finding R2 (Read Only)
 
-> **สถานะล่าสุด 23 ตุลาคม 2026:** แพตช์ใน Draft PR #29 แก้ dependency ใน revision worktree แล้ว (`proxy-addr@2.0.8`), runtime audit 0 และ regression ผ่าน ดู [ผล remediation](SECURITY_REMEDIATION.md) ส่วนด้านล่างเป็นหลักฐาน R2 ก่อนแก้ ไม่ใช่สถานะ dependency ล่าสุด **การยืนยันแพตช์บน Render ยัง OPEN/UNVERIFIED** และวิดีโอบังคับยังไม่ได้รับการยืนยัน
+> **สถานะล่าสุด 24 ตุลาคม 2026:** ผู้ใช้ยืนยันวิดีโอ CP42 แล้ว; proxy-addr2.0.8คงเดิมและแพตช์ body-parser2.4.0 เพิ่ม ผลAPI11/11/runtimeaudit0 ดู [Final closeout](FINAL_CLOSEOUT.md) ส่วนด้านล่างและ[remediation23ตุลาคม](SECURITY_REMEDIATION.md)เป็นประวัติก่อนcloseout **การยืนยันแพตช์บน Render ยัง OPEN/UNVERIFIED**
 
 วันที่ 22 ตุลาคม 2026 · นรบดี บุญเลิศ 68543210013-7
 

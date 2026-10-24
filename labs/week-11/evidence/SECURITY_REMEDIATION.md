@@ -29,7 +29,9 @@ Raw output: [revision-verification.txt](revision-verification.txt), [production-
 
 Frontend locked install รายงาน **3 high vulnerabilities** เป็น known issue แยกจาก runtime finding นี้ ไม่ขยาย scope ไปแก้ dev tooling หรืออ้างว่า audit ทั้ง frontend ผ่าน ไม่ update dependencies/lockfile ของ frontend
 
-## วิดีโอ CP42 และขอบเขต cloud
+## วิดีโอ CP42 และขอบเขต cloud (ประวัติ23ตุลาคม)
+
+> **อัปเดต24ตุลาคม:** ผู้ใช้ยืนยันวิดีโอแล้วและมีpatch body-parserเพิ่มเติม ดู [FINAL_CLOSEOUT.md](FINAL_CLOSEOUT.md) ข้อความUNVERIFIEDด้านล่างเป็นผลก่อนคำยืนยันใหม่ ไม่ต้องขอให้ผู้ใช้ตรวจวิดีโอซ้ำ ส่วนRenderยังUNVERIFIED
 
 ตรวจ [DEMO.md](../source/DEMO.md) พบลิงก์ SharePoint วิดีโอ A และ B ครบสอง URL ไม่มีไฟล์วิดีโอ local ใน LAB11 การตรวจ HTTP แบบไม่ส่ง cookie/ไม่ login ได้ 302 ทั้งสองลิงก์ ซึ่งไม่พิสูจน์ว่าเล่นวิดีโอได้หรือผู้สอนมีสิทธิ์
 

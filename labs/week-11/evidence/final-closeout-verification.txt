@@ -1,0 +1,145 @@
+=== week11-api-final.log ===
+npm notice run engse203-week06-campus-api@2.0.0 test
+npm notice run node --disable-warning=ExperimentalWarning --test "tests/*.test.js"
+GET /api/requests 200 4.409 ms - 2492
+▶ GET /api/requests
+  ✔ คืน array พร้อม status 200 (51.5122ms)
+GET /api/requests 200 0.766 ms - 2492
+  ✔ คืน requesterName ไม่ใช่ requester_id (10.8781ms)
+GET /api/requests?status=x%27%20OR%20%271%27%3D%271 200 0.724 ms - 2
+  ✔ SQL injection ผ่าน status ไม่หลุด (15.2101ms)
+✔ GET /api/requests (79.8459ms)
+GET /api/requests 200 0.452 ms - 2492
+GET /api/requests/REQ-001 200 0.958 ms - 321
+▶ GET /api/requests/:id
+  ✔ id ที่มีจริงคืน 200 (19.4817ms)
+GET /api/requests/REQ-NOT-FOUND 404 0.650 ms - 71
+  ✔ id ที่ไม่มีคืน 404 (9.3709ms)
+✔ GET /api/requests/:id (29.4862ms)
+GET /api/requests 200 0.545 ms - 2492
+POST /api/requests 201 17.740 ms - 268
+DELETE /api/requests/REQ-009 204 1.093 ms - -
+▶ POST /api/requests
+  ✔ ข้อมูลถูกต้องสร้างคำร้องและคืน 201 (44.7861ms)
+POST /api/requests 400 0.930 ms - 406
+  ✔ ข้อมูลไม่ครบคืน 400 (11.1081ms)
+✔ POST /api/requests (56.8295ms)
+✔ GHSA-27r3-jxmh-p828: trailing compressed bytes cannot crash the API (933.4211ms)
+✔ GHSA-jqcg-44mw-7w3h: a short IPv6 prefix cannot trust an IPv4 client (7.9552ms)
+✔ the correct IPv4 and mapped IPv6 subnets still match the private network (2.2203ms)
+✔ the application keeps trust proxy disabled and ignores untrusted XFF (9.5677ms)
+ℹ tests 11
+ℹ suites 3
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1217.437
+
+=== week11-check-final.log ===
+GET /api/health 200 4.352 ms - 139
+GET /api/requests 200 1.484 ms - 2492
+GET /api/nope 404 0.411 ms - 62
+
+✅ CP35 มีชั้น API (api/src/app.js)
+✅ CP35 มีชั้น frontend (frontend/src)
+✅ CP35 มีชั้นฐานข้อมูล (api/data/schema.sql)
+✅ CP36 มี config.js รวม env ไว้ที่เดียว
+✅ CP36 config อ่าน NODE_ENV
+✅ CP36 config อ่าน PORT จาก env
+✅ CP36 config มี isProd แยก dev/production
+✅ CP36 app.js ใช้ config ไม่ hardcode
+✅ CP37 มี healthRoutes.js
+✅ CP37 app.js ผูก /api/health
+✅ CP37 health คืนสถานะฐานข้อมูล
+✅ CP37 service มี getDbStatus()
+✅ CP38 มี errorHandler รวมศูนย์
+✅ CP38 มี notFound handler
+✅ CP38 ใช้ morgan logging
+✅ CP38 logging แยก dev/production
+✅ CP39 app.js เสิร์ฟ static ตอน production
+✅ CP39 config มี staticDir
+✅ CP39 production: เปิด / แล้วได้หน้าเว็บ (ไม่ใช่ JSON)
+✅ CP39 bundle production ไม่ฝัง localhost:3001 (ใช้ path สัมพัทธ์)
+✅ CP39 frontend มี build script
+✅ CP39 frontend build แล้ว (มี dist/)
+✅ CP37 GET /api/health ตอบ 200 + status ok
+✅ CP37 health บอก env และ database
+✅ CP35 ระบบยังคืนข้อมูลได้ (integration ไม่พัง)
+✅ CP38 route ที่ไม่มี → 404 (notFound ทำงาน)
+✅ CP40 มี README.md
+✅ CP40 README อธิบายสถาปัตยกรรม 3 ชั้น
+✅ CP40 README มีวิธีรัน (npm)
+✅ CP41 มีบันทึกคำตอบ DATABASE_CHOICES.md
+✅ CP41 ตอบเรื่อง SQLite/NoSQL/async
+✅ CP42 มีหลักฐานสาธิต (DEMO.md หรือลิงก์วิดีโอ)
+✅ CP43 frontend build แล้ว (จำลอง production ได้)
+✅ CP43 app.js เสิร์ฟ static ตอน production (พอร์ตเดียว)
+✅ CP43 มี frontend/.env.production (VITE_API_BASE_URL ว่าง)
+✅ CP43 root package.json มี script build + start (build ใช้ --include=dev)
+✅ CP43 มีไฟล์เตรียม deploy จริง (render.yaml — สำหรับ Challenge)
+✅ CHAL ⭐ มี deploy config จริง (render.yaml/Procfile/Dockerfile)
+✅ CHAL ⭐ render.yaml ตามสเปกปัจจุบัน (runtime · rootDir · healthCheckPath · NODE_VERSION)
+✅ CHAL ⭐ health check บอก uptime
+✅ CHAL ⭐ มี CI (.github/workflows)
+
+──────────────────────────────────────────────────────────
+🏫 ในห้อง (CP35–CP39)   ผ่าน 17/17 รายการ
+🏠 ที่บ้าน (CP40–CP43)   ผ่าน 20/20 รายการ
+⭐ Challenge            ผ่าน 4/4 รายการ
+──────────────────────────────────────────────────────────
+ผ่าน 41/41 รายการ
+
+หมายเหตุ: checker ตรวจว่าระบบพร้อมใช้จริง แต่ตรวจไม่ได้ว่าเข้าใจ
+ผู้สอนจะสุ่มถามให้อธิบายว่า dev ต่างจาก production อย่างไร
+
+=== week11-build.log ===
+npm notice run engse203-week05-campus-service-request@0.3.0 build
+npm notice run vite build
+vite v8.1.5 building client environment for production...
+[2K
+transforming...✓ 41 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.51 kB │ gzip:  0.32 kB
+dist/assets/index-UUV2Pq6a.css    4.79 kB │ gzip:  1.72 kB
+dist/assets/index-X9Z11gPz.js   250.32 kB │ gzip: 79.16 kB
+
+✓ built in 483ms
+
+=== week11-production-final.log ===
+127.0.0.1 - - [24/Oct/2026:04:16:21 +0000] "GET / HTTP/1.1" 200 511 "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "GET /about HTTP/1.1" 200 511 "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "GET /api/health HTTP/1.1" 200 138 "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "GET /api/requests HTTP/1.1" 200 2492 "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "POST /api/requests HTTP/1.1" 201 203 "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "GET /api/requests/REQ-009 HTTP/1.1" 200 203 "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "PUT /api/requests/REQ-009 HTTP/1.1" 200 205 "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "DELETE /api/requests/REQ-009 HTTP/1.1" 204 - "-" "node"
+127.0.0.1 - - [24/Oct/2026:04:16:22 +0000] "GET /api/missing HTTP/1.1" 404 65 "-" "node"
+[{"name":"production HTML /","status":"PASS"},{"name":"production HTML /about","status":"PASS"},{"name":"health database connected","status":"PASS"},{"name":"POST persists and returns 201","status":"PASS"},{"name":"GET sees created request","status":"PASS"},{"name":"PUT status returns 200 and updated response","status":"PASS"},{"name":"DELETE returns 204","status":"PASS"},{"name":"unknown API returns JSON 404 without stack","status":"PASS"}]
+
+=== week11-runtime-audit-final.json ===
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {},
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 78,
+      "dev": 109,
+      "optional": 50,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 186
+    }
+  }
+}

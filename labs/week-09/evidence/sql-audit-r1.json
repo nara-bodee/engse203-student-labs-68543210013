@@ -1,0 +1,447 @@
+{
+  "columns": {
+    "users": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "name",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "department",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "email",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "requests": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "requester_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "request_type",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "location",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "details",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "priority",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "'normal'",
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "status",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "'pending'",
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "created_at",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "datetime('now', 'localtime')",
+        "pk": 0
+      }
+    ]
+  },
+  "schema": [
+    {
+      "name": "users",
+      "sql": "CREATE TABLE users (\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  name        TEXT NOT NULL,\n  department  TEXT NOT NULL,\n  email       TEXT NOT NULL UNIQUE\n)"
+    },
+    {
+      "name": "requests",
+      "sql": "CREATE TABLE requests (\n  id            TEXT PRIMARY KEY,\n  requester_id  INTEGER NOT NULL,\n\n  request_type  TEXT NOT NULL\n                CHECK (\n                  request_type IN (\n                    'แจ้งซ่อม',\n                    'บริการบัญชีผู้ใช้',\n                    'ขอใช้อุปกรณ์',\n                    'อื่น ๆ'\n                  )\n                ),\n\n  location      TEXT NOT NULL,\n  details       TEXT NOT NULL,\n\n  priority      TEXT NOT NULL DEFAULT 'normal'\n                CHECK (\n                  priority IN ('normal', 'urgent')\n                ),\n\n  status        TEXT NOT NULL DEFAULT 'pending'\n                CHECK (\n                  status IN ('pending', 'in-progress', 'completed')\n                ),\n\n  created_at    TEXT NOT NULL\n                DEFAULT (datetime('now', 'localtime')),\n\n  FOREIGN KEY (requester_id)\n    REFERENCES users(id)\n)"
+    }
+  ],
+  "foreignKeys": [
+    {
+      "id": 0,
+      "seq": 0,
+      "table": "users",
+      "from": "requester_id",
+      "to": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION",
+      "match": "NONE"
+    }
+  ],
+  "counts": {
+    "users": 4,
+    "requests": 8
+  },
+  "queries": [
+    {
+      "sql": "SELECT *\r\nFROM requests\r\nORDER BY id",
+      "rows": [
+        {
+          "id": "REQ-001",
+          "requester_id": 1,
+          "request_type": "แจ้งซ่อม",
+          "location": "ห้องปฏิบัติการ 301",
+          "details": "เครื่องปรับอากาศไม่ทำงานตั้งแต่เช้า",
+          "priority": "urgent",
+          "status": "pending",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-002",
+          "requester_id": 2,
+          "request_type": "บริการบัญชีผู้ใช้",
+          "location": "อาคารวิศวกรรม",
+          "details": "เข้าสู่ระบบห้องปฏิบัติการไม่ได้",
+          "priority": "normal",
+          "status": "in-progress",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-003",
+          "requester_id": 3,
+          "request_type": "ขอใช้อุปกรณ์",
+          "location": "ห้องประชุม 2",
+          "details": "ขอยืมโปรเจกเตอร์",
+          "priority": "normal",
+          "status": "completed",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-004",
+          "requester_id": 1,
+          "request_type": "แจ้งซ่อม",
+          "location": "ห้องปฏิบัติการ 302",
+          "details": "คอมพิวเตอร์เครื่องที่ 5 เปิดไม่ติด",
+          "priority": "urgent",
+          "status": "pending",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-005",
+          "requester_id": 4,
+          "request_type": "อื่น ๆ",
+          "location": "ห้องสมุด ชั้น 2",
+          "details": "ขอเพิ่มปลั๊กไฟบริเวณโต๊ะอ่านหนังสือ",
+          "priority": "normal",
+          "status": "pending",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-006",
+          "requester_id": 2,
+          "request_type": "แจ้งซ่อม",
+          "location": "ห้องปฏิบัติการ 401",
+          "details": "ไฟในห้องกะพริบตลอดเวลา",
+          "priority": "normal",
+          "status": "pending",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-007",
+          "requester_id": 3,
+          "request_type": "อื่น ๆ",
+          "location": "อาคารวิศวกรรม",
+          "details": "ขอเพิ่มจุดเชื่อมต่ออินเทอร์เน็ต",
+          "priority": "urgent",
+          "status": "in-progress",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-008",
+          "requester_id": 4,
+          "request_type": "ขอใช้อุปกรณ์",
+          "location": "ห้องสมุด ชั้น 1",
+          "details": "ขอยืมอุปกรณ์สำหรับนำเสนอ",
+          "priority": "normal",
+          "status": "completed",
+          "created_at": "2026-09-24 17:11:07"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT id, location, details, status\r\nFROM requests\r\nWHERE status = 'pending'\r\nORDER BY id",
+      "rows": [
+        {
+          "id": "REQ-001",
+          "location": "ห้องปฏิบัติการ 301",
+          "details": "เครื่องปรับอากาศไม่ทำงานตั้งแต่เช้า",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-004",
+          "location": "ห้องปฏิบัติการ 302",
+          "details": "คอมพิวเตอร์เครื่องที่ 5 เปิดไม่ติด",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-005",
+          "location": "ห้องสมุด ชั้น 2",
+          "details": "ขอเพิ่มปลั๊กไฟบริเวณโต๊ะอ่านหนังสือ",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-006",
+          "location": "ห้องปฏิบัติการ 401",
+          "details": "ไฟในห้องกะพริบตลอดเวลา",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT id, location, priority, status\r\nFROM requests\r\nWHERE priority = 'urgent'\r\n  AND status <> 'completed'\r\nORDER BY id",
+      "rows": [
+        {
+          "id": "REQ-001",
+          "location": "ห้องปฏิบัติการ 301",
+          "priority": "urgent",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-004",
+          "location": "ห้องปฏิบัติการ 302",
+          "priority": "urgent",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-007",
+          "location": "อาคารวิศวกรรม",
+          "priority": "urgent",
+          "status": "in-progress"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT id, details\r\nFROM requests\r\nWHERE details LIKE '%ไฟ%'\r\nORDER BY id",
+      "rows": [
+        {
+          "id": "REQ-005",
+          "details": "ขอเพิ่มปลั๊กไฟบริเวณโต๊ะอ่านหนังสือ"
+        },
+        {
+          "id": "REQ-006",
+          "details": "ไฟในห้องกะพริบตลอดเวลา"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT\r\n  r.id,\r\n  u.name AS requesterName,\r\n  r.request_type,\r\n  r.location,\r\n  r.status\r\nFROM requests r\r\nJOIN users u\r\n  ON u.id = r.requester_id\r\nORDER BY r.id",
+      "rows": [
+        {
+          "id": "REQ-001",
+          "requesterName": "สมชาย ใจดี",
+          "request_type": "แจ้งซ่อม",
+          "location": "ห้องปฏิบัติการ 301",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-002",
+          "requesterName": "สุภาวดี รักเรียน",
+          "request_type": "บริการบัญชีผู้ใช้",
+          "location": "อาคารวิศวกรรม",
+          "status": "in-progress"
+        },
+        {
+          "id": "REQ-003",
+          "requesterName": "ธนกฤต ตั้งใจ",
+          "request_type": "ขอใช้อุปกรณ์",
+          "location": "ห้องประชุม 2",
+          "status": "completed"
+        },
+        {
+          "id": "REQ-004",
+          "requesterName": "สมชาย ใจดี",
+          "request_type": "แจ้งซ่อม",
+          "location": "ห้องปฏิบัติการ 302",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-005",
+          "requesterName": "ปรียา ขยันยิ่ง",
+          "request_type": "อื่น ๆ",
+          "location": "ห้องสมุด ชั้น 2",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-006",
+          "requesterName": "สุภาวดี รักเรียน",
+          "request_type": "แจ้งซ่อม",
+          "location": "ห้องปฏิบัติการ 401",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-007",
+          "requesterName": "ธนกฤต ตั้งใจ",
+          "request_type": "อื่น ๆ",
+          "location": "อาคารวิศวกรรม",
+          "status": "in-progress"
+        },
+        {
+          "id": "REQ-008",
+          "requesterName": "ปรียา ขยันยิ่ง",
+          "request_type": "ขอใช้อุปกรณ์",
+          "location": "ห้องสมุด ชั้น 1",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT\r\n  r.id,\r\n  u.name AS requesterName,\r\n  u.department,\r\n  r.details,\r\n  r.status\r\nFROM requests r\r\nJOIN users u\r\n  ON u.id = r.requester_id\r\nWHERE u.department = 'วิศวกรรมซอฟต์แวร์'\r\nORDER BY r.id",
+      "rows": [
+        {
+          "id": "REQ-001",
+          "requesterName": "สมชาย ใจดี",
+          "department": "วิศวกรรมซอฟต์แวร์",
+          "details": "เครื่องปรับอากาศไม่ทำงานตั้งแต่เช้า",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-002",
+          "requesterName": "สุภาวดี รักเรียน",
+          "department": "วิศวกรรมซอฟต์แวร์",
+          "details": "เข้าสู่ระบบห้องปฏิบัติการไม่ได้",
+          "status": "in-progress"
+        },
+        {
+          "id": "REQ-004",
+          "requesterName": "สมชาย ใจดี",
+          "department": "วิศวกรรมซอฟต์แวร์",
+          "details": "คอมพิวเตอร์เครื่องที่ 5 เปิดไม่ติด",
+          "status": "pending"
+        },
+        {
+          "id": "REQ-006",
+          "requesterName": "สุภาวดี รักเรียน",
+          "department": "วิศวกรรมซอฟต์แวร์",
+          "details": "ไฟในห้องกะพริบตลอดเวลา",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT DISTINCT\r\n  u.name AS requesterName\r\nFROM requests r\r\nJOIN users u\r\n  ON u.id = r.requester_id\r\nORDER BY requesterName",
+      "rows": [
+        {
+          "requesterName": "ธนกฤต ตั้งใจ"
+        },
+        {
+          "requesterName": "ปรียา ขยันยิ่ง"
+        },
+        {
+          "requesterName": "สมชาย ใจดี"
+        },
+        {
+          "requesterName": "สุภาวดี รักเรียน"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT\r\n  id,\r\n  location,\r\n  status,\r\n  created_at\r\nFROM requests\r\nORDER BY created_at DESC, id DESC\r\nLIMIT 3",
+      "rows": [
+        {
+          "id": "REQ-008",
+          "location": "ห้องสมุด ชั้น 1",
+          "status": "completed",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-007",
+          "location": "อาคารวิศวกรรม",
+          "status": "in-progress",
+          "created_at": "2026-09-24 17:11:07"
+        },
+        {
+          "id": "REQ-006",
+          "location": "ห้องปฏิบัติการ 401",
+          "status": "pending",
+          "created_at": "2026-09-24 17:11:07"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "sql": "INSERT INTO requests (id,requester_id,request_type,location,details) VALUES ('R1-FK',99999,'แจ้งซ่อม','ห้องทดสอบ','ทดสอบ Foreign Key')",
+      "error": "FOREIGN KEY constraint failed",
+      "rejected": true
+    },
+    {
+      "sql": "INSERT INTO requests (id,requester_id,request_type,location,details,status) VALUES ('R1-STATUS',1,'แจ้งซ่อม','ห้องทดสอบ','ทดสอบ CHECK','ยกเลิก')",
+      "error": "CHECK constraint failed: status IN ('pending', 'in-progress', 'completed')",
+      "rejected": true
+    },
+    {
+      "sql": "INSERT INTO users (name,department,email) SELECT 'R1','ทดสอบ',email FROM users WHERE id=1",
+      "error": "UNIQUE constraint failed: users.email",
+      "rejected": true
+    },
+    {
+      "sql": "INSERT INTO requests (id,requester_id,request_type,location,details) SELECT id,requester_id,request_type,location,details FROM requests ORDER BY id LIMIT 1",
+      "error": "UNIQUE constraint failed: requests.id",
+      "rejected": true
+    },
+    {
+      "sql": "INSERT INTO requests (id,requester_id,request_type,details) VALUES ('R1-NULL',1,'แจ้งซ่อม','ทดสอบ NOT NULL')",
+      "error": "NOT NULL constraint failed: requests.location",
+      "rejected": true
+    }
+  ],
+  "schemaTwice": {
+    "users": 4,
+    "requests": 8
+  }
+}

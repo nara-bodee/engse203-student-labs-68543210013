@@ -66,10 +66,10 @@ Malformed Hash Tests ถูกเพิ่มก่อนแก้ Implementatio
 
 ## Submission Status
 
-- สร้าง [PR #20: Week 13: Authentication & Security (CP48–CP52)](https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/20) แล้ว และยังรอ Review/Merge
-- Metadata ใช้ `submitted` พร้อม PR URL จริง; `lab-13-submission-v1` เป็นชื่อ Tag ที่วางแผนไว้หลัง Merge และได้รับอนุมัติเท่านั้น ยังไม่ได้สร้าง Tag
-- GitHub Pages ยังต้องตรวจหลัง Deploy รวมการเปิดใน Incognito และตรวจ Console/404
-- ไม่ได้สร้าง Screenshot หรืออ้างว่ามี Screenshot เพิ่ม
+- [PR #20: Week 13: Authentication & Security (CP48–CP52)](https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/20) **Merged แล้ว** เมื่อ 22 ตุลาคม 2026; Merge Commit `03d6447053db4bd185ec640688da1e6b1707f9be`
+- Tag `lab-13-submission-v1` **สร้างและมีบน Remote แล้ว** ชี้ Merge Commit ข้างต้น ตรวจซ้ำใน R2 โดยไม่เปลี่ยน tag หรือ metadata
+- GitHub Pages **Deployed แล้ว**: [workflow run 39787449218](https://github.com/nara-bodee/engse203-student-labs-68543210013/actions/runs/39787449218) สำเร็จสำหรับ commit นี้ และ [LAB13 Evidence Report](https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-13/) ตอบ HTTP 200 ใน R2
+- การตรวจใน Incognito ครบทุกกรณียังไม่ได้ยืนยันใน R2; ไม่ได้สร้าง Screenshot เพิ่มของ Week 13
 
 ผลข้างต้นเป็นผล Tests/Checkers ของ Source ไม่ได้หมายความว่า Root Repository Verification ผ่านทั้งหมด
 
@@ -88,3 +88,16 @@ npm run verify:lab -- week-13
 - ERROR จาก LAB เก่า 14 รายการ; Week 13 อีก 3 รายการ คือ `api/node_modules`, `frontend/node_modules` และ `frontend/.env.production`
 - สาเหตุ: Root Verifier สแกนไฟล์บนดิสก์ทุก LAB โดยไม่แยก Git-tracked/ignored files; `.env.production` ของ Frontend ใน Week 11 และ Week 13 เป็นไฟล์ที่ Git ติดตามอยู่
 - ไม่ได้แก้ Root Verifier หรือลบ Environment Files, Dependencies หรือฐานข้อมูลเพื่อให้ผลตรวจผ่าน
+
+## R2 Reverification — 22 ตุลาคม 2026
+
+ส่วนนี้เป็นผลรันใหม่ใน R2 ไม่แทนที่ผล Phase 3D/4A ด้านบน:
+
+- API Tests 82/82, Frontend 3/3, Week13 In-Class 23/23, Week12 Regression 20/20 ผ่านจากคำสั่งทดสอบข้างต้น
+- Config probes แบบแยก process 8/8: production ไม่มี/ว่าง/ช่องว่างถูกปฏิเสธ; production ตั้งค่าทดสอบผ่าน; development/test/default ที่ไม่มีตัวแปรผ่าน; production ค่าทดสอบมีช่องว่างรอบค่าที่ไม่ว่างผ่าน ค่าใน probes ใช้เพื่อทดสอบเท่านั้น ไม่ใช้ secret จริงและไม่แสดง secret
+- ตรวจ PR/Pages จาก GitHub และ tag refs จาก Git; source/tests/metadata ของ Week 13 คงเดิม
+- Root Verifier รอบ R2: `npm run verify` = 14 PASS, 0 WARN, 22 ERROR และ `verify:lab -- week-13` = 3 PASS, 1 WARN, 22 ERROR; exit 1 ทั้งคู่ เพิ่มจาก R1 อีก 1 error เพราะไฟล์ Starter `week-12/source/frontend/.env.production` ที่คืนใน R2 ถูกสแกนชื่อไฟล์ด้วย เป็น known filename policy ไม่มี structural/metadata defect เพิ่ม ไม่ใช้ผล tests กล่าวว่าระบบ verifier ผ่าน
+
+## References & AI Assistance
+
+ดู [Source README](../source/README.md#references--ai-assistance) สำหรับ disclosure และ [Instructor LAB13](https://github.com/se-rmutl/engse203-lab/tree/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-13-quality-security) ใช้ Codex ช่วยทดสอบ แก้ข้อบกพร่องตามขอบเขต Phase 3C และเตรียมเอกสารตามประวัติการทำงาน ใน R2 แก้เฉพาะเอกสารนี้กับ README ไม่แก้ source/tests หรือสร้าง submission ใหม่

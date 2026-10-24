@@ -1,0 +1,76 @@
+===== week12-db-reset.log =====
+npm notice run engse203-campus-api@3.1.0 db:reset
+npm notice run node --disable-warning=ExperimentalWarning scripts/setup-db.mjs --force
+
+  ฐานข้อมูล : D:\SEYear2\ENGSE203\engse203-student-labs-68543210013\labs\week-12\source\api\data\campus.db
+  schema    : D:\SEYear2\ENGSE203\engse203-student-labs-68543210013\labs\week-12\source\api\data\schema.sql
+
+  • ลบฐานข้อมูลเดิมแล้ว (--force)
+  ✓ สร้างฐานข้อมูลสำเร็จ
+
+    requests       5 แถว
+    users          4 แถว
+
+  ✓ Foreign Key: requests.requester_id → users.id
+
+
+===== week12-api.log =====
+npm notice run engse203-campus-api@3.1.0 test
+npm notice run vitest run
+
+ RUN  v5.0.3 D:/SEYear2/ENGSE203/engse203-student-labs-68543210013/labs/week-12/source/api
+
+
+ Test Files  2 passed (2)
+      Tests  29 passed (29)
+   Start at  23:51:43
+   Duration  1.06s (import 55%, tests 22%, transform 20%, worker 2%)
+
+
+===== week12-frontend.log =====
+npm notice run engse203-week05-campus-service-request@0.3.0 test
+npm notice run vitest run
+
+ RUN  v5.0.3 D:/SEYear2/ENGSE203/engse203-student-labs-68543210013/labs/week-12/source/frontend
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  23:51:46
+   Duration  347ms (transform 53%, import 25%, worker 13%, tests 8%, environment 1%)
+
+
+===== week12-checker.log =====
+POST /api/auth/login 404 18.843 ms - 69
+DELETE /api/requests/REQ-002 204 0.950 ms - -
+POST /api/requests 201 1.264 ms - 260
+POST /api/auth/login 404 0.510 ms - 69
+PUT /api/requests/REQ-999 404 0.820 ms - 65
+GET /api/health 200 0.598 ms - 139
+
+✅ CP44 api ใช้ Vitest (script test = vitest)
+✅ CP44 test ใช้ฐานข้อมูลแยก (DB_FILE :memory: ใน vitest.config.js)
+✅ CP44 TEST_CASES.md มีกรณีทดสอบอย่างน้อย 8 ข้อ
+✅ CP44 มีกรณีค่าขอบ (boundary) ในตาราง
+✅ CP45 มี unit test อย่างน้อย 10 ข้อ (tests/unit)
+✅ CP45 BUG #0 · รายละเอียด 10 ตัวอักษรพอดี → ผ่าน
+✅ CP45 รายละเอียด 9 ตัวอักษร → ยังถูกปฏิเสธ (ไม่แก้เกิน)
+✅ CP46 มี integration test อย่างน้อย 12 ข้อ (tests/integration)
+✅ CP46 integration test ครอบคลุม PUT และ DELETE
+✅ CP46 ตั้งค่า coverage แล้ว (script coverage + @vitest/coverage-v8)
+✅ CP46 npm test ใน api ผ่านทุกข้อ
+✅ CP47 BUG #1 · ลบรายการกลางแล้วเพิ่มใหม่ → 201
+✅ CP47 BUG #3 · เปลี่ยนสถานะคำร้องที่ไม่มี → 404 (ไม่ใช่ 500)
+✅ CP47 ไม่ถอยหลัง · /api/health ยังตอบ 200 และต่อฐานข้อมูลได้
+✅ CP47 BUG #2 · Dashboard นับ "กำลังดำเนินการ" ถูก
+✅ CP47 frontend มี test และผ่านทุกข้อ
+✅ CP47 regression test BUG #1 (ลบแล้วเพิ่มใหม่)
+✅ CP47 regression test BUG #2 (นับ in-progress)
+✅ CP47 regression test BUG #3 (PUT คำร้องที่ไม่มี → 404)
+✅ CP47 DEBUG_LOG.md ระบุสาเหตุครบ 4 bug
+
+──────────────────────────────────────────────────────────
+🏫 ในห้อง (CP44–CP47)   ผ่าน 20/20 รายการ
+
+หมายเหตุ: checker ตรวจได้ว่า bug หายและมี test กัน แต่ตรวจไม่ได้ว่าเข้าใจสาเหตุ
+ผู้สอนจะถามให้เล่าว่าใช้เครื่องมือไหนหาเจอ และทำไมแก้ตรงนั้น

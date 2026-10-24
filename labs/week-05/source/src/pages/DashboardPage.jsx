@@ -26,6 +26,7 @@ function DashboardPage() {
   const [notice, setNotice] = useState("");
 
   useEffect(() => {
+    let ignore = false;
     setLoadState("loading");
     setErrorMessage("");
     setNotice("");
@@ -33,14 +34,17 @@ function DashboardPage() {
     getRequests({
       scenario,
       onRecovery: (message) => {
+        if (ignore) return;
         setNotice(message);
       },
     })
       .then((data) => {
+        if (ignore) return;
         setRequests(data);
         setLoadState("success");
       })
       .catch((error) => {
+        if (ignore) return;
         setErrorMessage(
           error instanceof Error
             ? error.message
@@ -49,7 +53,8 @@ function DashboardPage() {
         setLoadState("error");
       });
 
-    // TODO 5B: เพิ่ม cleanup guard เพื่อกัน stale update
+    // LAB05B: a previous load must not write state after navigation or reload.
+    return () => { ignore = true; };
   }, [scenario, reloadKey]);
 
   const summary = useMemo(

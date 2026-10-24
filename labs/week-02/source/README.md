@@ -133,6 +133,17 @@ VITE v8.x.x ready
 
 # References & AI Assistance
 
+## Submission URLs และ Screenshot Evidence (ตรวจ R1)
+
+- [Student Repository](https://github.com/nara-bodee/engse203-student-labs-68543210013)
+- [Pages LAB02](https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-02/)
+- [Merged PR #2](https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/2), tag เดิม `lab-02-submission-v1`
+- [Normal](../evidence/dashboard-success-desktop-1280.png), [Error](../evidence/dashboard-error-state.png), [Filter done](../evidence/dashboard-filter-done.png), [Mobile 375px](../evidence/dashboard-mobile-375.png)
+
+วันที่ 22 ตุลาคม 2026 รัน `npm ci`, `npm run check`, `npm run build` สำเร็จ ตรวจ Pages โหลดข้อมูล 6 รายการ (todo=4, doing=1, done=1), filter Done เหลือ 1 รายการ และ `?simulateError=1` แสดงข้อความผิดพลาดตามที่กำหนด ภาพเป็น evidence เดิม ข้อความ macOS ด้านบนอธิบายงานเดิม ส่วนรอบ R1 ใช้ Windows/PowerShell
+
+Codex ช่วย audit, รัน check/build, ตรวจ Browser และเติมลิงก์ที่ README ยังขาดใน R1 ไม่แก้ implementation
+
 ### Source / Documentation
 
 - https://vite.dev/

@@ -5,12 +5,12 @@
   "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab03-68543210013-7",
   "originalCommit": "427bcb40b95ca51773479c4cf0dff5a62e232657",
-  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/3",
-  "submissionTag": "lab-03-submission-v1",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/23",
+  "submissionTag": "lab-03-submission-v2",
   "testStatus": "pass",
-  "notes": "Imported LAB03 source, adjusted Vite config for unified Pages, passed syntax check, built with Vite, imported publish output, captured desktop/mobile/valid/invalid evidence screenshots, merged PR, and created submission tag.",
+  "notes": "Revision: actual browser Zoom 200% evidence verified; check/build passed; PR #23.",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-03/",
-  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-03/labs/week-03/source",
+  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-03-submission-v2/labs/week-03/source",
   "hasPublish": true,
   "sourceEntries": 7
 }

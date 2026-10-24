@@ -1,12 +1,13 @@
 {
-    "week":  "week-09",
-    "title":  "SQL Fundamentals",
-    "status":  "submitted",
-    "sourceOrigin":  "course-starter",
-    "originalRepoUrl":  "",
-    "originalCommit":  "",
-    "pullRequestUrl":  "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/12",
-    "submissionTag":  "lab-09-submission-v1",
-    "testStatus":  "pass",
-    "notes":  "Weekly LAB submission evidence."
+  "week": "week-09",
+  "title": "SQL Fundamentals",
+  "status": "submitted",
+  "sourceOrigin": "course-starter",
+  "originalRepoUrl": "",
+  "originalCommit": "",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/27",
+  "submissionTag": "lab-09-submission-v2",
+  "testStatus": "pass",
+  "notes": "Weekly LAB submission evidence. Revision: Week 09 revision: Complete the SQL data model explanation and verification evidence.",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-09-submission-v2/labs/week-09/evidence"
 }

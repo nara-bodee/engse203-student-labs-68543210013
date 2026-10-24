@@ -1,0 +1,38 @@
+{
+  "database": ":memory:",
+  "boundHost": "127.0.0.1",
+  "checks": [
+    {
+      "name": "production HTML /",
+      "status": "PASS"
+    },
+    {
+      "name": "production HTML /about",
+      "status": "PASS"
+    },
+    {
+      "name": "health database connected",
+      "status": "PASS"
+    },
+    {
+      "name": "POST persists and returns 201",
+      "status": "PASS"
+    },
+    {
+      "name": "GET sees created request",
+      "status": "PASS"
+    },
+    {
+      "name": "PUT status returns 200 and updated response",
+      "status": "PASS"
+    },
+    {
+      "name": "DELETE returns 204",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown API returns JSON 404 without stack",
+      "status": "PASS"
+    }
+  ]
+}

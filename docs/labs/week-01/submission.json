@@ -5,12 +5,13 @@
   "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "https://github.com/nara-bodee/engse203-lab01-68543210013-7",
   "originalCommit": "6ff8cd3783d6ab4fa2b1ffedd523ec18bc02a5eb",
-  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/1",
-  "submissionTag": "lab-01-submission-v1",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/21",
+  "submissionTag": "lab-01-submission-v2",
   "testStatus": "pass",
-  "notes": "Imported LAB01 source, verified hello.js locally with Node v24.14.0, merged PR, and created submission tag.",
+  "notes": "Revision: start/check screenshots supplied by the student, reviewed and byte-preserved; CLI checks passed. Historical WSL2 setup remains UNVERIFIED.",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-01-submission-v2/labs/week-01/evidence",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-01/",
-  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab/week-01/labs/week-01/source",
+  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-01-submission-v2/labs/week-01/source",
   "hasPublish": false,
-  "sourceEntries": 3
+  "sourceEntries": 4
 }

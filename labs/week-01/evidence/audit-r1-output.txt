@@ -1,0 +1,10 @@
+v24.19.0
+12.2.0
+git version 2.54.0.windows.1
+npm notice run engse203-lab01@1.0.0 start
+npm notice run node src/hello.js
+Hello นรบดี บุญเลิศ (68543210013-7) | OS: win32 | Node: v24.19.0
+npm notice run engse203-lab01@1.0.0 check
+npm notice run node scripts/check-lab01.mjs
+LAB 01 file structure check: PASS
+start exit=0; check exit=0

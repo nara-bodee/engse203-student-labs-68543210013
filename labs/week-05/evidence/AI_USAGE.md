@@ -19,3 +19,7 @@ The table and checked learner statements above are historical, not a new attesta
 Codex added minimal ignore guards and a17-case callback harness:14 failures before,17/17 PASS after; unchanged checker133/133 and build PASS on Node22.23.4. CUA browser checks used real isolated source/synthetic local data. PNGs are format conversions of actual JPEG captures with provenance; no simulated screenshot. Original report/image bytes are preserved in legacy-pre-audit.
 
 The callback harness is not React DOM E2E. Full keyboard navigation and InPrivate remain UNVERIFIED; pages-incognito.png is MISSING. The peer checklist was not rerun with its named tester. See current TEST_REPORT for partial results/manual steps. The assistant makes no new learner-understanding attestation.
+
+## Screenshot followup — 2026-10-24
+
+Codex retried native GUI automation at the user's explicit request. Real Microsoft Edge InPrivate opened successfully; dashboard/new/detail/about/unknown hash URLs refreshed correctly, and the native capture includes URL/InPrivate chrome. images/pages-incognito.png and SCREENSHOT_FOLLOWUP.json now close the screenshot gap. Current case counts:18 PASS/5 WARNING/1 UNVERIFIED. Earlier missing-image statements above describe the initial attempt; full keyboard and partial-case limitations still apply. PNG encoding preserves decoded capture pixels without compositing, cropping or generation.

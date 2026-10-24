@@ -2,13 +2,11 @@
   "date": "2026-10-24",
   "sourceBase": "91807ef3752608b8846188409e3a76f502fe249c",
   "branch": "fix/week-05-v2",
-  "tool": "Codex CUA in-app browser, normal context",
+  "tool": "Codex CUA in-app browser, normal context; followup native Microsoft Edge InPrivate",
   "server": "localhost:5595, isolated modified Week05 source",
   "setup": "External QA middleware writes only the LAB05 key on this disposable local origin; seed HTTP delay 1500ms exposes the real loading state. No app source fixture was committed.",
   "encoding": "Actual browser JPEG capture decoded and encoded as PNG with Pillow; no crop, composition, annotation, image generation or content change. Raw JPEGs retained in remediation output.",
-  "missing": [
-    "images/pages-incognito.png"
-  ],
+  "missing": [],
   "captures": [
     {
       "path": "images/dashboard-initial.png",
@@ -408,6 +406,22 @@
         "time": "2026-10-24T09:01:50.513Z",
         "url": "http://localhost:5595/",
         "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/"
+      }
+    },
+    {
+      "path": "images/pages-incognito.png",
+      "rawJPEG": "pages-incognito.raw.jpg",
+      "rawSHA256": "caf047ab18870e2e6c2af247bcc339224a45780f6b1bb0eb882783f947444697",
+      "pngSHA256": "a76b2fcf34aa138720cfc8d930535d306c9c46718c495d9f7f2eba21522d1d8d",
+      "dimensions": [
+        960,
+        1032
+      ],
+      "observation": {
+        "time": "2026-10-24T10:01:52.489Z",
+        "url": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-05/#/",
+        "nativeEdgeInPrivate": true,
+        "details": "SCREENSHOT_FOLLOWUP.json"
       }
     }
   ],

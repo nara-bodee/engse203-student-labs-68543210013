@@ -1,5 +1,11 @@
 # Week 01 Evidence
 
+## อัปเดต24ตุลาคม2026 — ภาพผลการรันได้รับแล้ว
+
+ผู้ใช้เพิ่มภาพ `npm run start.png` และ `npm run check.png` ตรวจแล้วเห็นHelloชื่อ/รหัส/Nodev24.19.0และผลcheckPASS คัดลอกbytesเดิมเป็น [terminal-run.png](terminal-run.png) และ [terminal-check.png](terminal-check.png) ไม่แก้เนื้อหาภาพ ช่องว่างscreenshotผลstart/checkปิดแล้ว ดู [ผลตรวจหลักฐาน](TERMINAL_EVIDENCE_REVIEW.md)
+
+ข้อความMISSINGในR1–R3ด้านล่างเป็นประวัติก่อนรับภาพ ส่วนหลักฐานWSL2ในอดีตยังUNVERIFIED ภาพใหม่แสดงOSwin32และไม่ใช้ยืนยันWSL2
+
 Evidence files:
 
 - `run-output.txt` - verified output from running `hello.js` with Node v24.14.0.

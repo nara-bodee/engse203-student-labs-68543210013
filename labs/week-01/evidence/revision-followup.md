@@ -1,5 +1,7 @@
 # Week01 revision follow-up — 23 ตุลาคม 2026
 
+> อัปเดต24ตุลาคม: ได้รับภาพผู้ใช้แล้ว ดู [TERMINAL_EVIDENCE_REVIEW.md](TERMINAL_EVIDENCE_REVIEW.md) ข้อความMISSINGด้านล่างเป็นประวัติก่อนภาพใหม่
+
 รันทดสอบใน worktree ของ Draft PR #21 (`fix/week-01-v2`) โดยไม่ใช้ working tree หลัก
 
 | คำสั่ง | ผลจริง |

@@ -1,0 +1,265 @@
+=== week07-required.log ===
+GET /api/requests 200 7.836 ms - 1030
+GET /api/requests 200 0.547 ms - 1030
+PUT /api/requests/REQ-001 200 26.518 ms - 325
+PUT /api/requests/REQ-001 400 0.763 ms - 95
+
+✅ STRUCT มีไฟล์ api/src/app.js
+✅ STRUCT มีไฟล์ api/src/config.js
+✅ STRUCT มีไฟล์ api/.env.example
+✅ STRUCT มีไฟล์ frontend/src/services/apiClient.js
+✅ STRUCT มีไฟล์ frontend/src/services/requestService.js
+✅ CP10 config.js อ่าน PORT จาก environment
+✅ CP10 config.js อ่าน CORS_ORIGIN จาก environment
+✅ CP10 config.js แปลง port เป็นตัวเลข
+✅ CP10 app.js เรียกใช้ cors()
+✅ CP10 cors ใช้ค่าจาก config ไม่ใช่ค่าฝังในโค้ด
+✅ CP10 server.js ใช้ config.port แทนเลขฝังในโค้ด
+✅ CP10 ตอบ Access-Control-Allow-Origin ให้ frontend
+✅ CP10 รองรับ preflight OPTIONS
+✅ CP11 GET /api/requests ยังทำงาน
+✅ CP13 PUT /api/requests/:id เปลี่ยนสถานะได้
+✅ CP13 PUT status ไม่ถูกต้อง → 400
+✅ CP14 ใช้ morgan เป็น logger
+✅ CP11 apiClient อ่าน VITE_API_BASE_URL
+✅ CP11 apiClient เรียก fetch()
+✅ CP11 apiClient จัดการกรณีต่อเซิร์ฟเวอร์ไม่ได้ (try/catch รอบ fetch)
+✅ CP11 apiClient โยน ApiError เมื่อ response ไม่ ok
+✅ CP11 apiClient คืน null เมื่อได้ 204
+✅ CP11 getRequests เรียก API ไม่ใช่ localStorage
+✅ CP11 addRequest ส่ง method POST
+✅ CP11 deleteRequest ส่ง method DELETE
+✅ CP11 getRequestById คืน null เมื่อ 404 (ไม่โยน error)
+✅ CP12 Dashboard มีสถานะ loading
+✅ CP12 Dashboard จัดการกรณีโหลดไม่สำเร็จ
+✅ CP13 frontend มี updateRequestStatus ที่ใช้ PUT
+✅ CP15 มีไฟล์ API_CONTRACT.md
+✅ CP15 API contract ครอบคลุมครบ 5 endpoint
+✅ CP16 เขียน test อย่างน้อย 6 เคส
+✅ CP16 test ยิง request จริงด้วย supertest
+[TODO] CHAL ⭐ มี AppError สำหรับกำหนด status เอง
+[TODO] CHAL ⭐ มี asyncHandler ห่อ handler ที่เป็น async
+✅ CHAL ⭐ ไม่ส่ง stack trace ตอน production
+
+──────────────────────────────────────────────────────────
+🏫 ในห้อง (CP09–CP12)   ผ่าน 25/25 รายการ
+🏠 ที่บ้าน (CP13–CP16)   ผ่าน 8/8 รายการ
+⭐ Challenge            ผ่าน 1/3 รายการ
+──────────────────────────────────────────────────────────
+ผ่าน 34/36 รายการ
+
+หมายเหตุ: checker ตรวจ CORS จาก header ได้ แต่ตรวจพฤติกรรมจริงในเบราว์เซอร์ไม่ได้
+ต้องเปิดแอปคู่กับ API แล้วดูด้วยตาว่า Dashboard โหลดข้อมูลขึ้นจริง
+
+=== week07-api.log ===
+npm notice run engse203-week06-campus-api@2.0.0 test
+npm notice run node --test "tests/*.test.js"
+GET /api/requests 200 6.369 ms - 1030
+▶ GET /api/requests
+  ✔ คืนรายการทั้งหมด พร้อม status 200 (88.1229ms)
+✔ GET /api/requests (101.6189ms)
+GET /api/requests/REQ-001 200 1.542 ms - 321
+▶ GET /api/requests/:id
+  ✔ พบคำร้อง → คืน status 200 (19.3198ms)
+GET /api/requests/REQ-999 404 0.507 ms - 65
+  ✔ ไม่พบคำร้อง → คืน status 404 (16.9656ms)
+✔ GET /api/requests/:id (37.2204ms)
+POST /api/requests 201 25.774 ms - 331
+▶ POST /api/requests
+  ✔ ข้อมูลถูกต้อง → คืน status 201 และ status เป็น pending (39.5225ms)
+POST /api/requests 400 1.502 ms - 355
+  ✔ ข้อมูลไม่ครบ → คืน status 400 (12.1355ms)
+✔ POST /api/requests (52.8376ms)
+GET /api/requests 200 0.516 ms - 1362
+▶ CORS
+  ✔ ตอบ origin ที่อนุญาต (11.036ms)
+✔ CORS (11.9718ms)
+ℹ tests 6
+ℹ suites 4
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 835.3332
+
+=== week07-cp13.log ===
+npm notice run engse203-week05-campus-service-request@0.3.0 test:cp13
+npm notice run node --disable-warning=ExperimentalWarning --experimental-vm-modules --test tests/request-detail.test.mjs
+✔ CP13 loads the requested detail before exposing status actions (32.0002ms)
+✔ CP13 In Progress sends the correct ID/status and renders the API response (7.1941ms)
+✔ CP13 Completed sends the correct ID/status and updates the detail (5.9684ms)
+✔ CP13 the current status is disabled and does not send an update (5.5972ms)
+✔ CP13 updating disables every action and prevents another dispatched request (6.0182ms)
+✔ CP13 API failure shows the message and retains the previous status (5.2346ms)
+✔ CP13 a non-Error rejection uses the fallback and releases updating (3.5991ms)
+✔ CP13 retry clears the old error and uses the returned status, not a guessed value (7.4339ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1044.9855
+
+=== week07-build.log ===
+npm notice run engse203-week05-campus-service-request@0.3.0 build
+npm notice run vite build
+vite v8.1.5 building client environment for production...
+[2K
+transforming...✓ 41 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.51 kB │ gzip:  0.32 kB
+dist/assets/index-UUV2Pq6a.css    4.79 kB │ gzip:  1.72 kB
+dist/assets/index-BwbHdwzX.js   251.12 kB │ gzip: 79.35 kB
+
+✓ built in 509ms
+
+=== week07-legacy.log ===
+npm notice run engse203-week05-campus-service-request@0.3.0 check
+npm notice run node scripts/check-project.mjs
+[PASS] FILES public/data/initialRequests.json
+[PASS] FILES src/main.jsx
+[PASS] FILES src/App.jsx
+[PASS] FILES src/styles.css
+[PASS] FILES src/pages/AppLayout.jsx
+[PASS] FILES src/pages/DashboardPage.jsx
+[PASS] FILES src/pages/NewRequestPage.jsx
+[PASS] FILES src/pages/RequestDetailPage.jsx
+[PASS] FILES src/pages/AboutPage.jsx
+[PASS] FILES src/pages/NotFoundPage.jsx
+[PASS] FILES src/services/requestService.js
+[PASS] FILES src/services/requestStorage.js
+[PASS] FILES src/components/LoadingState.jsx
+[PASS] FILES src/components/ErrorState.jsx
+[PASS] FILES src/components/RequestForm.jsx
+[PASS] FILES src/components/RequestList.jsx
+[PASS] FILES vite.config.js
+[PASS] FILES package.json
+[PASS] FILES package-lock.json
+[PASS] FILES README.md
+[PASS] DEPS react-router-dom ต้องเป็น 7.18.2
+[PASS] DEPS Node.js engine >=22.12.0
+[PASS] SCRIPTS npm run check
+[PASS] BUILD Vite base: './'
+[PASS] R02 main.jsx ครอบ application ด้วย <HashRouter>
+[PASS] R02-R05 Route requests/new
+[PASS] R02-R05 Route requests/:requestId
+[PASS] R02-R05 Route about
+[PASS] R02-R05 Route *
+[PASS] R02 Dashboard index route
+[PASS] R02 AppLayout render <Outlet /> จริง (ไม่ใช่แค่คอมเมนต์)
+[PASS] R04 RequestDetailPage เรียก useParams()
+[PASS] R11 NewRequestPage เรียก useNavigate()
+[PASS] R07 Service export getRequests
+[PASS] R07 Service export getRequestById
+[PASS] R07 Service export addRequest
+[PASS] R07 Service export deleteRequest
+[PASS] R07 Service export resetRequests
+[TODO] R10 Service ตรวจ response.ok หลัง fetch
+[PASS] R10 ใช้ import.meta.env?.BASE_URL แบบ optional chaining เพื่อให้ทดสอบนอก Vite ได้
+[PASS] R14 STORAGE_KEY ถูกต้อง
+[PASS] R14 SCHEMA_VERSION = 1
+[PASS] R14 Storage export readStoredRequests
+[PASS] R14 Storage export writeStoredRequests
+[PASS] R14 Storage export clearStoredRequests
+[PASS] R14 ห้ามใช้ localStorage.clear() — ลบเฉพาะ STORAGE_KEY ของ LAB05
+[PASS] R07 src\App.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\App.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\AppHeader.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\AppHeader.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\ErrorState.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\ErrorState.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\FilterBar.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\FilterBar.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\LoadingState.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\LoadingState.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\RequestCard.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\RequestCard.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\RequestForm.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\RequestForm.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\RequestList.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\RequestList.jsx: ไม่มี direct fetch
+[PASS] R07 src\components\SummaryPanel.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\components\SummaryPanel.jsx: ไม่มี direct fetch
+[PASS] R07 src\hooks\useManualReload.js: ไม่มี direct localStorage access
+[PASS] R07 src\hooks\useManualReload.js: ไม่มี direct fetch
+[PASS] R07 src\main.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\main.jsx: ไม่มี direct fetch
+[PASS] R07 src\pages\AboutPage.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\pages\AboutPage.jsx: ไม่มี direct fetch
+[PASS] R07 src\pages\AppLayout.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\pages\AppLayout.jsx: ไม่มี direct fetch
+[PASS] R07 src\pages\DashboardPage.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\pages\DashboardPage.jsx: ไม่มี direct fetch
+[PASS] R07 src\pages\NewRequestPage.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\pages\NewRequestPage.jsx: ไม่มี direct fetch
+[PASS] R07 src\pages\NotFoundPage.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\pages\NotFoundPage.jsx: ไม่มี direct fetch
+[PASS] R07 src\pages\RequestDetailPage.jsx: ไม่มี direct localStorage access
+[PASS] R07 src\pages\RequestDetailPage.jsx: ไม่มี direct fetch
+[PASS] R07 src\services\apiClient.js: ไม่มี direct localStorage access
+[TODO] R07 src\services\apiClient.js: ไม่มี direct fetch
+[PASS] R07 src\services\requestService.js: ไม่มี direct localStorage access
+[PASS] R07 src\services\requestStorage.js: ไม่มี direct fetch
+[PASS] TODO src\App.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\AppHeader.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\ErrorState.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\FilterBar.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\LoadingState.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\RequestCard.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\RequestForm.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\RequestList.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\components\SummaryPanel.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\hooks\useManualReload.js: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\main.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\pages\AboutPage.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\pages\AppLayout.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\pages\DashboardPage.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\pages\NewRequestPage.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\pages\NotFoundPage.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\pages\RequestDetailPage.jsx: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\services\apiClient.js: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\services\requestService.js: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] TODO src\services\requestStorage.js: ไม่มี TODO ที่ยังไม่ได้ทำ
+[PASS] HOOKS app-layout
+[PASS] HOOKS page-dashboard
+[PASS] HOOKS page-new-request
+[PASS] HOOKS page-request-detail
+[PASS] HOOKS page-about
+[PASS] HOOKS page-not-found
+[PASS] HOOKS loading-state
+[PASS] HOOKS error-state
+[PASS] HOOKS empty-state
+[PASS] HOOKS request-list
+[PASS] HOOKS request-form
+[PASS] HOOKS retry-button
+[PASS] HOOKS reset-button
+[PASS] DATA seed JSON อ่านได้และมี REQ IDs อย่างน้อย 3 รายการ
+[TODO] RUNTIME import Service/Storage ได้ — Cannot read properties of undefined (reading 'VITE_API_BASE_URL')
+[TODO] R10 getRequests() คืนรายการคำร้องเมื่อโหลดสำเร็จ — ยัง import โมดูลไม่ได้
+[TODO] R09 getRequests({scenario:'empty'}) คืน array ว่าง — ยัง import โมดูลไม่ได้
+[TODO] R09 getRequests({scenario:'error'}) ต้อง reject — ยัง import โมดูลไม่ได้
+[TODO] R04 getRequestById() คืนคำร้องที่ ID ตรงกัน — ยัง import โมดูลไม่ได้
+[TODO] R04 getRequestById() คืน null เมื่อไม่พบ resource — ยัง import โมดูลไม่ได้
+[TODO] R14 readStoredRequests() คืน status "missing" เมื่อยังไม่มีข้อมูล — ยัง import โมดูลไม่ได้
+[TODO] R14 writeStoredRequests() แล้วอ่านกลับได้ status "valid" — ยัง import โมดูลไม่ได้
+[TODO] R14 readStoredRequests() คืน status "invalid" เมื่อ JSON เสีย — ยัง import โมดูลไม่ได้
+[TODO] R14 readStoredRequests() คืน status "invalid" เมื่อ schemaVersion ไม่ตรง — ยัง import โมดูลไม่ได้
+[TODO] R14 readStoredRequests() คืน status "invalid" เมื่อมี ID ซ้ำ — ยัง import โมดูลไม่ได้
+[TODO] R07 getRequests() อ่านจาก storage เมื่อมีข้อมูลที่ถูกต้องอยู่แล้ว — ยัง import โมดูลไม่ได้
+[TODO] R14 ข้อมูลเสียหายต้องกู้คืนได้และแจ้ง recovery — ยัง import โมดูลไม่ได้
+[TODO] R11 addRequest() สร้างคำร้องใหม่ status pending และ ID ขึ้นต้น REQ- — ยัง import โมดูลไม่ได้
+[TODO] R11 addRequest() ปฏิเสธข้อมูลที่ไม่ครบด้วยข้อความที่ผู้ใช้เข้าใจได้ — ยัง import โมดูลไม่ได้
+[TODO] R12 deleteRequest() ลบถูก ID และ persist — ยัง import โมดูลไม่ได้
+[TODO] R13 resetRequests() คืนข้อมูลตัวอย่างเริ่มต้น — ยัง import โมดูลไม่ได้
+[TODO] R14 clearStoredRequests() ลบเฉพาะคีย์ของ LAB05 — ยัง import โมดูลไม่ได้
+
+ENGSE203 LAB05 checker v2 — ขอบเขต: ทั้งหมด
+ผ่าน 116/136 รายการ
+หมายเหตุ: checker ตรวจ contract เท่านั้น ต้องทำ TC-L5 runtime/manual ใน browser ต่อ
+
+ทำ TODO ตาม Checkpoint Guide แล้วรัน npm run check อีกครั้ง
+ถ้ากำลังอยู่ในคาบ 5A ให้ใช้: npm run check -- --session=1

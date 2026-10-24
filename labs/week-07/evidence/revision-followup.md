@@ -2,6 +2,8 @@
 
 23 ตุลาคม 2026 · worktree `fix/week-07-v2` · Draft PR #26
 
+> อัปเดต24ตุลาคม: ผู้ใช้เพิ่มภาพTerminalและNetworkแล้ว ตรวจครบตาม [SCREENSHOT_EVIDENCE_REVIEW.md](SCREENSHOT_EVIDENCE_REVIEW.md) ข้อความMISSINGด้านล่างเป็นประวัติก่อนภาพใหม่
+
 ## ผลทดสอบที่รันใหม่จริง
 
 | คำสั่ง | ผล |

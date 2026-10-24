@@ -1,0 +1,100 @@
+{
+  "dateUTC": "2026-10-24T16:01:01.014414+00:00",
+  "app": "Cursor IDE (VS Code-compatible), actual installed SQLite extension",
+  "extension": "alexcvzz.vscode-sqlite@0.14.1",
+  "encoding": "Native CUA JPEG decoded and saved as lossless PNG only. No resizing/cropping/compositing/annotation/generation; decoded RGB pixels compared equal.",
+  "sourceSQLChanged": false,
+  "schemaExecuted": false,
+  "databaseWritesPerformed": false,
+  "databaseSHA256Before": "993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3",
+  "databaseSHA256After": "993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3",
+  "schemaTables": {
+    "users": [
+      "id INTEGER PRIMARY KEY",
+      "name TEXT NOT NULL",
+      "department TEXT NOT NULL",
+      "email TEXT NOT NULL"
+    ],
+    "requests": [
+      "id TEXT PRIMARY KEY",
+      "requester_id INTEGER NOT NULL",
+      "request_type TEXT NOT NULL",
+      "location TEXT NOT NULL",
+      "details TEXT NOT NULL",
+      "priority TEXT NOT NULL",
+      "status TEXT NOT NULL",
+      "created_at TEXT NOT NULL"
+    ]
+  },
+  "joinSelectedLines": "34-43 of submitted queries.sql (166 selected characters)",
+  "joinResultRows": 8,
+  "joinColumns": [
+    "id",
+    "requesterName",
+    "request_type",
+    "location",
+    "status"
+  ],
+  "captures": {
+    "schema-in-vscode": {
+      "time": "2026-10-24T10:12:18.375Z",
+      "tool": "CUA native App.getScreenshot",
+      "app": "Cursor IDE",
+      "windowId": 2294404,
+      "extension": "alexcvzz.vscode-sqlite@0.14.1",
+      "database": "D:/SEYear2/ENGSE203/post-audit-worktrees/week-09-v3/labs/week-09/source/campus.db",
+      "sourceFile": "labs/week-09/source/schema.sql",
+      "action": "SQLite Open Database, expand requests and users with real columns; schema.sql viewed only, never executed",
+      "rawSHA256": "37393cf3d3eb7f28e25cc36c60f376e654214c619a17f069738bfd2fca277cd4",
+      "image": {
+        "raw": "schema-in-vscode.raw.jpg",
+        "png": "schema-in-vscode.png",
+        "dimensions": [
+          1920,
+          1032
+        ],
+        "rawSHA256": "37393cf3d3eb7f28e25cc36c60f376e654214c619a17f069738bfd2fca277cd4",
+        "pngSHA256": "97552427b13db19bb04bd5c4c73698bf769bb4af78eee5b3753a7011e1818cae",
+        "decodedPixelsIdentical": true
+      },
+      "databaseSHA256Before": "993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3",
+      "databaseSHA256After": "993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3"
+    },
+    "join-result": {
+      "time": "2026-10-24T10:14:51.187Z",
+      "tool": "CUA native App.getScreenshot",
+      "app": "Cursor IDE",
+      "windowId": 2294404,
+      "extension": "alexcvzz.vscode-sqlite@0.14.1",
+      "database": "D:/SEYear2/ENGSE203/post-audit-worktrees/week-09-v3/labs/week-09/source/campus.db",
+      "file": "labs/week-09/source/queries.sql",
+      "selectedLines": "34-43",
+      "command": "SQLite: Run Selected Query",
+      "rows": 8,
+      "columns": [
+        "id",
+        "requesterName",
+        "request_type",
+        "location",
+        "status"
+      ],
+      "rawSHA256": "a7ddd6c256d2ac4e1ecca8c8d6bd938a9db6c7cb8559a8ee36cb74a9ffffe164",
+      "selectionStateFile": "join-selection-state.txt",
+      "writesPerformed": false,
+      "image": {
+        "raw": "join-result.raw.jpg",
+        "png": "join-result.png",
+        "dimensions": [
+          1920,
+          1032
+        ],
+        "rawSHA256": "a7ddd6c256d2ac4e1ecca8c8d6bd938a9db6c7cb8559a8ee36cb74a9ffffe164",
+        "pngSHA256": "34dddc1b651d6d78f3c0d254edd82daa4040f9f083e86acdb3d8453d67333cb2",
+        "decodedPixelsIdentical": true
+      },
+      "databaseSHA256Before": "993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3",
+      "databaseSHA256After": "993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3"
+    }
+  },
+  "note": "Raw native snapshots remain in local followup output. Only focused evidence/provenance is committed; unrelated application/account metadata is omitted."
+}

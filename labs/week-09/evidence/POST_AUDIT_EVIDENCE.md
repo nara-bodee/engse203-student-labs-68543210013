@@ -28,24 +28,32 @@ Actual output: [post-audit-sql-results.json](post-audit-sql-results.json).
 
 No submitted schema/query/database or instructor checker was changed. Constraint attempts use SAVEPOINT/ROLLBACK on a memory database, never the submitted file.
 
-## Screenshot status — MISSING / UNVERIFIED
+## Screenshot status — PASS (native GUI followup, 2026-10-24)
 
-| File | Current status | Required content |
+| File | Current status | Actual captured content |
 |---|---|---|
-| images/schema-in-vscode.png | **MISSING** | SQLite extension showing users and requests in the submitted DB |
-| images/join-result.png | **MISSING** | Actual JOIN results with requesterName |
+| [images/schema-in-vscode.png](images/schema-in-vscode.png) | **PASS** | Real Cursor IDE + installed SQLite extension, actual submitted campus.db opened, requests/users expanded with all columns; original schema.sql viewed alongside, not executed |
+| [images/join-result.png](images/join-result.png) | **PASS** | Actual query5 SELECT/JOIN from submitted queries.sql lines34–43, executed with SQLite: Run Selected Query; expanded executed SQL and real result grid show requesterName plus REQ-001…REQ-008,8 rows |
 
-Cursor with the SQLite extension was detected, but native capture returned an image inconsistent with the selected window and an input guard stopped interaction. No such capture is used as SQL evidence. No simulated screenshot, renamed unrelated image, or HTML imitation of an editor was created. Text execution results above do **not** replace the mandatory screenshots.
+The initial native attempt was blocked by inconsistent window capture. A fresh permitted CUA attempt succeeded after selecting the real IDE separately from Cursor Agents, using actual screenshots/keyboard navigation and the installed SQLite extension. These are native captures, not generated editor imitations. No manual screenshot remains required.
 
-## User steps to finish the two screenshots
+The raw tool screenshots are JPEG. They were converted to PNG without resizing, cropping, annotations, composition or generated content; decoded RGB pixels were compared equal. [GUI_SCREENSHOT_PROVENANCE.json](GUI_SCREENSHOT_PROVENANCE.json) records timestamps, extension, DB path, selected lines, original-JPEG/PNG hashes and dimensions. The submitted DB SHA256 before/after is identical: `993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3`. No schema.sql execution or DB writes occurred.
 
-1. Open this revision worktree in VS Code (or the course-approved editor) and open the submitted `labs/week-09/source/campus.db` using the SQLite extension. Do not run schema.sql against the submitted DB.
-2. Expand both users and requests in SQLite Explorer and capture the editor window as `labs/week-09/evidence/images/schema-in-vscode.png`.
-3. Open queries.sql, select query5 (JOIN users to requests, aliased requesterName), run only that SELECT using the SQLite extension, and capture the actual result grid as `images/join-result.png`.
-4. Ensure both images are readable and contain no unrelated personal data. Recheck the files and update this status from actual observation; retain the test date truthfully.
+## GUI reproduction
 
-This draft is reviewable SQL evidence preparation; screenshot completion remains blocked. It does not claim the LAB09 evidence finding is fully closed and creates no new submission tag.
+1. Open this revision worktree in Cursor and run SQLite: Open Database; choose labs/week-09/source/campus.db.
+2. Expand SQLite Explorer → campus.db → requests and users. View the unchanged schema.sql without executing it.
+3. Open the unchanged queries.sql; select only lines34–43 (query5,166 characters), then SQLite: Run Selected Query; choose the same LAB09 DB.
+4. Expand the result view SQL header; verify the actual JOIN, requesterName and8 result rows. This is how the committed captures were obtained.
+
+The two mandatory screenshot gaps are now closed. This evidence does not create a new learner attestation or authorize merge/tag.
 
 ## References & AI Assistance
 
-Codex checked the pinned submission requirements, added the read-only/memory verification script, and recorded actual output. The learner still needs to capture the editor screenshots and explain JOIN and the five constraints from the submitted SQL.
+Codex checked the pinned submission requirements, added the read-only/memory verification script, recorded actual output, and captured both mandatory screenshots through the real editor and SQLite extension. The learner still needs to explain JOIN and the five constraints from the submitted SQL; no manual screenshot remains required.
+
+## Captured evidence
+
+![Actual Cursor SQLite Explorer with both tables](images/schema-in-vscode.png)
+
+![Actual selected JOIN and eight-row result grid](images/join-result.png)

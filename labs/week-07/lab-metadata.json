@@ -1,12 +1,13 @@
 {
-    "week":  "week-07",
-    "title":  "REST API and Validation",
-    "status":  "submitted",
-    "sourceOrigin":  "course-starter",
-    "originalRepoUrl":  "",
-    "originalCommit":  "",
-    "pullRequestUrl":  "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/11",
-    "submissionTag":  "lab-07-submission-v1",
-    "testStatus":  "pass",
-    "notes":  "Weekly LAB submission evidence."
+  "week": "week-07",
+  "title": "REST API and Validation",
+  "status": "submitted",
+  "sourceOrigin": "course-starter",
+  "originalRepoUrl": "",
+  "originalCommit": "",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/26",
+  "submissionTag": "lab-07-submission-v2",
+  "testStatus": "pass",
+  "notes": "Revision: CP13 status handler repaired, exact49duplicatepaths removed; student Terminal/PUT200/Payload/Response/UI screenshots reviewed. Required33/33, API6/6, CP13regression8/8/build passed; legacy116/136 and dependency findings retained.",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-07-submission-v2/labs/week-07/evidence"
 }

@@ -1,0 +1,10 @@
+GET /api/requests 200 6.784 ms - 1030
+GET /api/requests 304 2.025 ms - -
+GET /api/requests/REQ-001 200 1.474 ms - 321
+GET /api/requests/REQ-001 304 0.563 ms - -
+PUT /api/requests/REQ-001 200 31.571 ms - 325
+GET /api/requests/REQ-001 200 0.541 ms - 325
+PUT /api/requests/REQ-001 200 1.067 ms - 323
+GET /api/requests/REQ-001 200 0.787 ms - 323
+GET /api/requests/REQ-001 304 0.538 ms - -
+GET /api/requests/REQ-001 200 0.386 ms - 323

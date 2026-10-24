@@ -1,0 +1,71 @@
+{
+  "kind": "actual Node HTTP fetch; NOT browser Network or UI evidence",
+  "observations": [
+    {
+      "method": "PUT",
+      "url": "http://localhost:5317/api/requests/REQ-001",
+      "requestBody": {
+        "status": "in-progress"
+      },
+      "httpStatus": 200,
+      "responseBody": {
+        "id": "REQ-001",
+        "requesterName": "สมชาย ใจดี",
+        "requestType": "แจ้งซ่อม",
+        "location": "ห้องปฏิบัติการ 301",
+        "details": "เครื่องปรับอากาศไม่ทำงานตั้งแต่เช้า",
+        "priority": "urgent",
+        "status": "in-progress"
+      },
+      "subsequentGetStatus": 200,
+      "subsequentGetBody": {
+        "id": "REQ-001",
+        "requesterName": "สมชาย ใจดี",
+        "requestType": "แจ้งซ่อม",
+        "location": "ห้องปฏิบัติการ 301",
+        "details": "เครื่องปรับอากาศไม่ทำงานตั้งแต่เช้า",
+        "priority": "urgent",
+        "status": "in-progress"
+      }
+    },
+    {
+      "method": "PUT",
+      "url": "http://localhost:5317/api/requests/REQ-001",
+      "requestBody": {
+        "status": "completed"
+      },
+      "httpStatus": 200,
+      "responseBody": {
+        "id": "REQ-001",
+        "requesterName": "สมชาย ใจดี",
+        "requestType": "แจ้งซ่อม",
+        "location": "ห้องปฏิบัติการ 301",
+        "details": "เครื่องปรับอากาศไม่ทำงานตั้งแต่เช้า",
+        "priority": "urgent",
+        "status": "completed"
+      },
+      "subsequentGetStatus": 200,
+      "subsequentGetBody": {
+        "id": "REQ-001",
+        "requesterName": "สมชาย ใจดี",
+        "requestType": "แจ้งซ่อม",
+        "location": "ห้องปฏิบัติการ 301",
+        "details": "เครื่องปรับอากาศไม่ทำงานตั้งแต่เช้า",
+        "priority": "urgent",
+        "status": "completed"
+      }
+    },
+    {
+      "method": "PUT",
+      "url": "http://localhost:5317/api/requests/REQ-001",
+      "requestBody": {
+        "status": "invalid-status"
+      },
+      "httpStatus": 400,
+      "responseBody": {
+        "error": "สถานะต้องเป็น pending, in-progress หรือ completed"
+      },
+      "retainedStatus": "completed"
+    }
+  ]
+}

@@ -32,27 +32,28 @@ function RequestDetailPage() {
         );
         setLoadState("error");
       });
-    async function handleChangeStatus(nextStatus) {
-      if (!request) return;
-
-      setUpdating(true);
-      setErrorMessage("");
-
-      try {
-        const updated = await updateRequestStatus(request.id, nextStatus);
-        setRequest(updated);
-      } catch (error) {
-        setErrorMessage(
-          error instanceof Error ? error.message : "เปลี่ยนสถานะไม่สำเร็จ",
-        );
-      } finally {
-        setUpdating(false);
-      }
-    }
     return () => {
       ignore = true;
     };
   }, [requestId, reloadKey]);
+
+  async function handleChangeStatus(nextStatus) {
+    if (!request) return;
+
+    setUpdating(true);
+    setErrorMessage("");
+
+    try {
+      const updated = await updateRequestStatus(request.id, nextStatus);
+      setRequest(updated);
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error ? error.message : "เปลี่ยนสถานะไม่สำเร็จ",
+      );
+    } finally {
+      setUpdating(false);
+    }
+  }
 
   return (
     <section data-testid="page-request-detail">

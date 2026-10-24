@@ -1,0 +1,14 @@
+{
+  "deletedA": 49,
+  "sourceBCounterparts": 49,
+  "approvedFilesHashMatched": 10,
+  "recoverableFrom": "03d6447053db4bd185ec640688da1e6b1707f9be",
+  "legacy": {
+    "pass": 116,
+    "total": 136,
+    "exitCode": 1,
+    "failuresSameAsR5B": true,
+    "lab05Specific": 11,
+    "week07Relevant": 9
+  }
+}

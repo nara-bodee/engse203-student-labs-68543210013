@@ -5,9 +5,9 @@
   "sourceOrigin": "course-starter",
   "originalRepoUrl": "",
   "originalCommit": "",
-  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/31",
-  "submissionTag": "lab-13-submission-v2",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/36",
+  "submissionTag": "lab-13-submission-v3",
   "testStatus": "pass",
-  "notes": "CP48-CP52 PASS 23/23. API 82/82 tests, Frontend 3/3 tests, Week 12 regression 20/20. Hardened password verification and production JWT configuration. Revision: Week 13 revision: Correct authentication lab setup and submission evidence.",
-  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-13-submission-v2/labs/week-13/evidence"
+  "notes": "Post-audit security revision: malformed gzip regression failed before the lock update and passes after it. Required 23/23, API 83/83, frontend 3/3 and build PASS. Exact lock versions: Express 5.2.1, body-parser 2.4.0, proxy-addr 2.0.8, qs 6.16.1.",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-13-submission-v3/labs/week-13/evidence"
 }

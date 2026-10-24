@@ -25,3 +25,9 @@ node --disable-warning=ExperimentalWarning labs/week-09/source/check-week09.mjs
 
 SQL Checker ผ่านทุก Checkpoint ที่บังคับ
 Challenge 3 รายการยังไม่ได้ทำ
+
+## Post-audit — 24 ตุลาคม 2026
+
+The results above are historical checker evidence, not proof that all submission evidence is complete. See [POST_AUDIT_EVIDENCE.md](POST_AUDIT_EVIDENCE.md) and [fresh SQL output](post-audit-sql-results.json).
+
+Fresh required checker27/27, queries8/8 and constraints5/5 passed. The two mandatory SQLite/JOIN screenshots are still **MISSING / UNVERIFIED**; the guide permits text for constraint evidence but does not state that text replaces those screenshots.

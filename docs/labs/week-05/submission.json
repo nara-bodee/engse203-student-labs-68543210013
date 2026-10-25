@@ -5,12 +5,13 @@
   "sourceOrigin": "course-starter",
   "originalRepoUrl": "https://github.com/se-rmutl/engse203-lab/tree/main/labs/week-05-react-mini-app/lab05/starter",
   "originalCommit": "7eb464480659fb5139801a36f7af059babf2eb7f",
-  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/9",
-  "submissionTag": "lab-05-submission-v1",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/38",
+  "submissionTag": "lab-05-submission-v2",
   "testStatus": "pass",
-  "notes": "Completed LAB05A read path and LAB05B write path. npm run check passed 133/133, npm run build passed, publish output imported, PR #9 merged, and submission tag lab-05-submission-v1 updated.",
+  "notes": "Post-audit cleanup guards verified in Dashboard and RequestDetail. Required133/133, cleanup regression17/17 and production build PASS. TC02/07/19/21 passed real GUI checks; TC17 PASS — User Manual Verification on2026-10-25, distinct from automation. All24 numbered cases including PR/tag delivery now PASS; required screenshots10/10. Original InPrivate image remains historical pre-PR38 evidence; post-merge deployment verification is recorded separately.",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-05-submission-v2/labs/week-05/evidence",
   "pageUrl": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-05/",
-  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-05-submission-v1/labs/week-05/source",
+  "sourceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-05-submission-v2/labs/week-05/source",
   "hasPublish": true,
   "sourceEntries": 11
 }

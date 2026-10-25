@@ -45,9 +45,9 @@ PASS means the stated result was observed. WARNING means only part of the origin
 | TC-L5-21 full keyboard-only journey | PASS | Keyboard-only navigation, filters, detail/back, complete form and synthetic deletion; Tab/Shift+Tab/Enter/Space plus native select/radio arrows and typing.108 interactive focus observations all visible with3px orange outline | KEYBOARD_CLOSEOUT_TRACE.json; images/keyboard-nav.jpg and keyboard-form.jpg |
 | TC-L5-22 build/preview/refresh | PASS | Node22 production build served at localhost5598/week-05-fixed; new/dashboard/found+missing detail/about/unknown hash routes refreshed without server404 | Command ledger and Pages browser observations |
 | TC-L5-23 Pages InPrivate | PASS | Followup: genuine Edge InPrivate, seed3/summary3-1-1-1; refreshed dashboard/new/REQ001/about/unknown hash URLs, app rendered correctly including app NotFound. Screenshot includes full URL and actual InPrivate indicator. Public main predates Draft PR38 guard patch | `images/pages-incognito.png`, `SCREENSHOT_FOLLOWUP.json` |
-| TC-L5-24 PR/tag delivery | WARNING | Runtime/manual verification complete. PR38 merge and actual submission tag are pending delivery operations; historical PR9/tagv1 remain preserved | Branch fix/week-05-v2 |
+| TC-L5-24 PR/tag delivery | PASS | PR38 merged at d7c9e209f6e78039b84c99f5a244d022151c4078; remote lab-05-submission-v2 resolves exactly to that merge commit. Historical tags preserved | SUBMISSION_CLOSEOUT.json |
 
-Summary of **24 numbered cases: 23 PASS, 1 WARNING, 0 UNVERIFIED, 0 FAIL**. All runtime/manual mandatory cases are verified; only actual PR/tag delivery remains pending. Required screenshots: **10/10 present**.
+Summary of **24 numbered cases: 24 PASS, 0 WARNING, 0 UNVERIFIED, 0 FAIL**. TC17 is User Manual Verification; the other recorded cases retain their actual provenance. Required screenshots: **10/10 present**. Post-merge Pages checks are recorded separately.
 
 ## Screenshot review and provenance
 
@@ -97,3 +97,7 @@ TC02 and TC07 are now PASS from existing native observations, reviewed against t
 The user explicitly reported PASS for seed3/summary3-1-1-1, all filter, preservation of engse203-closeout-unrelated=KEEP-20261025, and the same correct state after F5. This is **PASS — User Manual Verification**, not Computer Use Automation. [Original user attestation record](TC17_USER_MANUAL_VERIFICATION.json). No new screenshot was taken and Codex did not repeat TC17. Historical native traces and earlier UNVERIFIED descriptions remain as dated history; the current results table supersedes them. Prior URL-confidence rejection was a tool limitation, not an application failure.
 
 Final scoped rerun: cleanup17/17, unchanged instructor checker133/133 and production build PASS on Node22.23.4. Fresh JS/CSS bytes match committed publish output; HTML matches after carriage-return normalization. See FINAL_AUTOMATED_CHECKS.json.
+
+## Actual submission delivery — 2026-10-25
+
+GitHub confirmed PR38 merged at `d7c9e209f6e78039b84c99f5a244d022151c4078`. Remote `lab-05-submission-v2` points exactly to that commit. TC24 is now PASS; computed case counts are {"PASS":24,"WARNING":0,"UNVERIFIED":0,"FAIL":0}. This supersedes the earlier pending-delivery warning without rewriting historical traces. TC17 remains explicitly User Manual Verification. [Delivery and all five tag targets](SUBMISSION_CLOSEOUT.json).

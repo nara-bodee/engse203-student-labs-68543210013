@@ -1,159 +1,99 @@
-﻿# ENGSE203 LAB 05 — รายงานผลการทดสอบ
+# ENGSE203 LAB05 — Post-audit test report
 
-**ชื่อ–รหัส:** นรบดี บุญเลิศ  68543210013-7
-**Branch:** `lab/week-05` · **Commit:** bf7fccd
-**ระบบปฏิบัติการ:** Windows · **เบราว์เซอร์:** Microsoft Edge
-**Node version (`node -v`):** v22.23.1
-**วันที่ทดสอบ:** 28/02/2026
+Test date: **2026-10-24, Asia/Bangkok**. Branch: `fix/week-05-v2`, based on audited main `91807ef3752608b8846188409e3a76f502fe249c`.
+Initial tester: Codex automation, Windows. TC17 was later verified manually by the user on2026-10-25; that attestation is separate from automation. Initial checks used CUA in-app browser **normal context**; the screenshot followup used a genuine **Microsoft Edge InPrivate** native window. Those automation captures are not a peer attestation; the later TC17 user attestation is recorded separately.
+Node **22.23.4**, npm **12.2.0**, Vite **8.1.5**. Initial regression also ran on Node **24.19.0**.
 
----
+The previous report and its 11 original image files are preserved byte-for-byte under [legacy-pre-audit](legacy-pre-audit/README.md). Its old PASS labels, dates, browser and commit do not describe this run. Historical `REGRESSION_CHECKLIST.md` was not rerun with its named peer or Safari browser.
 
-## วิธีกรอก — อ่านก่อนเริ่ม
+## Automated verification
 
-| ช่อง | กรอกอะไร |
-|---|---|
-| **ผลจริง** | สิ่งที่<strong>เห็นจริง</strong>บนหน้าจอ ไม่ใช่สิ่งที่ควรเห็น |
-| **สถานะ** | `PASS` · `FAIL` · `NOT RUN` |
-| **หลักฐาน** | ชื่อไฟล์ภาพหรือหมายเหตุเพิ่มเติม |
+| Command in `labs/week-05/source` | Before guard | After guard |
+|---|---|---|
+| `npm run test:cleanup` | **FAIL: 3 passed, 14 failed / 17** | **PASS: 17/17**, Node22 and Node24 |
+| `npm run check` (unchanged instructor checker) | Historical133/133 did not detect missing guards | **PASS: 133/133** |
+| `npm run build` | Baseline fresh build PASS | **PASS**, Node22 and Node24 |
 
-> **ถ้าทดสอบแล้วไม่ผ่าน ให้เขียน `FAIL` พร้อมสิ่งที่เห็นจริง** อย่าเขียนว่าผ่านทั้งที่ยังไม่ได้ทดสอบ
->
-> รายงานที่เขียนย้อนหลังจะเป็น `PASS` ทั้งหมดเสมอ ซึ่งไม่มีคุณค่าอะไรเลย · ในการทำงานจริง รายงานแบบนี้คือสิ่งที่ทำให้คนอื่นเชื่อได้ว่างานของคุณผ่านการตรวจสอบมาแล้ว
->
-> **กรอกทีละ checkpoint** อย่ากองไว้ทำทีเดียวตอนท้าย เพราะพอถึงตอนนั้นคุณจะจำไม่ได้แล้วว่าเห็นอะไร
+The regression harness transforms real page JSX with installed Vite/Oxc, injects controlled hooks and deferred service promises, and executes actual Effect callbacks. It is a **component callback harness**, not a React DOM renderer or browser E2E test. It covers both happy paths, resolve/reject after unmount, dependency change/reload/StrictMode setup, old rejection after new success, and old/current `onRecovery`. These same assertions failed before the fix. Browser checks complement them.
 
-**เงื่อนไขเริ่มต้นของทุกข้อ** — รัน `npm run dev` แล้วเปิด URL ที่แสดง เว้นแต่ระบุเป็นอย่างอื่น
+## Current results for all 24 original cases
 
----
+PASS means the stated result was observed. WARNING means only part of the original multi-part case was verified. UNVERIFIED means the original requirement is unproved. TC18 includes three subcases but counts as one numbered case.
 
-## คาบ 5A · CP02 — Routing
-
-| ID | ทำอะไร | ผลที่ควรได้ | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| **TC-L5-01** | เปิด `#/` | Dashboard แสดงแผงสรุปและรายการคำร้อง | Dashboard แสดงแผงสรุปและรายการคำร้องได้ตามปกติ | PASS | |
-| **TC-L5-02** | กดเมนู Dashboard → New Request → About ทีละปุ่ม · เปิด DevTools แท็บ Network ค้างไว้ | เปลี่ยนหน้าทั้ง 3 ครั้ง · **ไม่มีไฟล์ `.html` ถูกโหลดใหม่** · ปุ่มที่ active ตรงกับหน้าปัจจุบัน | เปลี่ยนหน้า Dashboard, New Request และ About ได้โดยไม่ reload HTML และเมนู active ถูกต้อง | PASS | |
-| **TC-L5-03** | เปิด `#/requests/new` แล้วกด `F5` | หลัง refresh ยังอยู่หน้า New Request ไม่ใช่หน้า 404 | Refresh ที่ #/requests/new แล้วหน้า New Request ยังแสดงและไม่เกิด 404 | PASS | |
-| **TC-L5-06** | เปิด `#/unknown` | หน้า NotFound **พร้อม header และ footer** + ลิงก์กลับ Dashboard | #/unknown แสดงหน้า Not Found พร้อม Header และ Footer | PASS | `images/route-not-found.png` |
-
----
-
-## คาบ 5A · CP03 — Service และ Data Lifecycle
-
-| ID | ทำอะไร | ผลที่ควรได้ | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| **TC-L5-08** | เปิด `#/` แล้วสังเกตช่วงแรก · ถ้าถ่ายไม่ทันให้ตั้ง Network throttle เป็น Slow 3G | เห็นตัวบอกว่ากำลังโหลดก่อน แล้วรายการจึงขึ้น | แสดงสถานะกำลังโหลดก่อน แล้วจึงแสดงรายการคำร้อง | PASS | `images/state-loading.png` |
-| **TC-L5-09** | เปิด `#/?scenario=error` | แถบบอกว่าอยู่ในโหมดทดสอบ + ข้อความผิดพลาดที่คนทั่วไปเข้าใจ + ปุ่มลองอีกครั้ง · **ไม่มี stack trace** | แสดงโหมดทดสอบ error พร้อมข้อความผิดพลาดและปุ่มลองอีกครั้ง โดยไม่มี stack trace | PASS | `images/state-error-retry.png` |
-| **TC-L5-10** | จากข้อ 09 กดปุ่มลองอีกครั้ง | **URL เปลี่ยนกลับเป็น `#/`** แล้วโหลดรายการปกติ | เมื่อกดปุ่มลองอีกครั้ง URL กลับเป็น #/ และรายการคำร้องโหลดได้ตามปกติ | PASS | |
-| **TC-L5-11** | เปิด `#/?scenario=empty` | ข้อความว่ายังไม่มีคำร้อง + ปุ่มไปหน้าสร้างใหม่ · **ไม่ใช่หน้าจอ error** | แสดงข้อความว่ายังไม่มีคำร้องและปุ่มสร้างคำร้องใหม่ โดยไม่แสดงหน้าจอ error | PASS | `images/state-empty.png` |
-| **TC-L5-15** | เปลี่ยนตัวกรองครบทุกค่า — all, pending, in-progress, completed | รายการเปลี่ยนถูกต้องทุกค่า · **แผงสรุปไม่เปลี่ยน** เพราะนับจากข้อมูลทั้งหมด | ตัวกรอง all, pending, in-progress และ completed แสดงรายการถูกต้อง และแผงสรุปไม่เปลี่ยน | PASS | |
-
----
-
-## คาบ 5A · CP05a — Dynamic Detail
-
-| ID | ทำอะไร | ผลที่ควรได้ | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| **TC-L5-04** | เปิด `#/requests/REQ-001` | แสดงรายละเอียดที่ตรงกับรหัสนั้น | หน้า Detail แสดงข้อมูลคำร้อง REQ-001 ตรงกับรหัสที่ระบุใน URL | PASS | `images/route-detail-found.png` |
-| **TC-L5-05** | เปิด `#/requests/REQ-999` | ข้อความว่าไม่พบคำร้องรหัสนั้น + ลิงก์กลับ · **อยู่ในหน้า Detail ไม่ใช่หน้า NotFound และไม่ใช่หน้าจอ error** | แสดงข้อความว่าไม่พบคำร้อง REQ-999 พร้อมลิงก์กลับ โดยยังอยู่ในหน้า Detail และไม่แสดง Error State | PASS | |
-
----
-
-## คาบ 5B · CP04a — Persistence
-
-| ID | ทำอะไร | ผลที่ควรได้ | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| **TC-L5-07** | DevTools → Application → Local Storage → ลบคีย์ `engse203-campus-requests-v1` → refresh | ข้อมูลตัวอย่างกลับมา และคีย์ถูกสร้างใหม่พร้อม envelope · **ไม่มีข้อความแจ้งว่ากู้ข้อมูล** เพราะเป็นการเปิดครั้งแรก | เมื่อลบคีย์ LAB05 แล้ว refresh ข้อมูลตัวอย่างถูกโหลดและสร้างคีย์ใหม่พร้อม envelope โดยไม่มีข้อความ recovery | PASS | |
-| **TC-L5-13** | ส่งฟอร์มโดยเว้นบางช่อง แล้วลองใส่รายละเอียดสั้นกว่า 10 ตัวอักษร | ข้อความเตือนใต้ช่องที่ผิด · **ไม่ใช่ `TypeError` หรือข้อความภาษาโปรแกรมเมอร์** | ฟอร์มแสดงข้อความ validation ใต้ช่องที่ไม่ถูกต้อง รวมถึงรายละเอียดสั้นกว่า 10 ตัวอักษร โดยไม่เกิด TypeError | PASS | |
-| **TC-L5-14** | เพิ่มคำร้องที่กรอกครบ → เด้งไปหน้ารายละเอียด → กด `F5` | บันทึกสำเร็จ · **หน้ารายละเอียดแสดงข้อมูลจริง** · refresh แล้วคำร้องยังอยู่ | เพิ่มคำร้องสำเร็จและเข้าสู่หน้า Detail หลัง refresh ข้อมูลคำร้องยังแสดงอยู่ | PASS | `images/persistence-add-refresh.png` |
-| **TC-L5-16** | ลบคำร้องที่เพิ่งเพิ่ม → กด `F5` | หายจากรายการทันที และ **refresh แล้วไม่กลับมา** | คำร้องถูกลบออกจากรายการ และหลัง refresh คำร้องไม่กลับมา | PASS | `images/persistence-delete-refresh.png` |
-| **TC-L5-17** | กดปุ่ม Reset Demo Data → ยืนยัน | ข้อมูลตัวอย่างกลับมาครบ · ตัวกรองรีเซ็ตเป็น all · **ข้อมูลของเว็บอื่นในโดเมนเดียวกันไม่ถูกลบ** | เมื่อยืนยัน Reset Demo Data ข้อมูลกลับเป็นชุดตัวอย่าง ตัวกรองกลับเป็น all และ refresh แล้วยังคงเป็นข้อมูลชุดตัวอย่าง | PASS | |
-
----
-
-## คาบ 5B · CP04b — Recovery
-
-| ID | ทำอะไร | ผลที่ควรได้ | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| **TC-L5-18a** | ใน Local Storage วางค่า `{ ไม่ใช่ JSON` ทับคีย์ LAB05 → refresh | กู้ข้อมูลตัวอย่าง + **ข้อความแจ้งผู้ใช้** · ไม่มีหน้าจอขาว ไม่มี error ค้างใน Console | เมื่อ Local Storage มี JSON ที่เสีย ระบบกู้ข้อมูลตัวอย่างกลับมาและแสดงข้อความแจ้งผู้ใช้ โดยหน้าเว็บยังทำงานตามปกติ
- | PASS | `images/storage-recovery.png` |
-| **TC-L5-18b** | วางค่า `{"schemaVersion":99,"requests":[]}` → refresh | กู้ได้เหมือนกัน · **จับด้วยการเทียบ SCHEMA_VERSION ไม่ใช่ try/catch** | เมื่อ schemaVersion เป็น 99 ระบบตรวจพบ version ไม่ตรง กู้ข้อมูลตัวอย่างและแจ้งผู้ใช้ได้ | PASS | |
-| **TC-L5-18c** | วาง envelope ที่มีคำร้อง `id` ซ้ำกัน 2 รายการ → refresh | กู้ได้เหมือนกัน · จับด้วย `validateRequests()` | เมื่อข้อมูลมี request ID ซ้ำ ระบบตรวจพบด้วย validateRequests() กู้ข้อมูลตัวอย่างและแจ้งผู้ใช้ | PASS | |
-
----
-
-## คาบ 5B · CP05b — Regression จาก Week 04
-
-> ใช้ regression checklist 11 ข้อประกอบ · แนะนำให้จับคู่ทดสอบไขว้
-
-| ID | ทำอะไร | ผลที่ควรได้ | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| **TC-L5-19** | เพิ่มและลบคำร้องหลายรอบ แล้วเทียบตัวเลขในแผงสรุปกับจำนวนรายการที่นับด้วยตา | **ตัวเลขตรงกันทุกครั้ง** ทั้ง total, pending, in-progress, completed | หลังเพิ่มและลบคำร้องหลายรอบ ค่า total, pending, in-progress และ completed ในแผงสรุปตรงกับจำนวนรายการที่แสดงจริงทุกครั้ง | PASS | `REGRESSION_CHECKLIST.md` |
-
-*(TC-L5-13, 15, 16 รันซ้ำในช่วงนี้ด้วย — บันทึกไว้ในตารางของ CP04a ได้เลย ถ้าผลต่างจากเดิมให้เขียนกำกับ)*
-
----
-
-## คาบ 5B · CP06 — Verify และ Delivery
-
-| ID | ทำอะไร | ผลที่ควรได้ | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| **TC-L5-20** | DevTools → Toggle device toolbar → ตั้งความกว้าง 375px → เปิดครบทุกหน้า | ไม่มีการเลื่อนแนวนอน · ปุ่มกดได้ไม่ทับกัน · ข้อความไม่ถูกตัด | ทดสอบทุกหน้าที่ความกว้าง 375px แล้ว ไม่พบการเลื่อนแนวนอน ปุ่มและองค์ประกอบไม่ทับกัน และข้อความแสดงได้ครบ | PASS | `images/responsive-375.png` |
-| **TC-L5-21** | วางเมาส์ไว้ข้าง ๆ ใช้ `Tab` `Shift+Tab` `Enter` `Space` เท่านั้น | เข้าถึงทุกลิงก์ ปุ่ม และช่องกรอกได้ · **เห็นชัดตลอดว่าโฟกัสอยู่ที่ไหน** | สามารถใช้ Tab และ Shift+Tab เข้าถึงลิงก์ ปุ่ม ตัวกรอง และช่องกรอกได้ครบ ใช้ Enter/Space สั่งงานได้ และมีกรอบแสดงตำแหน่งโฟกัสชัดเจนตลอดการทดสอบ | PASS | |
-| **TC-L5-12** | `npm run check` | ผ่าน **133/133** | Checker ทำงานสำเร็จและผ่านครบ 133/133 รายการ | PASS | 133/133 |
-| **TC-L5-22** | `npm run build` แล้ว `npm run preview` | build ไม่มี error · เปิด preview แล้ว refresh ที่ทุก URL ได้ | Build สำเร็จโดยไม่มี error และทดสอบ refresh ทุก route บน preview แล้วสามารถเปิดได้ตามปกติโดยไม่เกิด 404 | PASS | |
-| **TC-L5-23** | เปิด GitHub Pages **ในหน้าต่างส่วนตัว** แล้ว refresh ที่ URL ที่มี `#` | โหลดได้ทุกหน้า · refresh แล้วไม่ 404 · ข้อมูลตัวอย่างขึ้นเหมือนผู้ใช้ใหม่ | เปิด Week05 บน GitHub Pages ในหน้าต่าง Private สามารถเข้าถึงทุก route และ refresh แต่ละ URL ได้โดยไม่เกิด 404 ข้อมูลตัวอย่างแสดงได้ตามปกติเหมือนผู้ใช้ใหม่ | PASS | `images/pages-incognito.png` |
-| **TC-L5-24** | เปิด Pull Request และติด tag `lab-05-submission-v1` | PR เปิดแล้ว · tag ถูก push ขึ้น remote | มี Pull Request สำหรับ `lab/week-05 → main` และตรวจสอบแล้วว่า tag `lab-05-submission-v1` อยู่บน remote | PASS | https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/9 |
-
----
-
-## สรุปผล
-
-| | จำนวน |
-|---|---|
-| PASS | 24 |
-| FAIL | 0 |
-| NOT RUN | 0 |
-| **รวม** | **24** |
-
-**รายการที่ไม่ผ่าน และสิ่งที่ทำเพื่อแก้**
-
-
-ไม่พบรายการที่ไม่ผ่านหลังจากดำเนินการแก้ไขและทดสอบซ้ำครบทุก Test Case
-
-
-**สิ่งที่ยังแก้ไม่ได้ และเหตุผล** *(เขียนตามจริง — การยอมรับว่ายังไม่เสร็จดีกว่าการเขียนว่าเสร็จ)*
-
-ไม่มี
-
----
-
-## ภาคผนวก · ค่าสำหรับทดสอบ TC-L5-18c
-
-คัดลอกไปวางใน Local Storage เพื่อจำลองข้อมูลที่มี `id` ซ้ำ
-
-```json
-{"schemaVersion":1,"updatedAt":"2026-08-13T00:00:00.000Z","requests":[
-{"id":"REQ-001","requesterName":"ทดสอบ หนึ่ง","requestType":"แจ้งซ่อม","location":"A","details":"รายละเอียดยาวพอสมควร","priority":"normal","status":"pending"},
-{"id":"REQ-001","requesterName":"ทดสอบ สอง","requestType":"แจ้งซ่อม","location":"B","details":"รายละเอียดยาวพอสมควร","priority":"normal","status":"pending"}]}
-```
-
----
-
-## ภาคผนวก · ภาพหน้าจอที่ต้องมีครบ 10 ภาพ
-
-เก็บไว้ใน `labs/week-05/evidence/images/`
-
-| # | ชื่อไฟล์ | จาก | คาบ |
+| Case | Status | Actual result and limits | Evidence |
 |---|---|---|---|
-| 1 | `route-not-found.png` | TC-L5-06 | 5A |
-| 2 | `state-loading.png` | TC-L5-08 | 5A |
-| 3 | `state-error-retry.png` | TC-L5-09 | 5A |
-| 4 | `state-empty.png` | TC-L5-11 | 5A |
-| 5 | `route-detail-found.png` | TC-L5-04 | 5A |
-| 6 | `persistence-add-refresh.png` | TC-L5-14 | 5B |
-| 7 | `persistence-delete-refresh.png` | TC-L5-16 | 5B |
-| 8 | `storage-recovery.png` | TC-L5-18a | 5B |
-| 9 | `responsive-375.png` | TC-L5-20 | 5B |
-| 10 | `pages-incognito.png` | TC-L5-23 | หลังคาบ |
+| TC-L5-01 Dashboard | PASS | Seed3; summary3/1/1/1 | `images/dashboard-initial.png` |
+| TC-L5-02 menu navigation | PASS | Native revision GUI: Dashboard/New Request/About/Dashboard and matching active styles. Actual Network baseline recorded1 document request; cleared Doc log remained empty through menu navigation | FINAL_MANUAL_RESULTS.json; DEVTOOLS_CLOSEOUT_TRACE.json |
+| TC-L5-03 new route refresh | PASS | Reload at `#/requests/new` retained New Request form, no404 | `BROWSER_EXTRA_OBSERVATIONS.json` |
+| TC-L5-04 found detail | PASS | REQ-001 shows matching seed name, location, details/status | `images/route-detail-found.png` |
+| TC-L5-05 missing record | PASS | REQ-999 shows missing-record detail and back link, not route404/error | `images/detail-missing.png` |
+| TC-L5-06 unknown route | PASS | `#/unknown` shows NotFound plus header/footer/back link | `images/route-not-found.png` |
+| TC-L5-07 first use | PASS | Actual DevTools Application: deleted only LAB key, observed empty table, refreshed to3 seeds/no recovery notice; inspected regenerated schemaVersion1/updatedAt/requests envelope | FINAL_MANUAL_RESULTS.json; DEVTOOLS_CLOSEOUT_TRACE.json |
+| TC-L5-08 loading | PASS | Real loading indicator before seed response; QA server delayed seed HTTP1500ms | `images/state-loading.png` |
+| TC-L5-09 error | PASS | Test notice, friendly error, Retry; no stack trace rendered | `images/state-error-retry.png` |
+| TC-L5-10 retry | PASS | Retry URL returned to `#/`;3 seed records loaded | `images/retry-success.png`, provenance URL |
+| TC-L5-11 empty | PASS | Empty notice/no-record state/create link, not error | `images/state-empty.png` |
+| TC-L5-12 checker | PASS | Unmodified checker133/133, exit0 | Dated command ledger |
+| TC-L5-13 validation | PASS | Blank fields showed inline errors; `short` details showed minimum10-character message; no record added | `images/form-validation-error.png`, `BROWSER_EXTRA_OBSERVATIONS.json` |
+| TC-L5-14 add/refresh | PASS | Synthetic Post Audit QA record `REQ-MVM64JIA-ZV10` created; detail persisted after reload | `images/persistence-add-refresh.png` |
+| TC-L5-15 filters | PASS | all3, pendingREQ001, in-progressREQ002, completedREQ003; summary unchanged3/1/1/1 | `images/filter-pending.png`, `filter-in-progress.png`, `filter-completed.png` |
+| TC-L5-16 delete/refresh | PASS | Synthetic record deleted; reload left original3; deleted ID showed missing detail | `images/persistence-delete-refresh.png`, `deleted-detail-missing.png` |
+| TC-L5-17 reset | PASS — User Manual Verification | User confirmed2026-10-25: seed3, summary3/1/1/1, filter all, unrelated key KEEP-20261025 preserved; same correct state after F5. Not Computer Use Automation; no new screenshot or retest | TC17_USER_MANUAL_VERIFICATION.json |
+| TC-L5-18 recovery | PASS | 18a invalid JSON,18b version99,18c duplicate IDs each recovered3 seed records with cause-specific notice; no white screen; observed error/warning console empty | `images/storage-recovery.png`, `storage-recovery-version.png`, `storage-recovery-duplicate.png` |
+| TC-L5-19 repeated summary | PASS | Three real synthetic add/delete cycles: every add gave4 records/summary4-2-1-1; every delete returned3 records/summary3-1-1-1 | FINAL_MANUAL_RESULTS.json, actual request IDs recorded |
+| TC-L5-20 responsive375 | PASS | Dashboard/New/Detail/About/unknown route width375; measured document width did not exceed viewport; no overlap seen | `images/responsive-375.png` and four route images; `RESPONSIVE_MEASUREMENTS.json` |
+| TC-L5-21 full keyboard-only journey | PASS | Keyboard-only navigation, filters, detail/back, complete form and synthetic deletion; Tab/Shift+Tab/Enter/Space plus native select/radio arrows and typing.108 interactive focus observations all visible with3px orange outline | KEYBOARD_CLOSEOUT_TRACE.json; images/keyboard-nav.jpg and keyboard-form.jpg |
+| TC-L5-22 build/preview/refresh | PASS | Node22 production build served at localhost5598/week-05-fixed; new/dashboard/found+missing detail/about/unknown hash routes refreshed without server404 | Command ledger and Pages browser observations |
+| TC-L5-23 Pages InPrivate | PASS | Followup: genuine Edge InPrivate, seed3/summary3-1-1-1; refreshed dashboard/new/REQ001/about/unknown hash URLs, app rendered correctly including app NotFound. Screenshot includes full URL and actual InPrivate indicator. Public main predates Draft PR38 guard patch | `images/pages-incognito.png`, `SCREENSHOT_FOLLOWUP.json` |
+| TC-L5-24 PR/tag delivery | WARNING | Runtime/manual verification complete. PR38 merge and actual submission tag are pending delivery operations; historical PR9/tagv1 remain preserved | Branch fix/week-05-v2 |
 
-> **ก่อนถ่ายทุกครั้ง** ตรวจว่าไม่มีข้อมูลส่วนบุคคลจริงหรือชื่อบัญชีอื่นติดมาในภาพ · ถ้ามีให้ crop หรือปิดทับก่อน
+Summary of **24 numbered cases: 23 PASS, 1 WARNING, 0 UNVERIFIED, 0 FAIL**. All runtime/manual mandatory cases are verified; only actual PR/tag delivery remains pending. Required screenshots: **10/10 present**.
+
+## Screenshot review and provenance
+
+The old NotFound image did not demonstrate NotFound; old add-refresh showed an unsubmitted form. Fresh matching screenshots replace those cases. Corrupt-JSON recovery now has real evidence. Old inaccurate claims remain as history only.
+
+Current PNGs are actual browser JPEG captures **re-encoded as PNG without changing content**, not renamed JPEGs or generated mockups. [SCREENSHOT_PROVENANCE.json](SCREENSHOT_PROVENANCE.json) records time, URL, accessibility observation, dimensions, rawJPEG/PNG SHA256 and historical hashes. The synthetic ID, totals and recovery notices distinguish operations. Raw JPEGs remain in the dated remediation output. Older `storage-localstorage-devtools.png` is historical-only and proves no current case.
+
+External setup wrote only `engse203-campus-requests-v1` on a disposable localhost origin; it was not added to app source. The initial native capture attempt could not reliably stay bound to the selected window, and additional browser screenshots became unavailable. On the followup, fresh native selection/observation and permitted keyboard/screenshot controls worked. The genuine InPrivate image and five hash-route refresh observations are recorded separately in SCREENSHOT_FOLLOWUP.json. No normal-context image was relabeled.
+
+## Historical pending actions before user verification — 2026-10-25
+
+1. Complete only TC17: non-all reset, preservation of unrelated key KEEP-20261025, and verification after refresh. TC02/TC07 are now PASS from the real DevTools continuation.
+2. TC19 repeated summary and TC21 keyboard-only journey are now PASS, supported by the actual closeout trace. No screenshot gap remains.
+3. Merge/tag and post-deployment smoke checks are already authorized, conditional on mandatory results. The original InPrivate image remains pre-PR38 evidence.
+4. Historical peer attestations remain unchanged. Any new peer run needs its own actual tester/date.
+
+Instructor basis: pin `3e080d366483fe9b4a903d9f4dd318b5de4cd5dd`, LAB05B §7 cleanup guard and LAB05A/B screenshot/submission requirements. Passing133 does not waive cleanup, visual or InPrivate requirements.
+
+## Screenshot followup — 2026-10-24
+
+The user requested a fresh attempt at all missing screenshots. Native CUA opened a real Edge InPrivate window and observed the actual page/URL/indicator. All five refresh cases passed; TC23 is updated from observed results only. Native captures returned JPEG, so the PNG is a format conversion with identical decoded RGB pixels, no crop/composition/annotation/generation. The existing25 captures and historical report/images are unchanged. At that historical followup, TC21 remained UNVERIFIED; the 2026-10-25 closeout below supersedes that status with a real PASS.
+
+[Native capture and refresh provenance](SCREENSHOT_FOLLOWUP.json). This image shows the public Pages deployment at main91807ef, before PR #38; it is not evidence that the PR's cleanup guard has been deployed.
+
+![Actual Edge InPrivate, URL and Week05 dashboard](images/pages-incognito.png)
+
+## Final closeout — 2026-10-25
+
+TC19 and TC21 are now completed on the actual revision branch with a new disposable local origin. [Detailed results and mandatory-gate classification](FINAL_MANUAL_RESULTS.json) distinguish PASS from the three still-unverified DevTools cases. Required automated checker133/133, cleanup17/17 and build were rerun successfully; source logic is unchanged. PR38 remains Draft until TC17 is verified. TC02 and TC07 were completed in the later native DevTools continuation below. These are mandatory verification gaps from the pinned test template, not a blanket rule that every warning blocks merge. No source defect was newly demonstrated.
+
+![Actual keyboard navigation focus](images/keyboard-nav.jpg)
+
+![Actual keyboard form/radio focus](images/keyboard-form.jpg)
+
+Native-tool state update: the latest screenshot shows the Windows lock screen while native app accessibility still describes Edge. Native activation cannot proceed until the user unlocks Windows; no unlock/security action was automated.
+
+## DevTools continuation — 2026-10-25
+
+TC02 and TC07 are now PASS from existing native observations, reviewed against the pinned instructor requirements. [Raw native trace](DEVTOOLS_CLOSEOUT_TRACE.json) and [unchanged capture hashes](DEVTOOLS_CAPTURE_PROVENANCE.json) preserve the actual evidence. TC17 remains UNVERIFIED; a tool URL-safety rejection is not an application FAIL. The current case summary above supersedes earlier dated blocker descriptions. No source or original mandatory screenshot was changed.
+
+![Actual Network document log after SPA navigation](images/devtools-network-spa.jpg)
+
+![Actual regenerated LocalStorage envelope](images/devtools-storage-envelope.jpg)
+
+## User TC17 verification — 2026-10-25
+
+The user explicitly reported PASS for seed3/summary3-1-1-1, all filter, preservation of engse203-closeout-unrelated=KEEP-20261025, and the same correct state after F5. This is **PASS — User Manual Verification**, not Computer Use Automation. [Original user attestation record](TC17_USER_MANUAL_VERIFICATION.json). No new screenshot was taken and Codex did not repeat TC17. Historical native traces and earlier UNVERIFIED descriptions remain as dated history; the current results table supersedes them. Prior URL-confidence rejection was a tool limitation, not an application failure.
+
+Final scoped rerun: cleanup17/17, unchanged instructor checker133/133 and production build PASS on Node22.23.4. Fresh JS/CSS bytes match committed publish output; HTML matches after carriage-return normalization. See FINAL_AUTOMATED_CHECKS.json.

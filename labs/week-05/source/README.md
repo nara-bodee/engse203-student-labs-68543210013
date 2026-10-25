@@ -8,6 +8,7 @@ Reference implementation สำหรับ Phase W5-D (Instructor Private)
 npm ci
 npm run dev
 npm run check
+npm run test:cleanup
 npm run build
 npm run preview
 ```
@@ -37,3 +38,7 @@ Dashboard Effect ขึ้นกับ `scenario` และ `reloadKey` เพ�
 ## Privacy
 
 ใช้ข้อมูลสาธิตเท่านั้น ห้ามบันทึก token, password, secret หรือข้อมูลส่วนบุคคลจริงใน `localStorage` หรือหลักฐานภาพ
+
+## Post-audit correction — 2026-10-24
+
+The guard described above was missing from audited main91807ef. Both Effects now return cleanup marking obsolete loads; success, rejection and Dashboard recovery callbacks check that flag. The17-case test:cleanup harness executes real transformed callbacks with deferred services and fake hooks; it is not React DOM/browser E2E. Before:3 PASS/14 FAIL. After:17 PASS; unchanged checker133/133 and Node22.23.4 build PASS. No UI/service architecture/checker changed. See ../evidence/TEST_REPORT.md for current visual evidence and remaining checks.

@@ -1,0 +1,2054 @@
+[
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:22.295Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:34.134Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:46:34.299Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:34.485Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:46:34.987Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:35.211Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:46:35.496Z",
+    "url": "http://127.0.0.1:5605/#/about",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:46:35.784Z",
+    "url": "http://127.0.0.1:5605/#/about",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:46:35.913Z",
+    "url": "http://127.0.0.1:5605/#/about",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:46:36.158Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:36.766Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:36.923Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:37.102Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "Reset Demo Data",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:56.972Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:57.161Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:46:57.318Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:46:57.573Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:46:57.778Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:57.933Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:58.105Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:46:58.255Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:46:58.439Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:46:58.736Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:46:59.045Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:59.206Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:59.365Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:46:59.628Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "เสร็จสิ้น",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:46:59.804Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "เสร็จสิ้น",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:46:59.992Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:47:00.141Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:47:00.293Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:47:00.489Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-seed-detail",
+    "timeUTC": "2026-10-24T17:47:00.596Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:00.778Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-seed-detail",
+    "timeUTC": "2026-10-24T17:47:00.809Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:00.968Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-seed-detail",
+    "timeUTC": "2026-10-24T17:47:01.001Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:01.169Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "เสร็จสิ้น",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-seed-detail",
+    "timeUTC": "2026-10-24T17:47:01.204Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "เสร็จสิ้น",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:01.356Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-001",
+      "id": "",
+      "name": "แจ้งซ่อม",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-seed-detail",
+    "timeUTC": "2026-10-24T17:47:01.385Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-001",
+      "id": "",
+      "name": "แจ้งซ่อม",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:47:01.665Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": false,
+      "href": null,
+      "id": "",
+      "name": "ENGSE203 • LAB 05Campus Service RequestDashboardNew RequestAboutROUTED · DYNAMIC DETAILราย",
+      "outline": "rgb(23, 36, 58) none 3px",
+      "shadow": "none",
+      "tag": "BODY",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-detail-back",
+    "timeUTC": "2026-10-24T17:47:01.785Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": false,
+      "href": null,
+      "id": "",
+      "name": "ENGSE203 • LAB 05Campus Service RequestDashboardNew RequestAboutROUTED · DYNAMIC DETAILราย",
+      "outline": "rgb(23, 36, 58) none 3px",
+      "shadow": "none",
+      "tag": "BODY",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:02.069Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-detail-back",
+    "timeUTC": "2026-10-24T17:47:02.100Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:02.243Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-detail-back",
+    "timeUTC": "2026-10-24T17:47:02.275Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:02.416Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-detail-back",
+    "timeUTC": "2026-10-24T17:47:02.448Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:02.714Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "กลับ Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-detail-back",
+    "timeUTC": "2026-10-24T17:47:02.747Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-001",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "กลับ Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:47:03.020Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": false,
+      "href": null,
+      "id": "",
+      "name": "ENGSE203 • LAB 05Campus Service RequestDashboardNew RequestAboutROUTED · READ PATHDashboar",
+      "outline": "rgb(23, 36, 58) none 3px",
+      "shadow": "none",
+      "tag": "BODY",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-new-form",
+    "timeUTC": "2026-10-24T17:47:28.362Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": false,
+      "href": null,
+      "id": "",
+      "name": "ENGSE203 • LAB 05Campus Service RequestDashboardNew RequestAboutROUTED · READ PATHDashboar",
+      "outline": "rgb(23, 36, 58) none 3px",
+      "shadow": "none",
+      "tag": "BODY",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:28.708Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-new-form",
+    "timeUTC": "2026-10-24T17:47:28.750Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:29.035Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-new-form",
+    "timeUTC": "2026-10-24T17:47:29.070Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:47:29.380Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-name-input",
+    "timeUTC": "2026-10-24T17:47:29.436Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:29.709Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-name-input",
+    "timeUTC": "2026-10-24T17:47:29.743Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:29.901Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "requesterName",
+      "name": "ชื่อผู้แจ้ง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-name-input",
+    "timeUTC": "2026-10-24T17:47:29.941Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "requesterName",
+      "name": "ชื่อผู้แจ้ง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "typed-name",
+    "timeUTC": "2026-10-24T17:47:30.906Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "requesterName",
+      "name": "ชื่อผู้แจ้ง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": null,
+      "value": "Keyboard QA",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:31.080Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "requestType",
+      "name": "ประเภทคำร้อง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "SELECT",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "ArrowDown",
+    "timeUTC": "2026-10-24T17:47:31.244Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "requestType",
+      "name": "ประเภทคำร้อง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "SELECT",
+      "type": null,
+      "value": "แจ้งซ่อม",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:31.412Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "location",
+      "name": "สถานที่",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "typed-location",
+    "timeUTC": "2026-10-24T17:47:33.261Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "location",
+      "name": "สถานที่",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": null,
+      "value": "Keyboard test room",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:33.417Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "details",
+      "name": "รายละเอียด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "TEXTAREA",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "typed-details",
+    "timeUTC": "2026-10-24T17:47:36.885Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "details",
+      "name": "รายละเอียด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "TEXTAREA",
+      "type": null,
+      "value": "Keyboard-only closeout synthetic request",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:37.051Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": true,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": "radio",
+      "value": "normal",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:47:37.237Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": true,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": "radio",
+      "value": "normal",
+      "visible": true
+    }
+  },
+  {
+    "label": "ArrowRight",
+    "timeUTC": "2026-10-24T17:47:37.377Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": true,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": "radio",
+      "value": "urgent",
+      "visible": true
+    }
+  },
+  {
+    "label": "Space",
+    "timeUTC": "2026-10-24T17:47:37.635Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": true,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": "radio",
+      "value": "urgent",
+      "visible": true
+    }
+  },
+  {
+    "label": "Shift+Tab",
+    "timeUTC": "2026-10-24T17:47:37.932Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "details",
+      "name": "รายละเอียด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "TEXTAREA",
+      "type": null,
+      "value": "Keyboard-only closeout synthetic request",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:38.112Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": true,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "INPUT",
+      "type": "radio",
+      "value": "urgent",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:47:38.250Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "เพิ่มคำร้อง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "submit",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:47:38.488Z",
+    "url": "http://127.0.0.1:5605/#/requests/new",
+    "focus": {
+      "checked": false,
+      "focusVisible": false,
+      "href": null,
+      "id": "",
+      "name": "ENGSE203 • LAB 05Campus Service RequestDashboardNew RequestAboutWRITE PATHสร้างคำร้องใหม่ก",
+      "outline": "rgb(23, 36, 58) none 3px",
+      "shadow": "none",
+      "tag": "BODY",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-dashboard-after-form",
+    "timeUTC": "2026-10-24T17:48:00.894Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-MVMOYXFO-8RM0",
+    "focus": {
+      "checked": false,
+      "focusVisible": false,
+      "href": null,
+      "id": "",
+      "name": "ENGSE203 • LAB 05Campus Service RequestDashboardNew RequestAboutROUTED · DYNAMIC DETAILราย",
+      "outline": "rgb(23, 36, 58) none 3px",
+      "shadow": "none",
+      "tag": "BODY",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:01.242Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-MVMOYXFO-8RM0",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-dashboard-after-form",
+    "timeUTC": "2026-10-24T17:48:01.287Z",
+    "url": "http://127.0.0.1:5605/#/requests/REQ-MVMOYXFO-8RM0",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:48:01.617Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:01.935Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/",
+      "id": "",
+      "name": "Dashboard",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:02.136Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:02.172Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/new",
+      "id": "",
+      "name": "New Request",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:02.329Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:02.453Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/about",
+      "id": "",
+      "name": "About",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:02.663Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "Reset Demo Data",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:02.789Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "Reset Demo Data",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:03.035Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:03.082Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ทั้งหมด",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:03.264Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:03.297Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "รอดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:03.480Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:03.599Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "กำลังดำเนินการ",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:03.790Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "เสร็จสิ้น",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:03.821Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "เสร็จสิ้น",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:04.045Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-001",
+      "id": "",
+      "name": "แจ้งซ่อม",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:04.078Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-001",
+      "id": "",
+      "name": "แจ้งซ่อม",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:04.288Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-001",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:04.326Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-001",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:04.605Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-002",
+      "id": "",
+      "name": "บริการบัญชีผู้ใช้",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:04.651Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-002",
+      "id": "",
+      "name": "บริการบัญชีผู้ใช้",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:04.977Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-002",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:05.015Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-002",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:05.220Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-003",
+      "id": "",
+      "name": "ขอใช้ห้อง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:05.252Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-003",
+      "id": "",
+      "name": "ขอใช้ห้อง",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:05.418Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-003",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:05.449Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-003",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:05.743Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-MVMOYXFO-8RM0",
+      "id": "",
+      "name": "แจ้งซ่อม",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:05.776Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": "#/requests/REQ-MVMOYXFO-8RM0",
+      "id": "",
+      "name": "แจ้งซ่อม",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "A",
+      "type": null,
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Tab",
+    "timeUTC": "2026-10-24T17:48:05.947Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-MVMOYXFO-8RM0",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "inspect-delete-synthetic",
+    "timeUTC": "2026-10-24T17:48:05.977Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-MVMOYXFO-8RM0",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  },
+  {
+    "label": "Enter",
+    "timeUTC": "2026-10-24T17:48:06.155Z",
+    "url": "http://127.0.0.1:5605/#/",
+    "focus": {
+      "checked": false,
+      "focusVisible": true,
+      "href": null,
+      "id": "",
+      "name": "ลบคำร้อง REQ-MVMOYXFO-8RM0",
+      "outline": "rgb(243, 156, 18) solid 3px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "type": "button",
+      "value": "",
+      "visible": true
+    }
+  }
+]

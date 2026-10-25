@@ -1,7 +1,7 @@
 # ENGSE203 LAB05 — Post-audit test report
 
 Test date: **2026-10-24, Asia/Bangkok**. Branch: `fix/week-05-v2`, based on audited main `91807ef3752608b8846188409e3a76f502fe249c`.
-Tester: Codex automation, Windows. Initial checks used CUA in-app browser **normal context**; the screenshot followup used a genuine **Microsoft Edge InPrivate** native window. This is not a learner or peer attestation.
+Initial tester: Codex automation, Windows. TC17 was later verified manually by the user on2026-10-25; that attestation is separate from automation. Initial checks used CUA in-app browser **normal context**; the screenshot followup used a genuine **Microsoft Edge InPrivate** native window. Those automation captures are not a peer attestation; the later TC17 user attestation is recorded separately.
 Node **22.23.4**, npm **12.2.0**, Vite **8.1.5**. Initial regression also ran on Node **24.19.0**.
 
 The previous report and its 11 original image files are preserved byte-for-byte under [legacy-pre-audit](legacy-pre-audit/README.md). Its old PASS labels, dates, browser and commit do not describe this run. Historical `REGRESSION_CHECKLIST.md` was not rerun with its named peer or Safari browser.
@@ -38,16 +38,16 @@ PASS means the stated result was observed. WARNING means only part of the origin
 | TC-L5-14 add/refresh | PASS | Synthetic Post Audit QA record `REQ-MVM64JIA-ZV10` created; detail persisted after reload | `images/persistence-add-refresh.png` |
 | TC-L5-15 filters | PASS | all3, pendingREQ001, in-progressREQ002, completedREQ003; summary unchanged3/1/1/1 | `images/filter-pending.png`, `filter-in-progress.png`, `filter-completed.png` |
 | TC-L5-16 delete/refresh | PASS | Synthetic record deleted; reload left original3; deleted ID showed missing detail | `images/persistence-delete-refresh.png`, `deleted-detail-missing.png` |
-| TC-L5-17 reset | UNVERIFIED | Prepared real sentinel KEEP-20261025, deleted disposable REQ003 and selected pending. Computer Use blocked Reset due URL confidence; post-reset seed/filter/key/refresh results remain unobserved | FINAL_MANUAL_RESULTS.json; DEVTOOLS_CLOSEOUT_TRACE.json |
+| TC-L5-17 reset | PASS — User Manual Verification | User confirmed2026-10-25: seed3, summary3/1/1/1, filter all, unrelated key KEEP-20261025 preserved; same correct state after F5. Not Computer Use Automation; no new screenshot or retest | TC17_USER_MANUAL_VERIFICATION.json |
 | TC-L5-18 recovery | PASS | 18a invalid JSON,18b version99,18c duplicate IDs each recovered3 seed records with cause-specific notice; no white screen; observed error/warning console empty | `images/storage-recovery.png`, `storage-recovery-version.png`, `storage-recovery-duplicate.png` |
 | TC-L5-19 repeated summary | PASS | Three real synthetic add/delete cycles: every add gave4 records/summary4-2-1-1; every delete returned3 records/summary3-1-1-1 | FINAL_MANUAL_RESULTS.json, actual request IDs recorded |
 | TC-L5-20 responsive375 | PASS | Dashboard/New/Detail/About/unknown route width375; measured document width did not exceed viewport; no overlap seen | `images/responsive-375.png` and four route images; `RESPONSIVE_MEASUREMENTS.json` |
 | TC-L5-21 full keyboard-only journey | PASS | Keyboard-only navigation, filters, detail/back, complete form and synthetic deletion; Tab/Shift+Tab/Enter/Space plus native select/radio arrows and typing.108 interactive focus observations all visible with3px orange outline | KEYBOARD_CLOSEOUT_TRACE.json; images/keyboard-nav.jpg and keyboard-form.jpg |
 | TC-L5-22 build/preview/refresh | PASS | Node22 production build served at localhost5598/week-05-fixed; new/dashboard/found+missing detail/about/unknown hash routes refreshed without server404 | Command ledger and Pages browser observations |
 | TC-L5-23 Pages InPrivate | PASS | Followup: genuine Edge InPrivate, seed3/summary3-1-1-1; refreshed dashboard/new/REQ001/about/unknown hash URLs, app rendered correctly including app NotFound. Screenshot includes full URL and actual InPrivate indicator. Public main predates Draft PR38 guard patch | `images/pages-incognito.png`, `SCREENSHOT_FOLLOWUP.json` |
-| TC-L5-24 PR/tag delivery | WARNING | Historical PR9/tagv1 preserved; merge/tag are authorized by the final closeout request, conditional on mandatory verification. PR38 remains Draft while TC17 remains unverified | Branch `fix/week-05-v2` |
+| TC-L5-24 PR/tag delivery | WARNING | Runtime/manual verification complete. PR38 merge and actual submission tag are pending delivery operations; historical PR9/tagv1 remain preserved | Branch fix/week-05-v2 |
 
-Summary of **24 numbered cases: 22 PASS, 1 WARNING, 1 UNVERIFIED, 0 new observed application FAIL**. This is not complete submission readiness. Required screenshots: **10/10 present**, including the genuine InPrivate followup. All screenshot gaps are closed; other manual limitations remain.
+Summary of **24 numbered cases: 23 PASS, 1 WARNING, 0 UNVERIFIED, 0 FAIL**. All runtime/manual mandatory cases are verified; only actual PR/tag delivery remains pending. Required screenshots: **10/10 present**.
 
 ## Screenshot review and provenance
 
@@ -57,7 +57,7 @@ Current PNGs are actual browser JPEG captures **re-encoded as PNG without changi
 
 External setup wrote only `engse203-campus-requests-v1` on a disposable localhost origin; it was not added to app source. The initial native capture attempt could not reliably stay bound to the selected window, and additional browser screenshots became unavailable. On the followup, fresh native selection/observation and permitted keyboard/screenshot controls worked. The genuine InPrivate image and five hash-route refresh observations are recorded separately in SCREENSHOT_FOLLOWUP.json. No normal-context image was relabeled.
 
-## Remaining closeout actions — updated 2026-10-25
+## Historical pending actions before user verification — 2026-10-25
 
 1. Complete only TC17: non-all reset, preservation of unrelated key KEEP-20261025, and verification after refresh. TC02/TC07 are now PASS from the real DevTools continuation.
 2. TC19 repeated summary and TC21 keyboard-only journey are now PASS, supported by the actual closeout trace. No screenshot gap remains.
@@ -91,3 +91,9 @@ TC02 and TC07 are now PASS from existing native observations, reviewed against t
 ![Actual Network document log after SPA navigation](images/devtools-network-spa.jpg)
 
 ![Actual regenerated LocalStorage envelope](images/devtools-storage-envelope.jpg)
+
+## User TC17 verification — 2026-10-25
+
+The user explicitly reported PASS for seed3/summary3-1-1-1, all filter, preservation of engse203-closeout-unrelated=KEEP-20261025, and the same correct state after F5. This is **PASS — User Manual Verification**, not Computer Use Automation. [Original user attestation record](TC17_USER_MANUAL_VERIFICATION.json). No new screenshot was taken and Codex did not repeat TC17. Historical native traces and earlier UNVERIFIED descriptions remain as dated history; the current results table supersedes them. Prior URL-confidence rejection was a tool limitation, not an application failure.
+
+Final scoped rerun: cleanup17/17, unchanged instructor checker133/133 and production build PASS on Node22.23.4. Fresh JS/CSS bytes match committed publish output; HTML matches after carriage-return normalization. See FINAL_AUTOMATED_CHECKS.json.

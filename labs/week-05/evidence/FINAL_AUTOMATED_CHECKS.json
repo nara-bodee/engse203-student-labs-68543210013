@@ -1,0 +1,111 @@
+{
+  "checkedUTC": "2026-10-25T08:02:21.319Z",
+  "head": "6221f6b19d49a1b247271afa132875249579ceb2",
+  "sourceTree": "a548e5bbba219c7ca13d078dd7e1f4cad10db14f",
+  "commands": [
+    {
+      "name": "final-week05-test-cleanup",
+      "script": "test:cleanup",
+      "node": "v22.23.4",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "test:cleanup"
+      ],
+      "startUTC": "2026-10-25T08:02:01.702Z",
+      "endUTC": "2026-10-25T08:02:03.069Z",
+      "exit": 0
+    },
+    {
+      "name": "final-week05-check",
+      "script": "check",
+      "node": "v22.23.4",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "check"
+      ],
+      "startUTC": "2026-10-25T08:02:03.071Z",
+      "endUTC": "2026-10-25T08:02:03.873Z",
+      "exit": 0
+    },
+    {
+      "name": "final-week05-build",
+      "script": "build",
+      "node": "v22.23.4",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "build"
+      ],
+      "startUTC": "2026-10-25T08:02:03.874Z",
+      "endUTC": "2026-10-25T08:02:05.290Z",
+      "exit": 0
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/index-1O0KRey8.css",
+      "sha256": "c7a927434ddcd6c3981417614a95cfee9414fcc52413d580c48f74571ff168fd",
+      "publishMatches": true
+    },
+    {
+      "path": "assets/index-BlPfdM1C.js",
+      "sha256": "3efb388526c509993b152c08b03a41a40fd87e37a04782853c1218c5bc79545a",
+      "publishMatches": true
+    }
+  ],
+  "htmlMatchesPublishAfterLineEndingNormalization": true,
+  "requiredScreenshots": [
+    {
+      "name": "route-not-found.png",
+      "sha256": "5027a092ef02454cbe1af008c9eb00f0f63ae88046dec5939b6bca4375542369",
+      "unchanged": true
+    },
+    {
+      "name": "state-loading.png",
+      "sha256": "978eaef1229c3782191c0e2c5bf956434b502000f08364a133a5483194f8ad54",
+      "unchanged": true
+    },
+    {
+      "name": "state-error-retry.png",
+      "sha256": "0c3918e1e90d038dcb03b9ff8ab1b9148f48d29e341098b1ddcfc2af8f421f43",
+      "unchanged": true
+    },
+    {
+      "name": "state-empty.png",
+      "sha256": "9c01b5856ca8272cb6681b7be3155a746d95cdcf766ea009c2ce0d4b9aba24af",
+      "unchanged": true
+    },
+    {
+      "name": "route-detail-found.png",
+      "sha256": "c5d94f13c7f5f5cbd62e6f580ebbd4eca1e392afb3ff05b1f66967bc2073bb50",
+      "unchanged": true
+    },
+    {
+      "name": "persistence-add-refresh.png",
+      "sha256": "a2bd867e88afb77c64aa26904d5033b3b03a5fda55ea799a39072f1439efeb56",
+      "unchanged": true
+    },
+    {
+      "name": "persistence-delete-refresh.png",
+      "sha256": "2ab4aaeccaabeff520940b69c90cf063e927cb0c55f1b258f20e64669fb4acfe",
+      "unchanged": true
+    },
+    {
+      "name": "storage-recovery.png",
+      "sha256": "4bee353937a0d075972dd3921a6ae909cb307f27121401aa3e11aa7e74c6d5a1",
+      "unchanged": true
+    },
+    {
+      "name": "responsive-375.png",
+      "sha256": "8439034321054ee7512f285db7b167fec28bf4331e9727d1774a322a68255d56",
+      "unchanged": true
+    },
+    {
+      "name": "pages-incognito.png",
+      "sha256": "a76b2fcf34aa138720cfc8d930535d306c9c46718c495d9f7f2eba21522d1d8d",
+      "unchanged": true
+    }
+  ]
+}

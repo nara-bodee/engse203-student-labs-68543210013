@@ -55,18 +55,28 @@
       "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L65"
     },
     "TC17": {
-      "status": "UNVERIFIED",
+      "status": "PASS",
       "mandatory": true,
-      "reason": "Unrelated key created in actual DevTools GUI with value KEEP-20261025; removed disposable REQ-003 and selected pending filter. Reset click was blocked by Computer Use URL safety before any post-reset observation. No application FAIL asserted.",
-      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L69",
-      "sentinelKey": "engse203-closeout-unrelated",
-      "sentinelValue": "KEEP-20261025",
-      "remaining": [
-        "confirm actual reset",
-        "seed3 and filter all",
-        "sentinel preserved",
-        "same result after refresh"
-      ]
+      "verificationType": "User Manual Verification",
+      "date": "2026-10-25",
+      "evidence": "TC17_USER_MANUAL_VERIFICATION.json",
+      "observations": {
+        "resetSeedCount": 3,
+        "summary": {
+          "total": 3,
+          "pending": 1,
+          "inProgress": 1,
+          "completed": 1
+        },
+        "filterAfterReset": "all",
+        "unrelatedLocalStorage": {
+          "key": "engse203-closeout-unrelated",
+          "value": "KEEP-20261025",
+          "preserved": true
+        },
+        "afterF5": "Seed records, request list, summary, all filter and unrelated key remain correct"
+      },
+      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L69"
     },
     "TC19": {
       "status": "PASS",
@@ -185,7 +195,7 @@
       "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L100"
     }
   },
-  "blocking": "Only TC17 remains a mandatory verification gate for PR38",
+  "blocking": null,
   "toolLimitation": {
     "history": {
       "nativeInput": "point over PickerHost.exe instead of msedge.exe; failed to activate captured window after fresh-window recovery",
@@ -197,5 +207,26 @@
     "latest": "Computer Use stopped the previous turn because current browser URL could not be established with sufficient confidence. No bypass or alternate automation was used. New continuation may act only after fresh safe URL/window identification."
   },
   "note": "No existing screenshots were recaptured. New focus screenshots only document newly completed TC21.",
-  "reviewedTraceUTC": "2026-10-25T06:22:53.653Z"
+  "reviewedTraceUTC": "2026-10-25T06:22:53.653Z",
+  "history": [
+    {
+      "case": "TC17",
+      "supersededStatus": {
+        "status": "UNVERIFIED",
+        "mandatory": true,
+        "reason": "Unrelated key created in actual DevTools GUI with value KEEP-20261025; removed disposable REQ-003 and selected pending filter. Reset click was blocked by Computer Use URL safety before any post-reset observation. No application FAIL asserted.",
+        "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L69",
+        "sentinelKey": "engse203-closeout-unrelated",
+        "sentinelValue": "KEEP-20261025",
+        "remaining": [
+          "confirm actual reset",
+          "seed3 and filter all",
+          "sentinel preserved",
+          "same result after refresh"
+        ]
+      },
+      "reason": "New explicit user manual verification received; original automation trace retained unchanged"
+    }
+  ],
+  "latestUpdate": "TC17 verified manually by user; no GUI retest or new screenshot"
 }

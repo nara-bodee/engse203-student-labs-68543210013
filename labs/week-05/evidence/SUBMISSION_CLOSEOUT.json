@@ -1,0 +1,79 @@
+{
+  "recordedUTC": "2026-10-25T08:05:58.785Z",
+  "status": "PASS",
+  "case": "TC-L5-24",
+  "week05": {
+    "pr": 38,
+    "mergeCommit": "d7c9e209f6e78039b84c99f5a244d022151c4078",
+    "tag": "lab-05-submission-v2",
+    "remoteTagTarget": "d7c9e209f6e78039b84c99f5a244d022151c4078"
+  },
+  "allFiveSubmissionTags": [
+    {
+      "pr": 34,
+      "week": "07",
+      "mergeCommit": "2efaef3fd8341c87b60201dcc11dfb1d94d3e3d4",
+      "tag": "lab-07-submission-v3",
+      "target": "2efaef3fd8341c87b60201dcc11dfb1d94d3e3d4",
+      "parents": [
+        "91807ef3752608b8846188409e3a76f502fe249c",
+        "e2d370cbdedfe052e80e855220599725297edd28"
+      ],
+      "head": "e2d370cbdedfe052e80e855220599725297edd28",
+      "verifiedUTC": "2026-10-24T17:40:40.494Z"
+    },
+    {
+      "pr": 35,
+      "week": "12",
+      "mergeCommit": "75adb56645aa80e5f756ffe264cb55ff539f8a1e",
+      "tag": "lab-12-submission-v3",
+      "target": "75adb56645aa80e5f756ffe264cb55ff539f8a1e",
+      "parents": [
+        "2efaef3fd8341c87b60201dcc11dfb1d94d3e3d4",
+        "b73c538dda6d1d078126f346d67751170ad54ec2"
+      ],
+      "head": "b73c538dda6d1d078126f346d67751170ad54ec2",
+      "verifiedUTC": "2026-10-24T17:42:35.823Z"
+    },
+    {
+      "pr": 36,
+      "week": "13",
+      "mergeCommit": "0ebb2eae28832921a2a17df897b23de94f379af5",
+      "tag": "lab-13-submission-v3",
+      "target": "0ebb2eae28832921a2a17df897b23de94f379af5",
+      "parents": [
+        "75adb56645aa80e5f756ffe264cb55ff539f8a1e",
+        "07075f762d639a4efb159506826243e3eb579ec7"
+      ],
+      "head": "07075f762d639a4efb159506826243e3eb579ec7",
+      "verifiedUTC": "2026-10-24T17:48:48.348Z"
+    },
+    {
+      "pr": 37,
+      "week": "09",
+      "mergeCommit": "9ea2775ad2011c2fa91baa39c06c6cbe57e8865f",
+      "tag": "lab-09-submission-v3",
+      "target": "9ea2775ad2011c2fa91baa39c06c6cbe57e8865f",
+      "parents": [
+        "0ebb2eae28832921a2a17df897b23de94f379af5",
+        "a49ae4fb46c1140b4c4bf56cc70bf2db68fafa39"
+      ],
+      "head": "a49ae4fb46c1140b4c4bf56cc70bf2db68fafa39",
+      "verifiedUTC": "2026-10-24T20:21:17.839Z"
+    },
+    {
+      "pr": 38,
+      "week": "05",
+      "mergeCommit": "d7c9e209f6e78039b84c99f5a244d022151c4078",
+      "tag": "lab-05-submission-v2",
+      "target": "d7c9e209f6e78039b84c99f5a244d022151c4078",
+      "parents": [
+        "9ea2775ad2011c2fa91baa39c06c6cbe57e8865f",
+        "e32f0d9125e900162fc063758233379638ab3b62"
+      ],
+      "head": "e32f0d9125e900162fc063758233379638ab3b62",
+      "verifiedUTC": "2026-10-25T08:04:40.995Z"
+    }
+  ],
+  "postMergePagesVerification": "Recorded separately after final metadata PR39 deployment; not implied by historical InPrivate screenshot"
+}

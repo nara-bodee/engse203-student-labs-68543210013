@@ -15,3 +15,7 @@ Only TC17 currently blocks PR38. Full details and raw observations: FINAL_MANUAL
 ## User verification supersedes the pending TC17 status
 
 TC17 **PASS — User Manual Verification**, reported25October2026. User confirmed seed3, summary3/1/1/1, filter all, KEEP-20261025 preserved, and correct state after F5. Not automation; no new screenshot; no repeated GUI test. Original traces remain unchanged. Current computed case counts: {"PASS":23,"WARNING":1,"UNVERIFIED":0,"FAIL":0}. Only PR/tag delivery is still pending.
+
+## Actual PR/tag delivery
+
+PR38 merged at d7c9e209f6e78039b84c99f5a244d022151c4078; remote lab-05-submission-v2 matches exactly. TC24 PASS. Current computed24-case counts: {"PASS":24,"WARNING":0,"UNVERIFIED":0,"FAIL":0}. All previous dated pending statuses are history; no historical trace/image was changed. Post-merge Pages validation is separate.

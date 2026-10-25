@@ -5,9 +5,9 @@
   "sourceOrigin": "course-starter",
   "originalRepoUrl": "",
   "originalCommit": "",
-  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/27",
-  "submissionTag": "lab-09-submission-v2",
+  "pullRequestUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/pull/37",
+  "submissionTag": "lab-09-submission-v3",
   "testStatus": "pass",
-  "notes": "Weekly LAB submission evidence. Revision: Week 09 revision: Complete the SQL data model explanation and verification evidence.",
-  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-09-submission-v2/labs/week-09/evidence"
+  "notes": "Post-audit SQL evidence: both genuine Cursor SQLite screenshots present; real JOIN result has 8 rows. Required 27/27, SQL assertions 8/8, isolated constraint tests 5/5 and integrity/FK checks PASS. Source campus.db SHA-256 unchanged: 993a960915978c60a16b07504e59413912ed9596f5de0328f94b9aa3844135e3.",
+  "evidenceUrl": "https://github.com/nara-bodee/engse203-student-labs-68543210013/tree/lab-09-submission-v3/labs/week-09/evidence"
 }

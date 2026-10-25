@@ -16,15 +16,18 @@ function RequestDetailPage() {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
+    let ignore = false;
     setLoadState('loading');
     setErrorMessage('');
 
     getRequestById(requestId)
       .then((result) => {
+        if (ignore) return;
         setRequest(result);
         setLoadState('success');
       })
       .catch((error) => {
+        if (ignore) return;
         setErrorMessage(
           error instanceof Error
             ? error.message
@@ -34,7 +37,8 @@ function RequestDetailPage() {
         setLoadState('error');
       });
 
-    // TODO 5B: เพิ่ม cleanup guard เพื่อกัน stale update
+    // LAB05B: ignore a response once this effect no longer owns the page.
+    return () => { ignore = true; };
   }, [requestId, reloadKey]);
 
   return (

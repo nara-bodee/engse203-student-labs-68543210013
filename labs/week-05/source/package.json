@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "check": "node scripts/check-project.mjs",
+    "test:cleanup": "node --experimental-vm-modules --disable-warning=ExperimentalWarning --test tests/cleanup.test.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "verify": "npm run check && npm run build"

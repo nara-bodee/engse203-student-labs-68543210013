@@ -1,0 +1,30 @@
+{
+  "case": "TC-L5-17",
+  "status": "PASS",
+  "verificationType": "User Manual Verification",
+  "reportedTestDate": "2026-10-25",
+  "reportedBy": "User",
+  "recordedUTC": "2026-10-25T08:03:02.880Z",
+  "origin": "http://127.0.0.1:5605",
+  "source": "Explicit user-provided FINAL MERGE & CLOSEOUT instruction",
+  "observations": {
+    "resetSeedCount": 3,
+    "summary": {
+      "total": 3,
+      "pending": 1,
+      "inProgress": 1,
+      "completed": 1
+    },
+    "filterAfterReset": "all",
+    "unrelatedLocalStorage": {
+      "key": "engse203-closeout-unrelated",
+      "value": "KEEP-20261025",
+      "preserved": true
+    },
+    "afterF5": "Seed records, request list, summary, all filter and unrelated key remain correct"
+  },
+  "automation": false,
+  "newScreenshot": false,
+  "repeatedByCodex": false,
+  "priorURLConfidenceFailure": "Computer Use tool limitation, not application failure"
+}

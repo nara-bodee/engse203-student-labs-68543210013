@@ -1,0 +1,478 @@
+{
+  "date": "2026-10-24",
+  "sourceBase": "91807ef3752608b8846188409e3a76f502fe249c",
+  "branch": "fix/week-05-v2",
+  "tool": "Codex CUA in-app browser, normal context; followup native Microsoft Edge InPrivate",
+  "server": "localhost:5595, isolated modified Week05 source",
+  "setup": "External QA middleware writes only the LAB05 key on this disposable local origin; seed HTTP delay 1500ms exposes the real loading state. No app source fixture was committed.",
+  "encoding": "Actual browser JPEG capture decoded and encoded as PNG with Pillow; no crop, composition, annotation, image generation or content change. Raw JPEGs retained in remediation output.",
+  "missing": [],
+  "captures": [
+    {
+      "path": "images/dashboard-initial.png",
+      "rawJPEG": "dashboard-initial.jpg",
+      "rawSHA256": "674a06e2dde6bd1973483194b3166938442fd07059e3da61c1a56a8d85de7710",
+      "pngSHA256": "2ab4aaeccaabeff520940b69c90cf063e927cb0c55f1b258f20e64669fb4acfe",
+      "dimensions": [
+        1265,
+        1079
+      ],
+      "observation": {
+        "name": "dashboard-initial",
+        "time": "2026-10-24T08:57:47.950Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/"
+      }
+    },
+    {
+      "path": "images/deleted-detail-missing.png",
+      "rawJPEG": "deleted-detail-missing.jpg",
+      "rawSHA256": "731c9899662faddc390b3a81f53c48adf61b6bc13bedd235fecc451e17901ed4",
+      "pngSHA256": "96cd6b6899516cfe472be03767cf1cc3ae1a5215ed7d682be28d18c889fea816",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "observation": {
+        "name": "deleted-detail-missing",
+        "time": "2026-10-24T09:00:51.065Z",
+        "url": "http://localhost:5595/#/requests/REQ-MVM64JIA-ZV10",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/requests/REQ-MVM64JIA-ZV10\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/REQ-MVM64JIA-ZV10"
+      }
+    },
+    {
+      "path": "images/detail-missing.png",
+      "rawJPEG": "detail-missing.jpg",
+      "rawSHA256": "ec7a8249d859bc34e4904b112a72ca7da8cf1434102156db02433f8b932a75f4",
+      "pngSHA256": "8dfca998f144fb7652e4d90ad148f45ad8b37db1878369251d339f52644854c4",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "observation": {
+        "name": "detail-missing",
+        "time": "2026-10-24T08:59:20.380Z",
+        "url": "http://localhost:5595/#/requests/REQ-999",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/requests/REQ-999\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/REQ-999"
+      }
+    },
+    {
+      "path": "images/filter-completed.png",
+      "rawJPEG": "filter-completed.jpg",
+      "rawSHA256": "a297669bd912516a98eedcbdc5b00f21e4c4422d42c0ce1d9f0093f5563bfdf1",
+      "pngSHA256": "7aa7f3e4727fe67169662905d9ee24fbadb550f7ff5d0d8448ff68fafbb16d0e",
+      "dimensions": [
+        1265,
+        790
+      ],
+      "observation": {
+        "name": "filter-completed",
+        "time": "2026-10-24T09:05:58.773Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 31 checkbox เสร็จสิ้น, Value: 1"
+      }
+    },
+    {
+      "path": "images/filter-in-progress.png",
+      "rawJPEG": "filter-in-progress.jpg",
+      "rawSHA256": "34085edcf756afb4523fb3cd74f1e2d719d688bc65e04d543a02197e9e904839",
+      "pngSHA256": "ab6102857d309f96d9660e8110ffa7541e0e79398094bc1496a71f6e405f610f",
+      "dimensions": [
+        1265,
+        790
+      ],
+      "observation": {
+        "name": "filter-in-progress",
+        "time": "2026-10-24T09:05:58.346Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 30 checkbox กำลังดำเนินการ, Value: 1"
+      }
+    },
+    {
+      "path": "images/filter-pending.png",
+      "rawJPEG": "filter-pending.jpg",
+      "rawSHA256": "432f6ad0675e314139b28bd1d2c865afa20fd061578a2d6ac952e266a55636e1",
+      "pngSHA256": "c5228ace61a65e88241f09f338d44b7283347e4bc539b90c72793f3be0561d82",
+      "dimensions": [
+        1265,
+        790
+      ],
+      "observation": {
+        "name": "filter-pending",
+        "time": "2026-10-24T09:05:45.797Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 29 checkbox รอดำเนินการ, Value: 1"
+      }
+    },
+    {
+      "path": "images/form-validation-error.png",
+      "rawJPEG": "form-validation-error.jpg",
+      "rawSHA256": "5d3cf6bf8e742a0e093a1f2c38eebb876ee55f5153408b8d7f1e350aa678fdfa",
+      "pngSHA256": "baeaa158f9b2fe01cdced6a220f60939064f0f3d279af2680745047369d49348",
+      "dimensions": [
+        1265,
+        1118
+      ],
+      "observation": {
+        "name": "form-validation-error",
+        "time": "2026-10-24T08:59:48.503Z",
+        "url": "http://localhost:5595/#/requests/new",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/requests/new\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 40 button เพิ่มคำร้อง"
+      }
+    },
+    {
+      "path": "images/persistence-add-refresh.png",
+      "rawJPEG": "persistence-add-refresh.jpg",
+      "rawSHA256": "a86b876b89bce5c884727d718b358ac2e9f38808dbc88570ee7db00dc42930d8",
+      "pngSHA256": "a2bd867e88afb77c64aa26904d5033b3b03a5fda55ea799a39072f1439efeb56",
+      "dimensions": [
+        1265,
+        778
+      ],
+      "observation": {
+        "name": "persistence-add-refresh",
+        "time": "2026-10-24T09:00:09.735Z",
+        "url": "http://localhost:5595/#/requests/REQ-MVM64JIA-ZV10",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/requests/REQ-MVM64JIA-ZV10\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/REQ-MVM64JIA-ZV10"
+      }
+    },
+    {
+      "path": "images/persistence-before-delete.png",
+      "rawJPEG": "persistence-before-delete.jpg",
+      "rawSHA256": "d339fd0c1a71f6ecf052bdcb3422aec09ddfd28ddfda9e058b2f553335998546",
+      "pngSHA256": "b22d572657d6aaab0b8d8e0945b0c81066a538ffdaf7a2f2569f6af2ad225ebc",
+      "dimensions": [
+        1265,
+        1254
+      ],
+      "observation": {
+        "name": "persistence-before-delete",
+        "time": "2026-10-24T09:00:23.143Z",
+        "url": "http://localhost:5595/#/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/"
+      }
+    },
+    {
+      "path": "images/persistence-delete-refresh.png",
+      "rawJPEG": "persistence-delete-refresh.jpg",
+      "rawSHA256": "674a06e2dde6bd1973483194b3166938442fd07059e3da61c1a56a8d85de7710",
+      "pngSHA256": "2ab4aaeccaabeff520940b69c90cf063e927cb0c55f1b258f20e64669fb4acfe",
+      "dimensions": [
+        1265,
+        1079
+      ],
+      "observation": {
+        "name": "persistence-delete-refresh",
+        "time": "2026-10-24T09:00:50.373Z",
+        "url": "http://localhost:5595/#/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/"
+      }
+    },
+    {
+      "path": "images/reset-demo-data.png",
+      "rawJPEG": "reset-demo-data.jpg",
+      "rawSHA256": "7f0acb30a4fae840eb607d0e90c0a28f50707b029ecb6210de94c6b35e26ff3b",
+      "pngSHA256": "77d83a2b7e13adeca17ba72705e379f6db2fbaa3d0a1850a99c36760dcce9177",
+      "dimensions": [
+        1265,
+        1139
+      ],
+      "observation": {
+        "name": "reset-demo-data",
+        "time": "2026-10-24T09:05:45.358Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 13 button Reset Demo Data"
+      }
+    },
+    {
+      "path": "images/responsive-375.png",
+      "rawJPEG": "responsive-375.jpg",
+      "rawSHA256": "d7370aa41d17b7c3b259f3900aa0d53c2f9676d6480af1cc10e47a06f2dc502b",
+      "pngSHA256": "8439034321054ee7512f285db7b167fec28bf4331e9727d1774a322a68255d56",
+      "dimensions": [
+        360,
+        1580
+      ],
+      "observation": {
+        "name": "responsive-375",
+        "time": "2026-10-24T09:06:00.397Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 28 checkbox ทั้งหมด, Value: 1"
+      }
+    },
+    {
+      "path": "images/responsive-about-375.png",
+      "rawJPEG": "responsive-about-375.jpg",
+      "rawSHA256": "3dba9e7bb6bd2bba293916b4c546d38ae33d7d3e6dc42a384a381259b9e66641",
+      "pngSHA256": "7b24193958bd2f0ce6254055fe9031ba8c1ce60dd88597d2659f6bd21cad6554",
+      "dimensions": [
+        375,
+        812
+      ],
+      "observation": {
+        "name": "responsive-about-375",
+        "time": "2026-10-24T09:06:37.589Z",
+        "url": "http://localhost:5595/#/about",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/about\".\n0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/about\n\t1 container root\n\t\t2 container\n\t\t\t3 text ENGSE203 • LAB 05 Campus Service Request\n\t\t\t4 container เมนูหลัก\n\t\t\t\t5 link Description: Dashboard, Value: localhost:5595/#/\n\t\t\t\t6 link Description: New Request, Value: localhost:5595/#/requests/new\n\t\t\t\t7 link Description: About, Value: localhost:5595/#/about\n\t\t51 container\n\t\t\t52 text ABOUT THE LAB\n\t\t\t53 heading เกี่ยวกับระบบ, Value: 1\n\t\t\t\t54 text เกี่ยวกับระบบ\n\t\t\t55 text Campus Service Request เป็นกรณีศึกษาสำหรับเรียนรู้ React Routing, Effect, Service Layer และ client-side persistence\n\t\t\t56 heading สถาปัตยกรรม, Value: 2\n\t\t\t\t57 text สถาปัตยกรรม\n\t\t\t58 text Page เรียก Service API ส่วน Service จัดการ seed JSON และ Storage module โดย UI ไม่เข้าถึง browser storage โดยตรง\n\t\t\t59 heading ความเป็นส่วนตัว, Value: 2\n\t\t\t\t60 text ความเป็นส่วนตัว\n\t\t\t61 text ข้อมูลใน LAB เป็นข้อมูลสาธิต ห้ามบันทึกข้อมูลส่วนบุคคลจริง รหัสผ่าน token หรือ secret\n\t\t50 text LAB environment · ไม่ใช้ข้อมูลส่วนบุคคลจริง\n\nThe focused UI element is 0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/about"
+      }
+    },
+    {
+      "path": "images/responsive-detail-375.png",
+      "rawJPEG": "responsive-detail-375.jpg",
+      "rawSHA256": "1075e4a2574696c38c113be483ac29cc86d5a2e9a4ba95a75be53a53511ccf48",
+      "pngSHA256": "769e829d6ec8db00151129289bf8ea416dd5cf0313cbe5fccbf1fe3150a49ba6",
+      "dimensions": [
+        375,
+        812
+      ],
+      "observation": {
+        "name": "responsive-detail-375",
+        "time": "2026-10-24T09:06:37.455Z",
+        "url": "http://localhost:5595/#/requests/REQ-001",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/requests/REQ-001\".\n0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/REQ-001\n\t1 container root\n\t\t2 container\n\t\t\t3 text ENGSE203 • LAB 05 Campus Service Request\n\t\t\t4 container เมนูหลัก\n\t\t\t\t5 link Description: Dashboard, Value: localhost:5595/#/\n\t\t\t\t6 link Description: New Request, Value: localhost:5595/#/requests/new\n\t\t\t\t7 link Description: About, Value: localhost:5595/#/about\n\t\t51 container\n\t\t\t52 text ROUTED · DYNAMIC DETAIL\n\t\t\t53 heading รายละเอียดคำร้อง, Value: 1\n\t\t\t\t54 text รายละเอียดคำร้อง\n\t\t\t55 text รหัสที่อ่านจาก URL:\n\t\t\t56 text REQ-001\n\t\t\t57 heading แจ้งซ่อม, Value: 2\n\t\t\t\t58 text แจ้งซ่อม\n\t\t\t59 definition list\n\t\t\t\t60 container รหัสคำร้อง\n\t\t\t\t\t61 text รหัสคำร้อง\n\t\t\t\t62 text REQ-001\n\t\t\t\t63 container ผู้แจ้ง\n\t\t\t\t\t64 text ผู้แจ้ง\n\t\t\t\t65 text สมชาย ใจดี\n\t\t\t\t66 container สถานที่\n\t\t\t\t\t67 text สถานที่\n\t\t\t\t68 text ห้องปฏิบัติการ 301\n\t\t\t\t69 container รายละเอียด\n\t\t\t\t\t70 text รายละเอียด\n\t\t\t\t71 text เครื่องปรับอากาศไม่ทำงาน\n\t\t\t\t72 container ความเร่งด่วน\n\t\t\t\t\t73 text ความเร่งด่วน\n\t\t\t\t74 text เร่งด่วน\n\t\t\t\t75 container สถานะ\n\t\t\t\t\t76 text สถานะ\n\t\t\t\t77 text pending\n\t\t\t78 link Description: กลับ Dashboard, Value: localhost:5595/#/\n\t\t50 text LAB environment · ไม่ใช้ข้อมูลส่วนบุคคลจริง\n\nThe focused UI element is 0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/REQ-001"
+      }
+    },
+    {
+      "path": "images/responsive-new-375.png",
+      "rawJPEG": "responsive-new-375.jpg",
+      "rawSHA256": "0d72b4237da527bf90c7e63c1a71f94bb43a397708e2cf81adcf593797739e65",
+      "pngSHA256": "13d9e20dc7c314a736105b67489f9e837f7cf637825603beb04082febb2794fd",
+      "dimensions": [
+        360,
+        1124
+      ],
+      "observation": {
+        "name": "responsive-new-375",
+        "time": "2026-10-24T09:06:36.858Z",
+        "url": "http://localhost:5595/#/requests/new",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/requests/new\".\n0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/new\n\t1 container root\n\t\t2 container\n\t\t\t3 text ENGSE203 • LAB 05 Campus Service Request\n\t\t\t4 container เมนูหลัก\n\t\t\t\t5 link Description: Dashboard, Value: localhost:5595/#/\n\t\t\t\t6 link Description: New Request, Value: localhost:5595/#/requests/new\n\t\t\t\t7 link Description: About, Value: localhost:5595/#/about\n\t\t51 container\n\t\t\t52 text WRITE PATH\n\t\t\t53 heading สร้างคำร้องใหม่, Value: 1\n\t\t\t\t54 text สร้างคำร้องใหม่\n\t\t\t55 text กรอกข้อมูลเพื่อสร้างคำร้องใหม่\n\t\t\t56 container\n\t\t\t\t57 text ชื่อผู้แจ้ง\n\t\t\t\t58 text field (settable) ชื่อผู้แจ้ง, ID: requesterName\n\t\t\t\t59 text ประเภทคำร้อง\n\t\t\t\t60 pop up button (collapsed, settable) ประเภทคำร้อง, Value: -- เลือกประเภท --, ID: requestType, Secondary Actions: Expand\n\t\t\t\t\t61 menu\n\t\t\t\t\t\t62 (selected) -- เลือกประเภท --\n\t\t\t\t\t\t63 แจ้งซ่อม\n\t\t\t\t\t\t64 ขอใช้ห้อง\n\t\t\t\t\t\t65 บริการบัญชีผู้ใช้\n\t\t\t\t66 text สถานที่\n\t\t\t\t67 text field (settable) สถานที่, ID: location\n\t\t\t\t68 text รายละเอียด\n\t\t\t\t69 text entry area (settable) รายละเอียด, ID: details\n\t\t\t\t70 container ความเร่งด่วน\n\t\t\t\t\t71 text ความเร่งด่วน\n\t\t\t\t\t72 radio button (settable, integer) Description: ปกติ, Value: 1\n\t\t\t\t\t73 radio button (settable, integer) Description: เร่งด่วน, Value: 0\n\t\t\t\t74 button เพิ่มคำร้อง\n\t\t50 text LAB environment · ไม่ใช้ข้อมูลส่วนบุคคลจริง\n\nThe focused UI element is 0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/new"
+      }
+    },
+    {
+      "path": "images/responsive-not-found-375.png",
+      "rawJPEG": "responsive-not-found-375.jpg",
+      "rawSHA256": "5aa67797fbf8a4548bc1f83a17550ab11650c55b1172081b26e282428a82e73c",
+      "pngSHA256": "a1af244485f05f5e4c2f752682b4375ef85497e6aa1137e21964514ae1a2dcf3",
+      "dimensions": [
+        375,
+        812
+      ],
+      "observation": {
+        "name": "responsive-not-found-375",
+        "time": "2026-10-24T09:06:37.701Z",
+        "url": "http://localhost:5595/#/unknown",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/unknown\".\n0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/unknown\n\t1 container root\n\t\t2 container\n\t\t\t3 text ENGSE203 • LAB 05 Campus Service Request\n\t\t\t4 container เมนูหลัก\n\t\t\t\t5 link Description: Dashboard, Value: localhost:5595/#/\n\t\t\t\t6 link Description: New Request, Value: localhost:5595/#/requests/new\n\t\t\t\t7 link Description: About, Value: localhost:5595/#/about\n\t\t51 container\n\t\t\t52 text 404 · ROUTE NOT FOUND\n\t\t\t53 heading ไม่พบหน้าที่ต้องการ, Value: 1\n\t\t\t\t54 text ไม่พบหน้าที่ต้องการ\n\t\t\t55 text URL นี้ไม่ตรงกับ route ของ LAB05\n\t\t\t56 link Description: กลับ Dashboard, Value: localhost:5595/#/\n\t\t50 text LAB environment · ไม่ใช้ข้อมูลส่วนบุคคลจริง\n\nThe focused UI element is 0 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/unknown"
+      }
+    },
+    {
+      "path": "images/retry-success.png",
+      "rawJPEG": "retry-success.jpg",
+      "rawSHA256": "674a06e2dde6bd1973483194b3166938442fd07059e3da61c1a56a8d85de7710",
+      "pngSHA256": "2ab4aaeccaabeff520940b69c90cf063e927cb0c55f1b258f20e64669fb4acfe",
+      "dimensions": [
+        1265,
+        1079
+      ],
+      "observation": {
+        "name": "retry-success",
+        "time": "2026-10-24T08:58:30.242Z",
+        "url": "http://localhost:5595/#/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/"
+      }
+    },
+    {
+      "path": "images/route-detail-found.png",
+      "rawJPEG": "route-detail-found.jpg",
+      "rawSHA256": "67830cb49fef1696e140b477fe95473df5de62b54d609446651bae5f88be8944",
+      "pngSHA256": "c5d94f13c7f5f5cbd62e6f580ebbd4eca1e392afb3ff05b1f66967bc2073bb50",
+      "dimensions": [
+        1265,
+        778
+      ],
+      "observation": {
+        "name": "route-detail-found",
+        "time": "2026-10-24T08:59:19.681Z",
+        "url": "http://localhost:5595/#/requests/REQ-001",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/requests/REQ-001\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/requests/REQ-001"
+      }
+    },
+    {
+      "path": "images/route-not-found.png",
+      "rawJPEG": "route-not-found.jpg",
+      "rawSHA256": "a8112f77d9777845f0c85f9feea3294692921462145675edb5dae2aa8c234658",
+      "pngSHA256": "5027a092ef02454cbe1af008c9eb00f0f63ae88046dec5939b6bca4375542369",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "observation": {
+        "name": "route-not-found",
+        "time": "2026-10-24T08:57:48.165Z",
+        "url": "http://localhost:5595/#/unknown",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/unknown\".\n1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/unknown\n\t2 container root\n\t\t3 container\n\t\t\t4 text ENGSE203 • LAB 05 Campus Service Request\n\t\t\t5 container เมนูหลัก\n\t\t\t\t6 link Description: Dashboard, Value: localhost:5595/#/\n\t\t\t\t7 link Description: New Request, Value: localhost:5595/#/requests/new\n\t\t\t\t8 link Description: About, Value: localhost:5595/#/about\n\t\t17 container\n\t\t\t18 text 404 · ROUTE NOT FOUND\n\t\t\t19 heading ไม่พบหน้าที่ต้องการ, Value: 1\n\t\t\t\t20 text ไม่พบหน้าที่ต้องการ\n\t\t\t21 text URL นี้ไม่ตรงกับ route ของ LAB05\n\t\t\t22 link Description: กลับ Dashboard, Value: localhost:5595/#/\n\t\t16 text LAB environment · ไม่ใช้ข้อมูลส่วนบุคคลจริง\n\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/unknown"
+      }
+    },
+    {
+      "path": "images/state-empty.png",
+      "rawJPEG": "state-empty.jpg",
+      "rawSHA256": "d334859a3f649d783c5d4e6fc0b9cf5be49a3cb75d9626dc986e915cc2370dad",
+      "pngSHA256": "9c01b5856ca8272cb6681b7be3155a746d95cdcf766ea009c2ce0d4b9aba24af",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "observation": {
+        "name": "state-empty",
+        "time": "2026-10-24T08:58:30.931Z",
+        "url": "http://localhost:5595/#/?scenario=empty",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/?scenario=empty\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/?scenario=empty"
+      }
+    },
+    {
+      "path": "images/state-error-retry.png",
+      "rawJPEG": "state-error-retry.jpg",
+      "rawSHA256": "54976873818e4b1986cd2eb60b703238dcb94203ff030a42fe6ec778554438ca",
+      "pngSHA256": "0c3918e1e90d038dcb03b9ff8ab1b9148f48d29e341098b1ddcfc2af8f421f43",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "observation": {
+        "name": "state-error-retry",
+        "time": "2026-10-24T08:58:29.331Z",
+        "url": "http://localhost:5595/#/?scenario=error",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/#/?scenario=error\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/#/?scenario=error"
+      }
+    },
+    {
+      "path": "images/state-loading.png",
+      "rawJPEG": "state-loading.jpg",
+      "rawSHA256": "3795f1620ef1eafc40bd02fb0379d87cf98abd43fa61e36e29e2ea5608c5b811",
+      "pngSHA256": "978eaef1229c3782191c0e2c5bf956434b502000f08364a133a5483194f8ad54",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "observation": {
+        "name": "state-loading",
+        "time": "2026-10-24T08:57:24.665Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\n1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/\n\t2 container root\n\t\t3 container\n\t\t\t4 text ENGSE203 • LAB 05 Campus Service Request\n\t\t\t5 container เมนูหลัก\n\t\t\t\t6 link Description: Dashboard, Value: localhost:5595/#/\n\t\t\t\t7 link Description: New Request, Value: localhost:5595/#/requests/new\n\t\t\t\t8 link Description: About, Value: localhost:5595/#/about\n\t\t9 container\n\t\t\t10 text ROUTED · READ PATH\n\t\t\t11 heading Dashboard, Value: 1\n\t\t\t\t12 text Dashboard\n\t\t\t13 text ติดตามคำร้องจาก URL และ Service Layer\n\t\t\t14 button Reset Demo Data\n\t\t\t15 text กำลังโหลดข้อมูล…\n\t\t16 text LAB environment · ไม่ใช้ข้อมูลส่วนบุคคลจริง\n\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/"
+      }
+    },
+    {
+      "path": "images/storage-recovery-duplicate.png",
+      "rawJPEG": "storage-recovery-duplicate.jpg",
+      "rawSHA256": "cac39714aebdf26f62b1ca078cae977d2889eefda90feac36e8da32198388912",
+      "pngSHA256": "9a6d79ae70ad8aef5f2e47880b2f5e4b070a9c5dca28193e054b6fc85702a630",
+      "dimensions": [
+        1265,
+        1139
+      ],
+      "observation": {
+        "name": "storage-recovery-duplicate",
+        "time": "2026-10-24T09:03:20.769Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/"
+      }
+    },
+    {
+      "path": "images/storage-recovery-version.png",
+      "rawJPEG": "storage-recovery-version.jpg",
+      "rawSHA256": "80931b2bcbf178166053992241ca3a99af1df26e7113a305147d48e8a62f5c6f",
+      "pngSHA256": "8c4a07e7771095b0b8620dccadafb3e1cfe5d89db828aa9f4c7fd00be0a89acc",
+      "dimensions": [
+        1265,
+        1139
+      ],
+      "observation": {
+        "name": "storage-recovery-version",
+        "time": "2026-10-24T09:02:37.749Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/"
+      }
+    },
+    {
+      "path": "images/storage-recovery.png",
+      "rawJPEG": "storage-recovery.jpg",
+      "rawSHA256": "491edfcf216f32cf060b33c5336d7ebaf11c426757083a3964a5ea924fba7ddc",
+      "pngSHA256": "4bee353937a0d075972dd3921a6ae909cb307f27121401aa3e11aa7e74c6d5a1",
+      "dimensions": [
+        1265,
+        1139
+      ],
+      "observation": {
+        "name": "storage-recovery",
+        "time": "2026-10-24T09:01:50.513Z",
+        "url": "http://localhost:5595/",
+        "state": "Browser tab: 1, Title: \"Campus Service Request · LAB05\", URL: \"http://localhost:5595/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea Campus Service Request · LAB05, URL: localhost:5595/"
+      }
+    },
+    {
+      "path": "images/pages-incognito.png",
+      "rawJPEG": "pages-incognito.raw.jpg",
+      "rawSHA256": "caf047ab18870e2e6c2af247bcc339224a45780f6b1bb0eb882783f947444697",
+      "pngSHA256": "a76b2fcf34aa138720cfc8d930535d306c9c46718c495d9f7f2eba21522d1d8d",
+      "dimensions": [
+        960,
+        1032
+      ],
+      "observation": {
+        "time": "2026-10-24T10:01:52.489Z",
+        "url": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-05/#/",
+        "nativeEdgeInPrivate": true,
+        "details": "SCREENSHOT_FOLLOWUP.json"
+      }
+    }
+  ],
+  "historicalFiles": [
+    {
+      "path": "legacy-pre-audit/images/form-validation-error.png",
+      "sha256": "05322f0e07264b87799b5db9618d36ad0d5ff8e7e34e78cfebb6031ffd37328b"
+    },
+    {
+      "path": "legacy-pre-audit/images/persistence-add-refresh.png",
+      "sha256": "0adb3ec57bf73f3965617d0acbec3c2ca7840b9d12876c822fa7cc149b6acf66"
+    },
+    {
+      "path": "legacy-pre-audit/images/persistence-delete-refresh.png",
+      "sha256": "92b995cd8de0d6e8a8608a5b31ff210eff7c5cd11a41c779d9dba46c7a4651b3"
+    },
+    {
+      "path": "legacy-pre-audit/images/reset-demo-data.png",
+      "sha256": "3889a8c94c1cd027cb1cd5ca8110c3bbb82dfe9ac851d55e1eb7f5c8f4bcc753"
+    },
+    {
+      "path": "legacy-pre-audit/images/responsive-375.png",
+      "sha256": "3df8c14e661ffbebc41c6032be4e396d7cd70f87935b47175ec71c726521e7ec"
+    },
+    {
+      "path": "legacy-pre-audit/images/route-detail-found.png",
+      "sha256": "eaacc2d8d424a66c1553991b6b546fe1b57c15edd3fe649dd7f8fef8b00a0199"
+    },
+    {
+      "path": "legacy-pre-audit/images/route-not-found.png",
+      "sha256": "34e8bffeaf9b889fc2e5a8f9c4ca09b0e3961cfd5e3bb64e32a6e089c6a4a805"
+    },
+    {
+      "path": "legacy-pre-audit/images/state-empty.png",
+      "sha256": "028328faf04de0683446f825251a9f4c620f45d69e16d6e8e6c1e194fa63ff64"
+    },
+    {
+      "path": "legacy-pre-audit/images/state-error-retry.png",
+      "sha256": "65240fb60bba4252c0b54599373156ba0054f44b246d48e92b94bd054ad85391"
+    },
+    {
+      "path": "legacy-pre-audit/images/state-loading.png",
+      "sha256": "10f7522242d7cea94290613359f09c9339fd6cccaf58e31b07a34fe041f87796"
+    },
+    {
+      "path": "legacy-pre-audit/images/storage-localstorage-devtools.png",
+      "sha256": "92b995cd8de0d6e8a8608a5b31ff210eff7c5cd11a41c779d9dba46c7a4651b3"
+    },
+    {
+      "path": "legacy-pre-audit/TEST_REPORT.md",
+      "sha256": "95dde14954cd35d478491b0c3985c62a78564371bff389ed04bdca5087802bbe"
+    }
+  ]
+}

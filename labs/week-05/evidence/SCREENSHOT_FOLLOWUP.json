@@ -1,0 +1,69 @@
+{
+  "capturedUTC": "2026-10-24T10:01:52.489Z",
+  "app": "Microsoft Edge native window",
+  "windowId": 918052,
+  "inPrivateVerifiedBy": [
+    "native title contains [InPrivate]",
+    "actual browser chrome InPrivate indicator",
+    "native accessibility InPrivate browsing button"
+  ],
+  "url": "https://nara-bodee.github.io/engse203-student-labs-68543210013/labs/week-05/#/",
+  "zoomPercent": 90,
+  "deployedMain": "91807ef3752608b8846188409e3a76f502fe249c",
+  "draftGuardPatchDeployed": false,
+  "encoding": "Native CUA JPEG decoded and saved as lossless PNG only. No resizing/cropping/compositing/annotation/generation; decoded RGB pixels compared equal.",
+  "image": {
+    "raw": "pages-incognito.raw.jpg",
+    "png": "pages-incognito.png",
+    "dimensions": [
+      960,
+      1032
+    ],
+    "rawSHA256": "caf047ab18870e2e6c2af247bcc339224a45780f6b1bb0eb882783f947444697",
+    "pngSHA256": "a76b2fcf34aa138720cfc8d930535d306c9c46718c495d9f7f2eba21522d1d8d",
+    "decodedPixelsIdentical": true
+  },
+  "refreshChecks": [
+    {
+      "label": "dashboard-refresh-loaded-seed3",
+      "time": "2026-10-24T10:00:27.552Z",
+      "route": "#/",
+      "observedHeading": "heading Dashboard",
+      "nativeEdgeInPrivate": true,
+      "result": "PASS - app rendered after refresh; unknown is app NotFound, not server error"
+    },
+    {
+      "label": "new-refresh-loaded",
+      "time": "2026-10-24T10:00:43.541Z",
+      "route": "#/requests/new",
+      "observedHeading": "heading สร้างคำร้องใหม่",
+      "nativeEdgeInPrivate": true,
+      "result": "PASS - app rendered after refresh; unknown is app NotFound, not server error"
+    },
+    {
+      "label": "detail-refresh-loaded",
+      "time": "2026-10-24T10:01:08.128Z",
+      "route": "#/requests/REQ-001",
+      "observedHeading": "heading รายละเอียดคำร้อง",
+      "nativeEdgeInPrivate": true,
+      "result": "PASS - app rendered after refresh; unknown is app NotFound, not server error"
+    },
+    {
+      "label": "about-refresh-loaded",
+      "time": "2026-10-24T10:01:18.654Z",
+      "route": "#/about",
+      "observedHeading": "heading เกี่ยวกับระบบ",
+      "nativeEdgeInPrivate": true,
+      "result": "PASS - app rendered after refresh; unknown is app NotFound, not server error"
+    },
+    {
+      "label": "unknown-refresh-loaded",
+      "time": "2026-10-24T10:01:29.023Z",
+      "route": "#/unknown",
+      "observedHeading": "heading ไม่พบหน้าที่ต้องการ",
+      "nativeEdgeInPrivate": true,
+      "result": "PASS - app rendered after refresh; unknown is app NotFound, not server error"
+    }
+  ],
+  "note": "Image and tests are of current public deployment; no claim that PR38 source guards are deployed. Raw JPEG retained in dated followup output."
+}

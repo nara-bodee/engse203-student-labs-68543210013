@@ -1,0 +1,31 @@
+{
+  "trace": "DEVTOOLS_CLOSEOUT_TRACE.json",
+  "origin": "http://127.0.0.1:5605",
+  "captures": [
+    {
+      "name": "devtools-network-spa.jpg",
+      "sha256": "35ee753ec8a02dfe9ca5032e803959102883fa2950bf605b19475dc81bf0b0a8",
+      "operation": "Existing native screenshot bytes copied unchanged; no recapture, conversion, editing or generation"
+    },
+    {
+      "name": "devtools-new-route.jpg",
+      "sha256": "53b2a7151248e14b751fc1d5dde78793e516c5b167e220c2f7fefac18c230c3b",
+      "operation": "Existing native screenshot bytes copied unchanged; no recapture, conversion, editing or generation"
+    },
+    {
+      "name": "devtools-about-route.jpg",
+      "sha256": "39b1f72c168bdd72dadfd5dc5d517a62f6ef55e5dd92baabd7bfe4e5c124d167",
+      "operation": "Existing native screenshot bytes copied unchanged; no recapture, conversion, editing or generation"
+    },
+    {
+      "name": "devtools-storage-envelope.jpg",
+      "sha256": "374ea9347e98313cbddcec3d266dc7794e63055f7081c3502e566d6e827eaf7c",
+      "operation": "Existing native screenshot bytes copied unchanged; no recapture, conversion, editing or generation"
+    },
+    {
+      "name": "devtools-reset-before.jpg",
+      "sha256": "fd1f930b3779f207617fa30e9896a5009ba84dc27299508f4aad5a8f7b05db61",
+      "operation": "Existing native screenshot bytes copied unchanged; no recapture, conversion, editing or generation"
+    }
+  ]
+}

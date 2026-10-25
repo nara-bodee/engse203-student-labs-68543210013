@@ -7,23 +7,66 @@
   "sourceFixture": false,
   "cases": {
     "TC02": {
-      "status": "UNVERIFIED",
+      "status": "PASS",
       "mandatory": true,
-      "navigationActiveStates": "PASS actual GUI navigation/keyboard; aria-current matches",
-      "networkHTMLReload": "NOT VERIFIED - native DevTools input blocked",
+      "navigationActiveStates": "PASS: real native menu navigation Dashboard/New Request/About/Dashboard with matching active styles; actual route screenshots and prior keyboard trace",
+      "networkHTMLReload": "PASS: one document request on baseline reload; cleared Doc log stayed empty across all menu transitions while recording",
+      "trace": "DEVTOOLS_CLOSEOUT_TRACE.json",
       "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L34"
     },
     "TC07": {
-      "status": "UNVERIFIED",
+      "status": "PASS",
       "mandatory": true,
-      "reason": "Actual DevTools envelope/key-removal inspection not completed",
+      "actual": "Application panel at http://127.0.0.1:5605: deleted only LAB key; empty table observed; real refresh restored three seed requests without recovery notice; regenerated envelope inspected",
+      "envelope": {
+        "schemaVersion": 1,
+        "updatedAt": "2026-10-25T04:23:43.857Z",
+        "requests": [
+          {
+            "id": "REQ-001",
+            "requesterName": "สมชาย ใจดี",
+            "requestType": "แจ้งซ่อม",
+            "location": "ห้องปฏิบัติการ 301",
+            "details": "เครื่องปรับอากาศไม่ทำงาน",
+            "priority": "urgent",
+            "status": "pending"
+          },
+          {
+            "id": "REQ-002",
+            "requesterName": "สุภาวดี รักเรียน",
+            "requestType": "บริการบัญชีผู้ใช้",
+            "location": "อาคารวิศวกรรมซอฟต์แวร์",
+            "details": "เข้าสู่ระบบห้องปฏิบัติการไม่ได้",
+            "priority": "normal",
+            "status": "in-progress"
+          },
+          {
+            "id": "REQ-003",
+            "requesterName": "กิตติพงษ์ ตั้งใจ",
+            "requestType": "ขอใช้ห้อง",
+            "location": "ห้องประชุม 2",
+            "details": "ขอใช้ห้องสำหรับกิจกรรมกลุ่มนักศึกษา",
+            "priority": "normal",
+            "status": "completed"
+          }
+        ]
+      },
+      "trace": "DEVTOOLS_CLOSEOUT_TRACE.json",
       "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L65"
     },
     "TC17": {
       "status": "UNVERIFIED",
       "mandatory": true,
-      "reason": "Non-all reset and unrelated-key preservation not completed in DevTools/GUI",
-      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L69"
+      "reason": "Unrelated key created in actual DevTools GUI with value KEEP-20261025; removed disposable REQ-003 and selected pending filter. Reset click was blocked by Computer Use URL safety before any post-reset observation. No application FAIL asserted.",
+      "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L69",
+      "sentinelKey": "engse203-closeout-unrelated",
+      "sentinelValue": "KEEP-20261025",
+      "remaining": [
+        "confirm actual reset",
+        "seed3 and filter all",
+        "sentinel preserved",
+        "same result after refresh"
+      ]
     },
     "TC19": {
       "status": "PASS",
@@ -142,13 +185,17 @@
       "requirement": "https://github.com/se-rmutl/engse203-lab/blob/3e080d366483fe9b4a903d9f4dd318b5de4cd5dd/labs/week-05-react-mini-app/lab05/evidence-templates/TEST_REPORT.md#L100"
     }
   },
-  "blocking": "Verification gate for PR38 only, not a newly demonstrated application defect",
+  "blocking": "Only TC17 remains a mandatory verification gate for PR38",
   "toolLimitation": {
-    "nativeInput": "point over PickerHost.exe instead of msedge.exe; failed to activate captured window after fresh-window recovery",
-    "securitySettingsChanged": false,
-    "rule": "Computer-use guidance forbids automating Windows security apps/permission requests",
-    "userInputRequested": "Please handle the pending Windows Security window manually; no further merge approval requested",
-    "latestObservation": "Windows lock screen captured instead of native Edge window; interactive desktop unavailable. User asked to unlock manually."
+    "history": {
+      "nativeInput": "point over PickerHost.exe instead of msedge.exe; failed to activate captured window after fresh-window recovery",
+      "securitySettingsChanged": false,
+      "rule": "Computer-use guidance forbids automating Windows security apps/permission requests",
+      "userInputRequested": "Please handle the pending Windows Security window manually; no further merge approval requested",
+      "latestObservation": "Windows lock screen captured instead of native Edge window; interactive desktop unavailable. User asked to unlock manually."
+    },
+    "latest": "Computer Use stopped the previous turn because current browser URL could not be established with sufficient confidence. No bypass or alternate automation was used. New continuation may act only after fresh safe URL/window identification."
   },
-  "note": "No existing screenshots were recaptured. New focus screenshots only document newly completed TC21."
+  "note": "No existing screenshots were recaptured. New focus screenshots only document newly completed TC21.",
+  "reviewedTraceUTC": "2026-10-25T06:22:53.653Z"
 }
